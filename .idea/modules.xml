@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/JavaCodingProblems.iml" filepath="$PROJECT_DIR$/JavaCodingProblems.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/DataStructure/DataStructure.iml" filepath="$PROJECT_DIR$/src/DataStructure/DataStructure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java_DS_Algo-InterviewPreparation.iml" filepath="$PROJECT_DIR$/Java_DS_Algo-InterviewPreparation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/Java_DS_Algo-InterviewPreparation1.iml" filepath="$PROJECT_DIR$/src/Java_DS_Algo-InterviewPreparation1.iml" />
     </modules>
   </component>
 </project>
