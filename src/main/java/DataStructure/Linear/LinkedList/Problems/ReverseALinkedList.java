@@ -1,4 +1,6 @@
-package DataStructure.LinkedList;
+package DataStructure.Linear.LinkedList.Problems;
+
+import DataStructure.Linear.LinkedList.Node;
 
 public class ReverseALinkedList {
 
