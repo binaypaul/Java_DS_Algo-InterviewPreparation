@@ -3,12 +3,12 @@ package DataStructure.Linear.LinkedList.Problems;
 import DataStructure.Linear.LinkedList.LinkedList;
 import DataStructure.Linear.LinkedList.Node;
 
-public class DeleteNodeInALinkedList {
+public class c_DeleteNodeInALinkedList {
     public static void main(String[] args) {
 
         Node head = new LinkedList(1,2,3,4,5,6,7).head();
         LinkedList.printList(head);
-        Node deletedNodeHead = DeleteNodeInALinkedList.deleteNode(head,7);
+        Node deletedNodeHead = c_DeleteNodeInALinkedList.deleteNode(head,7);
         LinkedList.printList(deletedNodeHead);
     }
 

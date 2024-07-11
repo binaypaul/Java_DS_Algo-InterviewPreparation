@@ -3,15 +3,15 @@ package DataStructure.Linear.LinkedList.Problems;
 import DataStructure.Linear.LinkedList.LinkedList;
 import DataStructure.Linear.LinkedList.Node;
 
-public class MiddleOfALinkedList extends LinkedList {
+public class b_MiddleOfALinkedList extends LinkedList {
     public static void main(String[] args) {
-        Node head = new LinkedList(1,2,3,4,5,6).head();
-        LinkedList.printList(head);
-        MiddleOfALinkedList.findMiddle(head);
-
-        Node head1 = new LinkedList(1,2,3,4,5,6,7).head();
+        Node head1 = new LinkedList(1,2,3,4,5,6).head();
         LinkedList.printList(head1);
-        MiddleOfALinkedList.findMiddle(head1);
+        b_MiddleOfALinkedList.findMiddle(head1);
+
+        Node head2 = new LinkedList(1,2,3,4,5,6,7).head();
+        LinkedList.printList(head2);
+        b_MiddleOfALinkedList.findMiddle(head2);
     }
 
     public static void findMiddle(Node head) {

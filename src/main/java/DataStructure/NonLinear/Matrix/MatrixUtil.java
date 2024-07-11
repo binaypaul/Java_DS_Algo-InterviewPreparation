@@ -1,4 +1,4 @@
-package NonLinearDS.Matrix;
+package DataStructure.NonLinear.Matrix;
 
 public class MatrixUtil {
     public static int [][] create(int m, int n) {

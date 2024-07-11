@@ -1,4 +1,4 @@
-package NonLinearDS.Matrix;
+package DataStructure.NonLinear.Matrix;
 
 /**
  * Examples :

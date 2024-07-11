@@ -2,7 +2,7 @@ package DataStructure.Linear.LinkedList.Problems;
 
 import DataStructure.Linear.LinkedList.Node;
 
-public class ReverseALinkedList {
+public class a_ReverseALinkedList {
 
 	public static void main(String[] args) {
 		Node head = new Node(1);
