@@ -1,7 +1,4 @@
-package DataStructure.Neetcode.ArraysAndHashing;
-
-import java.util.HashMap;
-import java.util.Map;
+package DataStructure.Neetcode.A_ArraysAndHashing;
 
 public class b_ValidAnagram {
     public static void main(String[] args) {

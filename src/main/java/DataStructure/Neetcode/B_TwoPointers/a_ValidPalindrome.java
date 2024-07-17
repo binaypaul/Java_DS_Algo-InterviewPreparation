@@ -1,4 +1,4 @@
-package DataStructure.Neetcode.TwoPointers;
+package DataStructure.Neetcode.B_TwoPointers;
 
 public class a_ValidPalindrome {
     public static void main(String[] args) {

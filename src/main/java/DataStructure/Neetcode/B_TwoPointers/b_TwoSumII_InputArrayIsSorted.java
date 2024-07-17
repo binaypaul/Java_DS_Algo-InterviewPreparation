@@ -1,4 +1,4 @@
-package DataStructure.Neetcode.TwoPointers;
+package DataStructure.Neetcode.B_TwoPointers;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package DataStructure.Neetcode.ArraysAndHashing;
+package DataStructure.Neetcode.A_ArraysAndHashing;
 
 import java.util.HashMap;
 import java.util.Map;
