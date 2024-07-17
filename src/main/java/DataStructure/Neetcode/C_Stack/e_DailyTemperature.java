@@ -5,18 +5,14 @@ import java.util.Stack;
 
 public class e_DailyTemperature {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(dailyTemperatures(new int[] {30,60,90})));
+        System.out.println(Arrays.toString(dailyTemperatures(new int[] {73,74,75,71,69,72,76,73})));
     }
     public static int[] dailyTemperatures(int[] temperatures) {
-        int x, y, count=0;
         int[] res  = new int[temperatures.length];
         for (int i = 0; i < temperatures.length; i++) {
-            x = temperatures[i];
             int j = i+1;
-
             while (j < temperatures.length) {
-                y = temperatures[j];
-                if(y > x) {
+                if(temperatures[j] > temperatures[i]) {
                     res[i] = j-i;
                     break;
                 }
