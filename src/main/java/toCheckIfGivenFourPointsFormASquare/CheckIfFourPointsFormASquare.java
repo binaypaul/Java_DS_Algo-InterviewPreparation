@@ -31,29 +31,29 @@ public class CheckIfFourPointsFormASquare {
 					}
 				}
 			}
-		if (a != null && aX != null && aY != null) {
-			for (Point point : points) {
-				if (!(point.equals(a)||point.equals(aX)||point.equals(aY))) {
-					aXY = point;
-					break;
+			if (a != null && aX != null && aY != null) {
+				for (Point point : points) {
+					if (!(point.equals(a)||point.equals(aX)||point.equals(aY))) {
+						aXY = point;
+						break;
+					}
 				}
-			}
-			if (aXY != null) {
-				if (aXY.getX() != aY.getX() && aXY.getY() == aY.getY()) {
-					la = aXY.getX() - aY.getX();
-					la = (la < 0) ? la * -1 : la;
-				} else if (aXY.getY() != aX.getY() && aXY.getX() == aX.getX()) {
-					lc = aXY.getY() - aY.getY();
-					lc = (lc < 0) ? lc * -1 : lc;
-				}
-				if (la == lc) {
-					int lb1 = (int) Math.sqrt(Math.pow(la, 2) + Math.pow(lc, 2));
-					if (lb == lb1) {
-						isSquare = true;
+				if (aXY != null) {
+					if (aXY.getX() != aY.getX() && aXY.getY() == aY.getY()) {
+						la = aXY.getX() - aY.getX();
+						la = (la < 0) ? la * -1 : la;
+					} else if (aXY.getY() != aX.getY() && aXY.getX() == aX.getX()) {
+						lc = aXY.getY() - aY.getY();
+						lc = (lc < 0) ? lc * -1 : lc;
+					}
+					if (la == lc) {
+						int lb1 = (int) Math.sqrt(Math.pow(la, 2) + Math.pow(lc, 2));
+						if (lb == lb1) {
+							isSquare = true;
+						}
 					}
 				}
 			}
-		}
 		}
 		return isSquare;
 	}

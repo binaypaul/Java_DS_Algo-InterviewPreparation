@@ -15,7 +15,7 @@ public class a_ReverseALinkedList {
 	}
 	
 	public static void reverse(Node head) {
-		while(head.next != null) {
+		while( head.next != null) {
 			Node prev = head;
 			head = head.next;
 			Node current = head;

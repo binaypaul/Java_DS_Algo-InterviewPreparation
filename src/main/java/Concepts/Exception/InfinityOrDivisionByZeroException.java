@@ -1,4 +1,4 @@
-package Exception;
+package Concepts.Exception;
 
 public class InfinityOrDivisionByZeroException {
 

@@ -1,4 +1,4 @@
-package Multithreading;
+package Concepts.Multithreading;
 
 public class CreateADeadlock {
 	public static void main(String[] args) {

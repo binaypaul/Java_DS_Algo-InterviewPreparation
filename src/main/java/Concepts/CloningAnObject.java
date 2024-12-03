@@ -68,6 +68,7 @@ class CloneTester implements Cloneable{
 	public String toString() {
 		return "CloneTester [id=" + id + ", name=" + name + ", al=" + al + "]";
 	}
+
 	@Override
 	protected CloneTester clone() throws CloneNotSupportedException {
 		return (CloneTester) super.clone();

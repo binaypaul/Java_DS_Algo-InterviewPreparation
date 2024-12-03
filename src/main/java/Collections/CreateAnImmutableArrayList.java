@@ -24,18 +24,14 @@ class ImmutableArrayList<E> extends ArrayList<E> {
 	
 	@Override
 	public boolean add(E e) {
-		List<E> tempImmutableArrayList = new ArrayList<E>();
-		immutableArrayList.forEach(tempImmutableArrayList::add);
-		immutableArrayList = tempImmutableArrayList;
-		return immutableArrayList.add(e);	
+        List<E> tempImmutableArrayList = new ArrayList<E>(immutableArrayList);
+		return tempImmutableArrayList.add(e);
 	};
 	
 	@Override
 	public E remove(int index) {
-		List<E> tempImmutableArrayList = new ArrayList<E>();
-		immutableArrayList.forEach(tempImmutableArrayList::add);
-		immutableArrayList = tempImmutableArrayList;
-		return immutableArrayList.remove(index);
+        List<E> tempImmutableArrayList = new ArrayList<E>(immutableArrayList);
+		return tempImmutableArrayList.remove(index);
 	}
 
 	@Override

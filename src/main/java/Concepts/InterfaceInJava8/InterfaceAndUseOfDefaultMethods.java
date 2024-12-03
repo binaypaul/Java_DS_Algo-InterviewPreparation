@@ -1,4 +1,4 @@
-package InterfaceInJava8;
+package Concepts.InterfaceInJava8;
 
 public class InterfaceAndUseOfDefaultMethods implements A, B{
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Multithreading;
+package Concepts.Multithreading;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

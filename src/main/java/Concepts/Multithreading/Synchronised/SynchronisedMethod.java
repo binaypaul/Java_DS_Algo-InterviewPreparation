@@ -1,4 +1,4 @@
-package Multithreading.Synchronised;
+package Concepts.Multithreading.Synchronised;
 
 public class SynchronisedMethod {
 

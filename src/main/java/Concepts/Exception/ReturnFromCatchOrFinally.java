@@ -1,4 +1,4 @@
-package Exception;
+package Concepts.Exception;
 
 public class ReturnFromCatchOrFinally {
 
@@ -14,16 +14,16 @@ class A {
 		try {
 			System.out.println("In try");
 			int x = 10/0;
-			System.exit(0);
+//			System.exit(0);
 			return 1;
 		} catch (ArithmeticException e) {
 			e.getMessage();
 			System.out.println("In catch");
-			System.exit(0);
+//			System.exit(0);
 			return 2;
 		} finally {
 			System.out.println("In finally");
-			System.exit(0);
+//			System.exit(0);
 			return 3;
 		}
 	}

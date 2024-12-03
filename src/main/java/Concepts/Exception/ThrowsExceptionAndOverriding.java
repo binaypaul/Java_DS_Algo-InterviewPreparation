@@ -1,4 +1,4 @@
-package Exception;
+package Concepts.Exception;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

@@ -6,17 +6,14 @@ public class QuickSort {
 		int i = low-1;
 		int pivot = arr[high];
 		for(int j = low; j<high; j++) {
-			System.out.println("arr[j]: " + arr[j] + ", pivot: " + pivot);
 			if (arr[j] <= pivot) {
 				i++;
 				//swap element at index i and j
-				System.out.println("Inside if, swap:	arr[i]: " + arr[i] + " , arr[j]: " + arr[j]);
 				swap(arr, i, j);
 			}
 		}
-		//swap swap element at index i+1 and j
+		//swap element at index i+1 and high
 		i = i + 1;
-		System.out.println("Outside if, swap:	arr[i]: " + arr[i] + " , pivot: " + arr[high]);
 		swap(arr, i, high);
 		return i;
 	}
@@ -40,7 +37,7 @@ public class QuickSort {
 	}
 	
 	public static void main(String[] args) {
-		int[] arr = new int[] {22,11,55,33,66,44,88,99,77};
+		int[] arr = new int[] {22,11,55,33,66,44,99,77};
 		System.out.println(Arrays.toString(arr));
 		QuickSort quickSort = new QuickSort();
 		quickSort.sort(arr, 0, arr.length-1);

@@ -18,7 +18,6 @@ public class HashMapToTreeMap {
 
 class HashMapToTreeMapConverter {
 	public <K, V> TreeMap<K, V> convert(HashMap<K, V> hashMap) {
-		TreeMap<K, V> treeMap = hashMap.entrySet().stream().collect(Collectors.toMap(e->e.getKey(), e->e.getValue(), (oldValue, newValue)->newValue, TreeMap::new));
-		return treeMap;
+		return hashMap.entrySet().stream().collect(Collectors.toMap(k -> k.getKey(), v->v.getValue(), (oldValue, newValue) -> newValue, TreeMap::new));
 	}
 }
