@@ -32,7 +32,7 @@ public class a_ValidParentheses {
 }
 
 class Stack1 {
-    static int maxSize = (int) Math.pow(10,4);
+    static int maxSize = Integer.MAX_VALUE;
     private static String[] Stack1 = new String[maxSize];
     private static int top = -1;
 

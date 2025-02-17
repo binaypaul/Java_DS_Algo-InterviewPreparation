@@ -1,5 +1,7 @@
 package DataStructure.Neetcode.G_Tree.Concept;
 
+import DataStructure.Neetcode.G_Tree.Concept.Traversal.BFS;
+
 public class TreeNode {
     public int val;
     public TreeNode left;
@@ -20,5 +22,8 @@ public class TreeNode {
         return "root: " + val +
                 " leftNode: " + ((left != null) ? left.val : "null") +
                 " rightNode: " + ((right != null) ? right.val : "null");
+    }
+    public void print (){
+        new BFS().bfs(this);
     }
 }

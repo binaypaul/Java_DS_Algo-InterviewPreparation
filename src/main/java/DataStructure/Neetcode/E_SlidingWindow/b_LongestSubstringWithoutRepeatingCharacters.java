@@ -17,7 +17,7 @@ public class b_LongestSubstringWithoutRepeatingCharacters {
         while (right < s.length()) {
             Integer indxchar = map.get(sar[right]);
             if (indxchar != null) {
-                left = indxchar < left ? left : indxchar + 1;
+                left = left > indxchar ? left : indxchar + 1;
             }
             curSub = s.substring(left, right+1);
             if(curSub.length() > maxSub.length()) {

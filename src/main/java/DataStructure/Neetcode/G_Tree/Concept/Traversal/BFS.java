@@ -6,8 +6,8 @@ import java.util.Queue;
 
 public class BFS {
     public void bfs(TreeNode root) {
+        System.out.println("-------------------------------------------------------------");
         Queue<TreeNode> queue = new LinkedList<>();
-
         if(root == null)
             return;
         else
@@ -16,8 +16,7 @@ public class BFS {
         int level = 0;
 
         while (!queue.isEmpty()) {
-            System.out.println();
-            System.out.println(level);
+            System.out.println("level="+level);
             int queueSize = queue.size();
             for (int i = 0; i < queueSize; i++) {
                 TreeNode node = queue.remove();
@@ -29,6 +28,8 @@ public class BFS {
                     queue.add(node.right);
             }
             level+=1;
+            System.out.println();
         }
+        System.out.println("-------------------------------------------------------------");
     }
 }

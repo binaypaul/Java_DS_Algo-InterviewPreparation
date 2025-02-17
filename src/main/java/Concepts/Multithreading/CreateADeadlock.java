@@ -1,5 +1,7 @@
 package Concepts.Multithreading;
 
+import lombok.AllArgsConstructor;
+
 public class CreateADeadlock {
 	public static void main(String[] args) {
 		SharedRes sharedRes1 = new SharedRes();
@@ -10,14 +12,10 @@ public class CreateADeadlock {
 		tb.start();
 	}
 }
-
+@AllArgsConstructor
 class RunnableA implements Runnable {
 	private SharedRes sharedRes1;
 	private SharedRes sharedRes2;
-	public RunnableA(SharedRes sharedRes1, SharedRes sharedRes2) {
-		this.sharedRes1 = sharedRes1;
-		this.sharedRes2 = sharedRes2;
-	}
 	@Override
 	public void run() {
 		System.out.println("In RunnableA run");

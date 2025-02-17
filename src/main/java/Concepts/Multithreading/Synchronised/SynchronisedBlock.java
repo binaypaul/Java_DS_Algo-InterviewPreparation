@@ -1,5 +1,8 @@
 package Concepts.Multithreading.Synchronised;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 public class SynchronisedBlock {
 
 	public static void main(String[] args) throws InterruptedException {
@@ -10,6 +13,7 @@ public class SynchronisedBlock {
 		Thread t1 = new Thread(s1);
 		t0.start();
 		t1.start();
+		System.out.println("Both thread started.");
 	}
 }
 
@@ -40,19 +44,8 @@ class SynchronisedBlockTester implements Runnable{
 	}
 }
 
+@Data
+@AllArgsConstructor
 class Sender {
 	private String str;
-	public Sender(String str) {
-		this.str = str;
-	}
-	public String getStr() {
-		return str;
-	}
-	public void setStr(String str) {
-		this.str = str;
-	}
-	@Override
-	public String toString() {
-		return "Sender [str=" + str + "]";
-	}
 }

@@ -11,6 +11,7 @@ public class b_ValidAnagram {
         int[] sLetters = new int[26];
         int[] tLetters = new int[26];
 
+        //base
         if (s.length() != t.length()) {
             return false;
         }

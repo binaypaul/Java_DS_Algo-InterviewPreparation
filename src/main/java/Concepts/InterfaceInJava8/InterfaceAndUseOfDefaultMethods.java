@@ -46,6 +46,7 @@ interface B {
 	default void add() {
 		System.out.println("In B add");
 	}
+
 	default void addB() {
 		System.out.println("In B addB");
 	}

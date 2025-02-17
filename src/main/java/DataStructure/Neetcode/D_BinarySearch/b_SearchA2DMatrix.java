@@ -11,6 +11,8 @@ public class b_SearchA2DMatrix {
         int n = matrix[0].length;    // 4
         int low = 0, high = n*m - 1;      // 11
 
+        int[] [] matrix1 = new int[][]{{1,2},{4,5}};
+                                    //  0,1,  2,3
         while (low <= high) {
             int mid = (low + high)/2;   // 5
             int row = mid/n;   //1
