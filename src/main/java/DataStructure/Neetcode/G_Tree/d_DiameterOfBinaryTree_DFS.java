@@ -4,7 +4,7 @@ package DataStructure.Neetcode.G_Tree;
 
 import DataStructure.Neetcode.G_Tree.Concept.TreeNode;
 
-public class d_DiameterOfBinaryTree {
+public class d_DiameterOfBinaryTree_DFS {
 
     //Solution - start
     private int maxDia=0;
@@ -30,7 +30,7 @@ public class d_DiameterOfBinaryTree {
         TreeNode root = new TreeNode(
                 1, new TreeNode(2),null
         );
-        int maxDia = new d_DiameterOfBinaryTree().diameterOfBinaryTree(root);
+        int maxDia = new d_DiameterOfBinaryTree_DFS().diameterOfBinaryTree(root);
         System.out.println(maxDia);
     }
 }

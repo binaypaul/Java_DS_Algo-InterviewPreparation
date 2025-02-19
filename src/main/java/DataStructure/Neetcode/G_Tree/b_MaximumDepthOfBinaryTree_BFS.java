@@ -15,7 +15,7 @@ public class b_MaximumDepthOfBinaryTree_BFS {public static void main(String[] ar
                     new TreeNode(2),
                     new TreeNode(2, new TreeNode(1), new TreeNode(3))))
     );
-    root.print();
+    root.toString();
     System.out.println(maxDepth(root));
 }
 

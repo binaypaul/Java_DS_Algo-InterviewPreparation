@@ -4,7 +4,7 @@ import DataStructure.Neetcode.G_Tree.Concept.Traversal.BFS;
 import DataStructure.Neetcode.G_Tree.Concept.TreeNode;
 //https://leetcode.com/problems/invert-binary-tree/description/
 
-public class a_Invert_Binary_Tree {
+public class a_InvertBinaryTree_DFS {
     public static void main(String[] args) {
         TreeNode root = new TreeNode(
                 4,

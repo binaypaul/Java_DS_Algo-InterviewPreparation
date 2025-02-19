@@ -34,8 +34,8 @@ public class a_Invert_Binary_Tree {
                 new TreeNode(2, new TreeNode(1), new TreeNode(3)),
                 new TreeNode(7, new TreeNode(6), new TreeNode(9))
         );
-        root.print();
-        invertTree(root).print();
+        root.toString();
+        invertTree(root).toString();
     }
 
     public static TreeNode invertTree(TreeNode root) {

@@ -3,17 +3,17 @@ package DataStructure.Neetcode.G_Tree.Concept;
 public class BST {
 
     //Create a BST
-    public TreeNode createBST(int[] values) {
-
-        TreeNode root = new TreeNode(values[0]);
-        for (int i=1; i < values.length; i++) {
-            insert(root, values[i]);
+    public static TreeNode createBST(Integer[] values) {
+        TreeNode root = null;
+        for (Integer value : values) {
+            if(value != null)
+                root = insert(root, value);
         }
         return root;
     }
 
     //Add a node
-    public TreeNode insert(TreeNode root, int value) {
+    public static TreeNode insert(TreeNode root, Integer value) {
         if(null == root) {
             return new TreeNode(value);
         }
@@ -27,7 +27,7 @@ public class BST {
     }
 
     //Remove a node
-    public TreeNode remove(TreeNode root, int value) {
+    public static TreeNode remove(TreeNode root, Integer value) {
         if (root == null) {
             return null;
         }
@@ -51,7 +51,7 @@ public class BST {
     }
 
     //Search for a node
-    public boolean search(TreeNode root, int value) {
+    public static boolean search(TreeNode root, Integer value) {
         if(root == null) {
             return false;
         }
@@ -66,7 +66,7 @@ public class BST {
     }
 
     //helpers
-    public TreeNode findMin(TreeNode root) {
+    public static TreeNode findMin(TreeNode root) {
         if(root == null)
             return null;
 
