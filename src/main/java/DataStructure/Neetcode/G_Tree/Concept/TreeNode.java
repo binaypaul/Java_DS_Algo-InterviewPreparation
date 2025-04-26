@@ -22,6 +22,8 @@ public class TreeNode {
     }
 
     public static TreeNode create(Integer... values) {
+        if(values == null) return null;
+
         Queue<TreeNode> q = new LinkedList<>();
         TreeNode root = new TreeNode(values[0]);
         q.add(root);

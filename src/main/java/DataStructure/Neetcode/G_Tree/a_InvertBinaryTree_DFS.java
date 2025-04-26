@@ -1,6 +1,6 @@
 package DataStructure.Neetcode.G_Tree;
 
-import DataStructure.Neetcode.G_Tree.Concept.Traversal.BFS;
+import DataStructure.Neetcode.G_Tree.Concept.BinaryTreeTraversal.BFS;
 import DataStructure.Neetcode.G_Tree.Concept.TreeNode;
 //https://leetcode.com/problems/invert-binary-tree/description/
 

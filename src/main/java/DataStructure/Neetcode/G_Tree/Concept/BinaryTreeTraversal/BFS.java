@@ -1,4 +1,4 @@
-package DataStructure.Neetcode.G_Tree.Concept.Traversal;
+package DataStructure.Neetcode.G_Tree.Concept.BinaryTreeTraversal;
 
 import DataStructure.Neetcode.G_Tree.Concept.TreeNode;
 import java.util.LinkedList;
