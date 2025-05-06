@@ -1,4 +1,4 @@
-package DataStructure.Neetcode.I_Heap_OR_PriorityQueue;
+package DataStructure.Neetcode.J_Heap_OR_PriorityQueue;
 //https://leetcode.com/problems/kth-largest-element-in-a-stream/description/
 public class a_KthLargestElementInAStream_WithoutUsingJavaPriorityQueue {
     private int k;

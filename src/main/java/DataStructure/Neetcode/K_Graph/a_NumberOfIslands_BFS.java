@@ -1,4 +1,4 @@
-package DataStructure.Neetcode.J_Graph;
+package DataStructure.Neetcode.K_Graph;
 
 import DataStructure.Topics.Graph.MatrixOrGrid.GridRowCol;
 

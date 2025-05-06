@@ -1,4 +1,4 @@
-package DataStructure.Neetcode.I_Heap_OR_PriorityQueue;
+package DataStructure.Neetcode.J_Heap_OR_PriorityQueue;
 
 import lombok.Data;
 

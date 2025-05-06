@@ -1,4 +1,4 @@
-package DataStructure.Neetcode.J_Graph;
+package DataStructure.Neetcode.K_Graph;
 
 //https://leetcode.com/problems/number-of-islands/description/
 public class a_NumberOfIslands_DFS {
