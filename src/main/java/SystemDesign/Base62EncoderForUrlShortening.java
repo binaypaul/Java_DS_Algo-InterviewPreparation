@@ -1,3 +1,5 @@
+package SystemDesign;
+
 public class Base62EncoderForUrlShortening {
     public static void main(String[] args) {
         System.out.println(new Base62EncoderForUrlShortening().encodeBase62(1000L));

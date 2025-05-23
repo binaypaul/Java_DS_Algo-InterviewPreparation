@@ -3,6 +3,4 @@ public class Test {
         Integer[] mergedInterval = new Integer[2];
         System.out.println(mergedInterval[0]);
     }
-
-
 }
