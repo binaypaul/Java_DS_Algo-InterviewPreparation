@@ -15,8 +15,8 @@ package DataStructure.Neetcode.B_TwoPointers;
  */
 public class d_ContainerWithMostWater {
     public static void main(String[] args) {
-        System.out.println(maxArea(new int[]{1,3,2,5,25,24,5}));
-    }                                      //0 1 2 3  4  5 6
+        System.out.println(maxArea(new int[]{1,8,6,2,5,4,8,3,7}));
+    }                                      //0 1 2 3 4 5 6 7 8
 
     public static int maxArea(int[] height) {
         int l =0, r=height.length-1;

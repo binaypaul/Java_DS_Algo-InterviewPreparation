@@ -26,7 +26,7 @@ public class c_3Sum {
         public static List<List<Integer>> threeSum(int[] nums) {
             List<List<Integer>> threeSumList = new ArrayList<>();
 
-            Arrays.sort(nums);
+            Arrays.sort(nums); //[-4, -1, -1, 0, 1, 2]
             System.out.println(Arrays.toString(nums));
 
             for (int i = 0; i < nums.length-2; i++) {

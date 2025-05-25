@@ -1,4 +1,4 @@
-package SystemDesign;
+package SystemDesign.HLD;
 
 public class Base62EncoderForUrlShortening {
     public static void main(String[] args) {

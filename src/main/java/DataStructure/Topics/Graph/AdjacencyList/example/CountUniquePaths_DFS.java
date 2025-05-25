@@ -20,7 +20,7 @@ public class CountUniquePaths_DFS {
                 new EdgeS("C","E"),
                 new EdgeS("E","D")
         };
-        Map<String, Set<EdgeS>> adjListMap = AdjListMap.createAdjList(edges);
+        Map<String, Set<EdgeS>> adjListMap = AdjListMap.createDirectedAdjList(edges);
         System.out.println(adjListMap);
         new CountUniquePaths_DFS().countPaths(sourceNode, targetNode, adjListMap, new HashSet<>());
         System.out.println(count);

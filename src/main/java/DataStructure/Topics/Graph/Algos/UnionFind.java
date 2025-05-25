@@ -1,4 +1,4 @@
-package DataStructure.Topics.Graph;
+package DataStructure.Topics.Graph.Algos;
 
 public class UnionFind {
     private int[] parent;

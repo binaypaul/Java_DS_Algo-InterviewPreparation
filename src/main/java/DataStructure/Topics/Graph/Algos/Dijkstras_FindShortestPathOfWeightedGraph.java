@@ -1,4 +1,4 @@
-package DataStructure.Topics.Graph;
+package DataStructure.Topics.Graph.Algos;
 
 import DataStructure.Topics.Graph.AdjacencyList.AdjListMap.AdjListMap;
 import DataStructure.Topics.Graph.AdjacencyList.AdjListMap.EdgeI;
@@ -17,7 +17,7 @@ import java.util.Set;
  *       "weight" is the sum of weight of all the edges in the path.
  */
 
-public class DijkstrasAlgo_FindShortestPathOfWeightedGraph {
+public class Dijkstras_FindShortestPathOfWeightedGraph {
     public Map<Integer, Integer> findShortestPathOfWeightedGraph(Map<Integer, Set<EdgeI>> graph, int src) {
         var shortestPaths = new LinkedHashMap<Integer, Integer>();
         var minHeap = new PriorityQueue<PathI>((PathI x, PathI y) -> Integer.compare(x.getWeight(), y.getWeight()));
@@ -50,9 +50,20 @@ public class DijkstrasAlgo_FindShortestPathOfWeightedGraph {
                 new EdgeI(3,5,2),
                 new EdgeI(4,5,5),
         };
-        Map<Integer, Set<EdgeI>> graph = AdjListMap.createAdjList(edges, 5);
+        /**   Below graph is directed.
+         *             2
+         *       2 -------- 4
+         *  10 /          / |
+         *   /          /   |
+         * 1        8 /     | 5
+         *   \      /       |
+         *  3 \   /         |
+         *      3 --------- 5
+         *             2
+         */
+        Map<Integer, Set<EdgeI>> graph = AdjListMap.createDirectedAdjList(edges);
 
-        Map<Integer, Integer> shortest = new DijkstrasAlgo_FindShortestPathOfWeightedGraph()
+        Map<Integer, Integer> shortest = new Dijkstras_FindShortestPathOfWeightedGraph()
                 .findShortestPathOfWeightedGraph(graph, src);
 
         for (Map.Entry<Integer, Integer> entry : shortest.entrySet()) {
