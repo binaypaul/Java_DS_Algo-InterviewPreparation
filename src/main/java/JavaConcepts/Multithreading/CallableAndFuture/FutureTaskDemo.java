@@ -1,23 +1,18 @@
-package JavaConcepts.Multithreading;
+package JavaConcepts.Multithreading.CallableAndFuture;
 
 import java.util.Random;
 import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;
 //https://www.geeksforgeeks.org/callable-future-java/?ref=lbp
 
-public class CallableFutureTask {
+public class FutureTaskDemo {
     public static void main(String[] args) throws Exception {
-        FutureTask[] tasks = new FutureTask[5];
-        for (int i=0;i<5;i++) {
-            Callable<Integer> rgCallable = new RandomGenerator();
-            tasks[i] = new FutureTask<Integer>(rgCallable);
-            Thread t = new Thread(tasks[i]);
-            t.start();
-        }
-
-        for (int i = 0; i <5; i++) {
-            System.out.println("From futureTasks:: "+tasks[i].get());
-        }
+        Callable<Integer> rgCallable = new RandomGenerator();
+        FutureTask<Integer> ft = new FutureTask<>(rgCallable);
+        Thread t = new Thread(ft);
+        t.start();
+        System.out.println("Hello FutureTask is non blocking in nature!");
+        System.out.println("From futureTasks:: "+ft.get());
     }
 }
 

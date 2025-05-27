@@ -1,0 +1,7 @@
+Good article on Multithreading:
+1. https://aeontanvir.medium.com/java-multithreading-a-step-by-step-guide-for-concurrent-programming-3bf5dccbbfa1
+2. https://engineeringdigest.medium.com/multithreading-in-java-39f34724bbf6
+JVM Architecture:
+https://medium.com/java-for-beginners/understanding-java-virtual-machine-jvm-architecture-e68d1c611026
+Garbage Collector:
+https://alibabatech.medium.com/how-does-garbage-collection-work-in-java-cf4e31343e43
