@@ -1,6 +1,6 @@
 package DataStructure.Neetcode.K_Graph;
 
-import DataStructure.Topics.Graph.MatrixOrGrid.GridRowCol;
+import DataStructure.Concepts.Graph.MatrixOrGrid.GridRowCol;
 
 import java.util.HashSet;
 import java.util.LinkedList;

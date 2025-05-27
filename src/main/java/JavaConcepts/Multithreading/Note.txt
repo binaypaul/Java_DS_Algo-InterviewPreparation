@@ -1,0 +1,3 @@
+Good article on Multithreading:
+1. https://aeontanvir.medium.com/java-multithreading-a-step-by-step-guide-for-concurrent-programming-3bf5dccbbfa1
+2. https://engineeringdigest.medium.com/multithreading-in-java-39f34724bbf6
