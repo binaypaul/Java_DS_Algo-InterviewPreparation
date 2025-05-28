@@ -16,7 +16,7 @@ public class e_Top_K_Frequent_Elements {
 
         List<Map.Entry<Integer, Integer>> entries = new ArrayList<>(map.entrySet());
 
-        entries.sort((o1, o2) -> o2.getValue() - o1.getValue());
+        entries.sort(Comparator.comparingInt(Map.Entry::getValue));
 
         int[] retArr = new int[k];
         for (int i = 0; i < k; i++) {

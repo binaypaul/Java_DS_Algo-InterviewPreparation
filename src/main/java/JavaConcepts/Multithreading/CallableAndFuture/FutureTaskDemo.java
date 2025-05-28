@@ -11,7 +11,7 @@ public class FutureTaskDemo {
         FutureTask<Integer> ft = new FutureTask<>(rgCallable);
         Thread t = new Thread(ft);
         t.start();
-        System.out.println("Hello FutureTask is non blocking in nature!");
+        System.out.println("FutureTask is also blocking in nature!");
         System.out.println("From futureTasks:: "+ft.get());
     }
 }

@@ -8,7 +8,7 @@ public class ProducerConsumer {
 
     public static void main(String[] args) {
         int maxSize = 5;
-        Queue<Integer> queue = new PriorityQueue<>();
+        Queue<Integer> queue = new PriorityQueue<>(5);
 
         Thread producerThread = new Thread(() -> {
             synchronized (queue) {
