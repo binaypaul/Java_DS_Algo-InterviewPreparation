@@ -20,9 +20,9 @@ public class d_DiameterOfBinaryTree_DFS {
         int leftDepth = dfs(root.left);
         int rightDepth = dfs(root.right);
 
-        maxDia = Math.max(maxDia, (leftDepth + rightDepth));
+        maxDia = Math.max(maxDia, (leftDepth + rightDepth)); // find diameter
 
-        return 1 + Math.max(leftDepth,rightDepth);
+        return 1 + Math.max(leftDepth,rightDepth);//find depth
     }
     //Solution - end
 

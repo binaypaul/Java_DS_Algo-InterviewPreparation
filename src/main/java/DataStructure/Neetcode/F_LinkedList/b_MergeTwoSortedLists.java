@@ -36,7 +36,8 @@ public class b_MergeTwoSortedLists {
             }
         }
 
-
+        //above execution has reached the end of one of the lists
+        //below code will add the remaining elements of one of the lists
         if(list1 != null) {
             if(head != null) {
                 curr.next = list1;

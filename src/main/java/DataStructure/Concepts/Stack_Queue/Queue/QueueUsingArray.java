@@ -3,7 +3,7 @@ package DataStructure.Concepts.Stack_Queue.Queue;
 public class QueueUsingArray {
 
 	public static void main(String[] args) {
-		Queue queue = new Queue(3);
+		Queue queue = new Queue(5);
 		queue.enQueue(10);
 		queue.enQueue(20);
 		queue.enQueue(30);
