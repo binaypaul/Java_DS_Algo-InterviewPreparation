@@ -1,6 +1,6 @@
 package RandomProblems;
 
-import DataStructure.Neetcode.G_Tree.Concept.TreeNode;
+import DataStructure.Neetcode150.G_Tree.Concept.TreeNode;
 //https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/
 public class b_MaxProductTreeSplit {
     int maxProd = 0;

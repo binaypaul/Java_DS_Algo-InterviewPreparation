@@ -4,10 +4,7 @@ import DataStructure.Concepts.Graph.AdjacencyList.AdjListMap.AdjListMap;
 import DataStructure.Concepts.Graph.AdjacencyList.AdjListMap.EdgeI;
 import DataStructure.Concepts.Graph.AdjacencyList.AdjListMap.PathI;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.PriorityQueue;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Path and edge are used for better understanding. <p/>
@@ -19,8 +16,9 @@ import java.util.Set;
 
 public class Dijkstras_FindShortestPathOfWeightedGraph {
     public Map<Integer, Integer> findShortestPathOfWeightedGraph(Map<Integer, Set<EdgeI>> graph, int src) {
+        //k:vertex, v:path to reach the vertex from src.
         var shortestPaths = new LinkedHashMap<Integer, Integer>();
-        var minHeap = new PriorityQueue<PathI>((PathI x, PathI y) -> Integer.compare(x.getWeight(), y.getWeight()));
+        var minHeap = new PriorityQueue<PathI>(Comparator.comparingInt(EdgeI::getWeight));
         minHeap.add(new PathI(src, src, 0));
 
         while (!minHeap.isEmpty()) {
