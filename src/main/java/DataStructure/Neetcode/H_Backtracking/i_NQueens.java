@@ -13,7 +13,7 @@ public class i_NQueens {
     Set<Integer> negativeDiagonal = new HashSet<>(); //north-west to south-east diagonal
 
     public List<List<String>> solveNQueens(int n) {
-        //create or initialize a n*n board with "."
+        //create or initialize an n*n board with "."
         char[][] board = new char[n][n];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
