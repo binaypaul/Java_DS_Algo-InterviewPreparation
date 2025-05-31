@@ -2,7 +2,7 @@ package DataStructure.Neetcode150.K_Graph;
 
 import java.util.LinkedList;
 import java.util.Queue;
-
+//https://leetcode.com/problems/max-area-of-island/
 public class b_MaxAreaOfIsland_BFS {
     int maxArea = 0, curMaxArea;
     public int maxAreaOfIsland(int[][] grid) {
@@ -28,10 +28,6 @@ public class b_MaxAreaOfIsland_BFS {
 
         while (!q.isEmpty()) {
             int[] cur = q.poll();
-//            if(grid[cur[0]][cur[1]] == 1) {
-//                grid[cur[0]][cur[1]] = 0;
-//                curMaxArea++;
-//            }
             for(int[] neigh : neighs) {
                 int nr = cur[0]+neigh[0], nc = cur[1]+neigh[1];
                 if((Math.min(nr, nc) < 0) ||

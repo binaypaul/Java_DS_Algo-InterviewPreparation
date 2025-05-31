@@ -8,7 +8,7 @@ public class e_TaskScheduler {
     private Queue<TaskFreq> allowedMaxHeap = new PriorityQueue<>((tf1, tf2)-> (tf2.freq-tf1.freq));
     private Queue<TaskFreq> notAllowedMaxHeap = new PriorityQueue<>(Comparator.comparingInt(tf -> tf.usedInterval));
 
-//    private List<Character> ll = new LinkedList<>();
+    private List<Character> ll = new LinkedList<>();
 
     public int leastInterval(char[] tasks, int n) {
         int resInt = 0;
@@ -19,7 +19,7 @@ public class e_TaskScheduler {
        for (Map.Entry<Character, Integer> mapent : map.entrySet()) {
            allowedMaxHeap.add(new TaskFreq(mapent.getKey(), mapent.getValue(), 0));
        }
-//        System.out.println("allowedMaxHeap:    " + allowedMaxHeap);
+        System.out.println("allowedMaxHeap:    " + allowedMaxHeap);
 
         int curInt = 0;
         while (!allowedMaxHeap.isEmpty() || !notAllowedMaxHeap.isEmpty()) {
@@ -27,10 +27,10 @@ public class e_TaskScheduler {
             curInt++;
 
             if(null == tf) {
-//                ll.add('_');
+                ll.add('_');
                 resInt++;
             } else {
-//                ll.add(tf.task);
+                ll.add(tf.task);
                 resInt++;
 
                 if(tf.freq > 1) {
@@ -44,15 +44,15 @@ public class e_TaskScheduler {
                 allowedMaxHeap.add(notAllowedMaxHeap.poll());
             }
 
-//            System.out.println("allowedMaxHeap:    " + allowedMaxHeap);
-//            System.out.println("notAllowedMaxHeap: " + notAllowedMaxHeap);
-//            System.out.println(ll);
+            System.out.println("allowedMaxHeap:    " + allowedMaxHeap);
+            System.out.println("notAllowedMaxHeap: " + notAllowedMaxHeap);
+            System.out.println(ll);
         }
         return resInt;
     }
 
     public static void main(String[] args) {
-        System.out.println(new e_TaskScheduler().leastInterval(new char[]{'A','B','C','D','E','A','B','C','D','E'}, 4));
+        System.out.println(new e_TaskScheduler().leastInterval(new char[]{'A','A','A','B','B','B'}, 2));
     }
 }
 
