@@ -1,9 +1,10 @@
-package DataStructure.Neetcode150.D_BinarySearch;
+package DataStructure.Neetcode150.D_BinarySearch.Practise;
 
 public class d_FindMinimumInRotatedSortedArray {
     public static void main(String[] args) {
         System.out.println(new d_FindMinimumInRotatedSortedArray()
                 .findMin(new int[] {4,5,6,7,1,2,3}));
+                                 // 0 1 2 3 4 5 6
     }
 
     int min = Integer.MAX_VALUE;

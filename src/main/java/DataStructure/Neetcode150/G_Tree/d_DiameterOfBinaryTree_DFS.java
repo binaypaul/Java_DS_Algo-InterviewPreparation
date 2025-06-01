@@ -14,9 +14,8 @@ public class d_DiameterOfBinaryTree_DFS {
     }
 
     private int dfs(TreeNode root) {
-        if(root == null) {
-            return 0;
-        }
+        if(root == null) return 0;
+
         int leftDepth = dfs(root.left);
         int rightDepth = dfs(root.right);
 

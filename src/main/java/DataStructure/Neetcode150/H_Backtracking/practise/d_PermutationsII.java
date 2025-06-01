@@ -1,12 +1,10 @@
-package DataStructure.Neetcode150.H_Backtracking;
+package DataStructure.Neetcode150.H_Backtracking.practise;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-//https://leetcode.com/problems/permutations-ii/description/
-//https://www.youtube.com/watch?v=YW5F0WqBBWY
-public class d_PermutationsII_ForLoopWithSingleRecursion {
+public class d_PermutationsII {
 
     List<Integer> cur = new ArrayList<>();
     List<List<Integer>> res = new ArrayList<>();
@@ -18,26 +16,26 @@ public class d_PermutationsII_ForLoopWithSingleRecursion {
     }
 
     private void dfs(int[] nums, boolean[] used) {
-        if(nums.length == cur.size()) {
+        if(cur.size() == nums.length) {
             res.add(new ArrayList<>(cur));
             return;
         }
+
         for (int i = 0; i < nums.length; i++) {
-            if(used[i] //this check is important when dfs is called recursively.
-                ||
-            (i>0 && nums[i] == nums[i-1] && !used[i-1])) //this is important when for loop is executing for the original sorted array.
+            if(used[i] || (i>0 && nums[i] == nums[i-1] && !used[i-1]))
                 continue;
             cur.add(nums[i]);
             used[i] = true;
             dfs(nums, used);
-            cur.remove(cur.size() - 1);
             used[i] = false;
+            cur.remove(cur.size() - 1);
         }
     }
 
+
     public static void main(String[] args) {
         System.out.println(
-                new d_PermutationsII_ForLoopWithSingleRecursion()
+                new d_PermutationsII()
                         .permuteUnique(new int[]{1,1,2}) //[[1,1,2],[1,2,1],[2,1,1]]
         );
     }

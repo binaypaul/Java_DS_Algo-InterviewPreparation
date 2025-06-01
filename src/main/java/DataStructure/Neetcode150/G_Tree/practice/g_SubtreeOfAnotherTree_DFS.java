@@ -1,13 +1,13 @@
-package DataStructure.Neetcode150.G_Tree;
+package DataStructure.Neetcode150.G_Tree.practice;
 
 import DataStructure.Neetcode150.G_Tree.Concept.TreeNode;
 //https://leetcode.com/problems/subtree-of-another-tree/description/
 
 public class g_SubtreeOfAnotherTree_DFS {
     public boolean isSubtree(TreeNode root, TreeNode subRoot) {
-        return (isSameTree(root, subRoot)
-                || ((root!=null)? isSubtree(root.left, subRoot):false)
-                || ((root!=null)? isSubtree(root.right, subRoot):false));
+        return isSameTree(root,subRoot)
+                || (root!=null ? isSubtree(root.left, subRoot) : false)
+                || (root!=null ? isSubtree(root.right, subRoot) : false);
     }
 
     private boolean isSameTree(TreeNode p, TreeNode q) {

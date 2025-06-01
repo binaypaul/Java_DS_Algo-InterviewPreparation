@@ -19,7 +19,7 @@ import java.util.Arrays;
  */
 public class b_TwoSumII_InputArrayIsSorted {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(twoSum(new int[]{-7, -6, -4, -2, 1, 7, 11, 14}, 9)));
+        System.out.println(Arrays.toString(twoSum(new int[]{2,7,11,15}, 9)));
     }
 
     public static int[] twoSum(int[] numbers, int target) {

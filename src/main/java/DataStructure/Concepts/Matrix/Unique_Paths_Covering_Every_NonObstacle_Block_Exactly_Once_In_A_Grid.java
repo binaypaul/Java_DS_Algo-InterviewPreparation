@@ -30,9 +30,9 @@ import java.util.Arrays;
 public class Unique_Paths_Covering_Every_NonObstacle_Block_Exactly_Once_In_A_Grid {
 
     // ans ==> Final Result
-    private static int ans = 0;
+    private int ans = 0;
 
-    private static void uniquePaths(int[][] grid) {
+    private int uniquePaths(int[][] grid) {
         int rowCount = grid.length;
         int columnCount = grid[0].length;
 
@@ -56,6 +56,7 @@ public class Unique_Paths_Covering_Every_NonObstacle_Block_Exactly_Once_In_A_Gri
             }
         }
         dfs(grid, visitTrack, startRowIndex, startColumnIndex, totalCountOf0, currentDFS0Count);
+        return ans;
     }
 
     /**
@@ -67,7 +68,7 @@ public class Unique_Paths_Covering_Every_NonObstacle_Block_Exactly_Once_In_A_Gri
      * @param totalCountOf0 Total 0s present
      * @param currentDFS0Count Current count 0s visited
      */
-    private static void dfs(int[][] grid, boolean[][] visitTrack, int rowIndex, int columnIndex, int totalCountOf0, int currentDFS0Count) {
+    private void dfs(int[][] grid, boolean[][] visitTrack, int rowIndex, int columnIndex, int totalCountOf0, int currentDFS0Count) {
         int rowCount = grid.length;
         int columnCount = grid[0].length;
 
@@ -118,7 +119,6 @@ public class Unique_Paths_Covering_Every_NonObstacle_Block_Exactly_Once_In_A_Gri
                 {0, 0, 0, 0},
                 {0, 0, 2, -1}
         };
-        uniquePaths(grid);
-        System.out.println(ans);
+        System.out.println(new Unique_Paths_Covering_Every_NonObstacle_Block_Exactly_Once_In_A_Grid().uniquePaths(grid));
     }
 }

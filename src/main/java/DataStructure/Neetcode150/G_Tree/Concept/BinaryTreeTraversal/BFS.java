@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class BFS {
-    public void bfs(TreeNode root) {
+    public static void bfs(TreeNode root) {
         System.out.println("-------------------------------------------------------------");
         Queue<TreeNode> queue = new LinkedList<>();
         if(root == null)

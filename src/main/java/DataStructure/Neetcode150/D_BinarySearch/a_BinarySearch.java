@@ -11,7 +11,7 @@ public class a_BinarySearch {
         int high = nums.length -1;
 
         while (low <= high) {
-            int mid = (low + high)/2;
+            int mid = low + (high-low)/2;
             if (nums[mid] == target) {
                 return mid;
             } else if (target > nums[mid]) {

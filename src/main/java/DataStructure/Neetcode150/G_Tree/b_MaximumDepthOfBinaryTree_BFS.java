@@ -6,18 +6,19 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 //https://leetcode.com/problems/maximum-depth-of-binary-tree/description/
-public class b_MaximumDepthOfBinaryTree_BFS {public static void main(String[] args) {
-    TreeNode root = new TreeNode(
-            4,
-            new TreeNode(2, new TreeNode(1), new TreeNode(3)),
-            new TreeNode(7, new TreeNode(6), new TreeNode(
-                    9,
-                    new TreeNode(2),
-                    new TreeNode(2, new TreeNode(1), new TreeNode(3))))
-    );
-    root.toString();
-    System.out.println(maxDepth(root));
-}
+public class b_MaximumDepthOfBinaryTree_BFS {
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(
+                4,
+                new TreeNode(2, new TreeNode(1), new TreeNode(3)),
+                new TreeNode(7, new TreeNode(6), new TreeNode(
+                        9,
+                        new TreeNode(2),
+                        new TreeNode(2, new TreeNode(1), new TreeNode(3))))
+        );
+        root.toString();
+        System.out.println(maxDepth(root));
+    }
 
     private static int maxDepth(TreeNode root) {
         Queue<TreeNode> q = new LinkedList<>();

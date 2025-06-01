@@ -31,6 +31,23 @@ public class b_CombinationSum_ForLoopWithSingleRecursion {
         }
     }
 
+    private void dfs1(int[] can, int target, int start) {
+        if(target <= 0) {
+            if(target==0)
+                res.add(new ArrayList<>(cur));
+            return;
+        }
+        for (int j = start; j < can.length; j++) {
+            if(j > start && can[j] == can[j-1])
+                continue;
+            if(target-can[j] < 0)
+                continue;
+            cur.add(can[j]);
+            dfs1(can, target-can[j], j);
+            cur.remove(cur.size()-1);
+        }
+    }
+
     public static void main(String[] args) {
         System.out.println(
                 new b_CombinationSum_ForLoopWithSingleRecursion()

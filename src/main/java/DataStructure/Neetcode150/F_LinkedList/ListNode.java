@@ -3,15 +3,29 @@ package DataStructure.Neetcode150.F_LinkedList;
 public class ListNode implements Cloneable{
     public int val;
     public ListNode next;
-    public ListNode() {
 
-    }
     public ListNode(int val) {
         this.val = val;
     }
+
     public ListNode(int val, ListNode next) {
         this.val = val;
         this.next = next;
+    }
+
+    public static ListNode create(int... vals) {
+        ListNode list = null;
+        ListNode head = null;
+        for(int val : vals) {
+            if(head == null) {
+                head = new ListNode(val);
+                list = head;
+            } else {
+                list.next = new ListNode(val);
+                list = list.next;
+            }
+        }
+        return head;
     }
 
     public static void printList(ListNode head) {

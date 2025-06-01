@@ -17,16 +17,18 @@ package DataStructure.Concepts.Matrix;
  * (0, 0) -> (1, 0) -> (1, 1) -> (1, 2)
  **/
 public class Count_All_Possible_Paths_From_Top_Left_To_Bottom_Right_Of_A_mXn_Matrix {
-    static int countOfPath = 0;
-    static String path = "";
+    int countOfPath = 0;
+    String path = "";
 
-    public static void countNumberOfPath(int m, int n) {
+    public int countNumberOfPath(int m, int n) {
         int[][] grid = MatrixUtil.create(m, n);
         MatrixUtil.display(grid);
         dfs(grid, 0, 0);
+
+        return countOfPath;
     }
 
-    private static void dfs(int[][] grid, int rowIndex, int columnIndex) {
+    private void dfs(int[][] grid, int rowIndex, int columnIndex) {
         path = "(" + rowIndex + ", " + columnIndex + ")";    //To print path
         int rowCount = grid.length;
         int columnCount = grid[0].length;
@@ -49,7 +51,6 @@ public class Count_All_Possible_Paths_From_Top_Left_To_Bottom_Right_Of_A_mXn_Mat
     }
 
     public static void main(String[] args) {
-        countNumberOfPath(2,3);
-        System.out.println(countOfPath);
+        System.out.println(new Count_All_Possible_Paths_From_Top_Left_To_Bottom_Right_Of_A_mXn_Matrix().countNumberOfPath(2,3));
     }
 }
