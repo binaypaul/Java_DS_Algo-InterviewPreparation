@@ -21,6 +21,8 @@ public class MethodOverriding {
 }
 
 class MethodOverridingTesterBase {
+
+	// A is parent class of B
 	public A add() {
 		System.out.println("Base add() called..");
 		A a = new A();
@@ -40,7 +42,9 @@ class MethodOverridingTesterBase {
 class MethodOverridingTesterChild extends MethodOverridingTesterBase {
 	
 	@Override
-	public B add() {		//covariant return type is allowed in overriden method.
+	//! covariant return type is allowed in overridden method.
+	// B is child class of A
+	public B add() {
 		System.out.println("Child add() called..");
 		B b = new B();
 		b.id = 102;

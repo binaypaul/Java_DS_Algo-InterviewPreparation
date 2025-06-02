@@ -5,7 +5,7 @@ import SystemDesign.LLD.DesignPattern.b_Observer.observers.NotificationObserver;
 import java.util.HashSet;
 import java.util.Set;
 
-public class StocksObservablesImpl implements StocksObservable{
+public class StocksObservablesImpl implements StocksObservable {
     int stocks;
     String itemType;
     Set<NotificationObserver> observers = null;
