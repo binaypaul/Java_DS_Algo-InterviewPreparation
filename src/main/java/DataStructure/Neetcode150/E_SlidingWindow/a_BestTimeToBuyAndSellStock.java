@@ -11,7 +11,7 @@ package DataStructure.Neetcode150.E_SlidingWindow;
  *
  * Example 1:
  *
- * Input: prices = [7,1,5,3,6,4]
+ * Input: prices = [7,8,1,5,3,6,4]
  * Output: 5
  * Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
  * Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
@@ -20,18 +20,18 @@ package DataStructure.Neetcode150.E_SlidingWindow;
 
 public class a_BestTimeToBuyAndSellStock {
     public static void main(String[] args) {
-        System.out.println(maxProfit(new int[]{7,1,5,3,6,4}));
+        System.out.println(maxProfit(new int[]{7,8,1,5,3,6,4}));
     }
 
     public static int maxProfit(int[] prices) {
-        int i = 0, j = 1, profit = 0;
-        while (i < j && j < prices.length) {
-            if(prices[j] < prices[i]) {
-                i = j;
+        int l = 0, r = 1, profit = 0;
+        while (l < r && r < prices.length) {
+            if(prices[r] < prices[l]) {
+                l = r;
             } else {
-                profit = Math.max(profit, (prices[j] - prices[i]));
+                profit = Math.max(profit, (prices[r] - prices[l]));
             }
-            j++;
+            r++;
         }
         return profit;
     }

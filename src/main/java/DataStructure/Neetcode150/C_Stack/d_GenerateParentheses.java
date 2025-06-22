@@ -18,18 +18,21 @@ public class d_GenerateParentheses {
         recurse(left, right, s);
         return list;
     }
-
+    //print statements are to show the flow of return of recursive call in debug mode run.
     private static void recurse(int left, int right, String s) {
+        System.out.print("");
         if(s.length() == n*2) {
             list.add(s);
             return;
         }
+        System.out.print("");
         if(left < n) {
             recurse(left+1, right, s+"(");
         }
-
+        System.out.print("");
         if(right < left) {
             recurse(left, right+1, s+")");
         }
+        System.out.print("");
     }
 }

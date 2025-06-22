@@ -1,26 +1,36 @@
 package DataStructure.Neetcode150.C_Stack;
+
+import java.util.Stack;
+
 //all operations should be in O(1) time
 class b_MinStack {
-    public b_MinStack() {
+    private Stack<Integer> stack;
+    private Stack<Integer> minStack;
 
+    public b_MinStack() {
+        stack = new Stack<>();
+        minStack = new Stack<>();
     }
 
     public void push(int val) {
-
+        stack.push(val);
+        if (minStack.isEmpty() || val <= minStack.peek()) {
+            minStack.push(val);
+        }
     }
 
     public void pop() {
-
+        if (stack.pop().equals(minStack.peek())) {
+            minStack.pop();
+        }
     }
 
     public int top() {
-
-        return 0;
+        return stack.peek();
     }
 
     public int getMin() {
-
-        return 0;
+        return minStack.peek();
     }
 
     public static void main(String[] args) {
@@ -28,10 +38,10 @@ class b_MinStack {
         minStack.push(-2);
         minStack.push(0);
         minStack.push(-3);
-        minStack.getMin(); // return -3
+        System.out.println(minStack.getMin()); // -3
         minStack.pop();
-        minStack.top();    // return 0
-        minStack.getMin(); // return -2
+        System.out.println(minStack.top());    // 0
+        System.out.println(minStack.getMin()); // -2
     }
 }
 

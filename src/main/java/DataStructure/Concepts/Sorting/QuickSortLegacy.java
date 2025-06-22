@@ -6,7 +6,7 @@ public class QuickSortLegacy {
 		int i = low-1;
 		int pivot = arr[high];
 		for(int j = low; j<high; j++) {
-			if (arr[j] <= pivot) {
+			if (arr[j] < pivot) {
 				i++;
 				//swap element at index i and j
 				swap(arr, i, j);
