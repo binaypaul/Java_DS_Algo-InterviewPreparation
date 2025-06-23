@@ -1,6 +1,6 @@
 package DataStructure.Neetcode150.F_LinkedList;
 //https://leetcode.com/problems/reorder-list/description/
-public class c_ReorderList {
+public class d_ReorderList {
     public static void main(String[] args) {
         ListNode head =
                 new ListNode(

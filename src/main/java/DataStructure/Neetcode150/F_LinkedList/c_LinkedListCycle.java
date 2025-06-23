@@ -1,6 +1,6 @@
 package DataStructure.Neetcode150.F_LinkedList;
 
-public class g_LinkedListCycle {
+public class c_LinkedListCycle {
     public static void main(String[] args) {
         ListNode one = new ListNode(1);
         ListNode two = new ListNode(2);

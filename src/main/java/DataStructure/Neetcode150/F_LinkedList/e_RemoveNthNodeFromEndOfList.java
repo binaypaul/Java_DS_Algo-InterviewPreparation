@@ -1,6 +1,6 @@
 package DataStructure.Neetcode150.F_LinkedList;
 //https://leetcode.com/problems/remove-nth-node-from-end-of-list/
-public class d_RemoveNthNodeFromEndOfList {
+public class e_RemoveNthNodeFromEndOfList {
     public static void main(String[] args) {
         ListNode head = new ListNode(1);
         ListNode.printList(removeNthFromEnd(head, 1));                                                                                                                                                     ;

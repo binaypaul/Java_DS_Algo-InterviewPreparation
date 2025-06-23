@@ -4,6 +4,7 @@ import DataStructure.Neetcode150.G_Tree.Concept.TreeNode;
 
 public class RecursiveDFS {
     //recursive - start
+    //! In order traversal prints a Binary Search Tree in ascending order.
     public void inOrder(TreeNode root) {
         if(null == root) {
             return;
@@ -33,7 +34,7 @@ public class RecursiveDFS {
     //recursive - end
 
     public static void main(String[] args) {
-        TreeNode root = TreeNode.create(4,1,3,5,null,1,5,7,6,null,null);
+        TreeNode root = TreeNode.create(10,5,15,2,8,12,18,1,3,6,9,11,13,16,19);
         new RecursiveDFS().inOrder(root);
         System.out.println();
         new RecursiveDFS().preOrder(root);

@@ -12,7 +12,7 @@ package DataStructure.Neetcode150.F_LinkedList;
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-public class h_MergeKSortedLists {
+public class j_MergeKSortedLists {
     public ListNode mergeKLists(ListNode[] lists) {
         ListNode cur = null;
         ListNode head = null;
@@ -67,6 +67,6 @@ public class h_MergeKSortedLists {
             lists[i] = ListNode.create(listsArr[i]);
             ListNode.printList(lists[i]);
         }
-        ListNode.printList(new h_MergeKSortedLists().mergeKLists(new ListNode[]{}));
+        ListNode.printList(new j_MergeKSortedLists().mergeKLists(lists));
     }
 }

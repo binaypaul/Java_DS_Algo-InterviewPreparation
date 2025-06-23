@@ -5,8 +5,7 @@ import java.util.Arrays;
 public class c_KokoEatingBananas {
     public static void main(String[] args) {
         System.out.println( minEatingSpeed(
-                new int[] {3,6,7,11},
-                8
+                new int[] {3,6,7,11}, 8
         ) );
     }
 
