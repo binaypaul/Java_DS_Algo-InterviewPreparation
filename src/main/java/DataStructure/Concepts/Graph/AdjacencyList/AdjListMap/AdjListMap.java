@@ -26,7 +26,6 @@ public class AdjListMap {
 
     public static Map<Integer, Set<EdgeI>> createUndirectedAdjList(int[][] edges) {
         adjListInt = new HashMap<>();
-        adjListInt = new HashMap<>();
         for(int[] edge : edges) {
             if(!adjListInt.containsKey(edge[0])) {
                 adjListInt.put(edge[0], new HashSet<>());

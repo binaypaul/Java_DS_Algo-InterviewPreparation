@@ -2,6 +2,7 @@ package DataStructure.Concepts.Sorting;
 import java.util.Arrays;
 
 public class QuickSortLegacy {
+	//{22,11,55,33,66,44,99,77}
 	public int partition(int[] arr, int low, int high) {
 		int i = low-1;
 		int pivot = arr[high];
