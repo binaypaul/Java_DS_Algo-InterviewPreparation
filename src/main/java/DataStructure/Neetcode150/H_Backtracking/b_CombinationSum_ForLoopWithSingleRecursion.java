@@ -20,12 +20,11 @@ public class b_CombinationSum_ForLoopWithSingleRecursion {
         }
 
         for (int i = start; i < can.length; i++) {
-            int canI = can[i];
-            if(target-canI < 0)
+            if(target-can[i] < 0)
                 continue;
             else {
-                cur.add(canI);
-                dfs(can, target - canI, i);
+                cur.add(can[i]);
+                dfs(can, target - can[i], i);
                 cur.remove(cur.size()-1);
             }
         }

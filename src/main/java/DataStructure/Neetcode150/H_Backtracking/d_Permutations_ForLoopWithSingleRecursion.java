@@ -32,7 +32,7 @@ public class d_Permutations_ForLoopWithSingleRecursion {
     public static void main(String[] args) {
         System.out.println(
                 new d_Permutations_ForLoopWithSingleRecursion()
-                        .permute(new int[]{1,1,3}) //[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
+                        .permute(new int[]{1,2,3}) //[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
         );
     }
 }
