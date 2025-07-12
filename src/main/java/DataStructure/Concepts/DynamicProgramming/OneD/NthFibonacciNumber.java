@@ -8,14 +8,16 @@ public class NthFibonacciNumber {
         System.out.println(new NthFibonacciNumber().nthFiboMemo(6, new HashMap<Integer, Integer>()));
         System.out.println(new NthFibonacciNumber().nthFiboTabu(6));
     }
-
+//!    Since we're using top-down recursion, we'll start computing from n-1 down to 0.
     //! bruteforce / simple recursion
     public int nthFiboBF(int n) {
         if(n < 2)
             return n;
-        return nthFiboBF(n-1) + nthFiboBF(n-2);
+        int n1 = nthFiboBF(n-1);
+        int n2 = nthFiboBF(n-2);
+        return n1 + n2;
     }
-
+//!    Since we're using top-down recursion, we'll start computing from n-1 down to 0.
     //! DP: memoization or top-down
     public int nthFiboMemo(int n, HashMap<Integer, Integer> cache) {
         if(n<2)

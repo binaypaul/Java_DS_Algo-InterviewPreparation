@@ -16,7 +16,6 @@ public class e_SearchInRotatedSortedArray {
             }
 
             //Determine which side of mid is sorted:
-
             if(nums[low] <= nums[mid]) {//left side is sorted - starting from low till mid is sorted
                 //Check if the target falls within this sorted left half
                 if(nums[low] <= target && target < nums[mid]) {

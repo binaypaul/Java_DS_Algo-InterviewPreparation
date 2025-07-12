@@ -5,8 +5,11 @@ import java.util.Arrays;
 public class g_ProductOfArrayExceptSelf {
     public static void main(String[] args) {
         System.out.println(Arrays.toString(new g_ProductOfArrayExceptSelf().productExceptSelf(new int[]{2,3,4,5})));
-    }//            [1,2,6,24]
-//      right = 1  [60 20 5 1]
+    }
+    // I/p:                  [2,3,4,5]
+    // prefixProd:           [1,2,6,24]
+    // prefixProd:           [60,20,5,1]
+    // O/p:                  [60,40,30,24]
     public int[] productExceptSelf(int[] nums) {
         //! brute force
         /*

@@ -33,7 +33,7 @@ public class g_DecodeWays {
     }
 
     public static void main(String[] args) {
-        System.out.println(new g_DecodeWays().numDecodings("1222116"));
+        System.out.println(new g_DecodeWays().numDecodings("123"));
     }
 }
 /**

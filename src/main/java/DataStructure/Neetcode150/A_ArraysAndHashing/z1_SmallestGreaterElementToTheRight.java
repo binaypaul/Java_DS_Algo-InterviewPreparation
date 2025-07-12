@@ -1,8 +1,9 @@
+package DataStructure.Neetcode150.A_ArraysAndHashing;
+
 import java.util.Arrays;
 import java.util.TreeSet;
 
-public class Test {
-
+public class z1_SmallestGreaterElementToTheRight {
     public static void main(String[] args) {
         int[] nums = new int[] {10,9,2,8,3,7,101,18};
         //expected output:     {18,18,3,18,7,18,-1,-1}

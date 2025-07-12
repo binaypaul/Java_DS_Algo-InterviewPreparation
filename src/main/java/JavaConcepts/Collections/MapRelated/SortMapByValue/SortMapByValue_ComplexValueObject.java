@@ -20,7 +20,7 @@ public class SortMapByValue_ComplexValueObject {
                         Collectors.toMap(
                                 e->e.getKey(),
                                 e->e.getValue(),
-                                (ov,nv) -> ov, //could understand find the use of this as map cannot have same key so key collision is not possible.
+                                (ov,nv) -> ov, //could not understand the use of this as map cannot have same key so key collision is not possible.
                                 LinkedHashMap::new
                         )
                 );

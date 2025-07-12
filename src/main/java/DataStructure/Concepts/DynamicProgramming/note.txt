@@ -1,1 +1,58 @@
 Solve problems ins: https://www.geeksforgeeks.org/top-20-dynamic-programming-interview-questions/
+
+1. Understand the Core Idea
+    DP is used for problems with:
+        Overlapping subproblems:
+            The problem can be broken down into smaller subproblems that are reused multiple times.
+    Optimal substructure:
+        The optimal solution to the problem can be constructed from optimal solutions to its subproblems.
+    Key difference from divide-and-conquer:
+        DP memoizes/caches solutions to subproblems to avoid recomputation.
+
+2. Identify DP Problems
+    Look for problems where:
+        You’re asked to find the "maximum," "minimum," "number of ways," or "whether something is possible."
+    The problem involves sequences (e.g., arrays, strings) or states (e.g., grid paths, knapsack).
+
+3. Steps to Solve DP Problems (Mantra of DP)
+a) Define the State.                            -> What does dp[i] or dp[i][j] represent?
+b) Formulate the Recurrence/Recursive Relation. -> How does the state relate to overlapping smaller subproblems?
+c) Initialize Base Cases.                       -> Set the smallest subproblem solutions.
+d) Choose a Direction (Top-Down or Bottom-Up).  -> TDM or BUT
+e) Optimize Space (if possible)                 -> state array vs previous 2 state in variables.
+
+
+a) Define the State:
+    What does dp[i] or dp[i][j] represent?
+        Example:
+        In Fibonacci, dp[i] = Fibonacci number at index i.
+        In grid paths, dp[i][j] = number of ways to reach cell (i,j).
+b) Formulate the Recurrence/Recursive Relation:
+    How does the state relate to smaller subproblems?
+        Example:
+        Fibonacci: dp[i] = dp[i-1] + dp[i-2].
+        Coin Change: dp[amount] = min(dp[amount], 1 + dp[amount - coin]).
+c) Initialize Base Cases:
+    Set the smallest subproblem solutions.
+        Example:
+        Fibonacci: dp[0] = 0, dp[1] = 1.
+        Grid paths: dp[0][0] = 1.
+d) Choose a Direction (Top-Down or Bottom-Up)
+    Top-Down (Memoization): Recursive + cache.
+        python:
+            memo = {}
+            def fib(n):
+                if n in memo: return memo[n]
+                if n <= 1: return n
+                memo[n] = fib(n-1) + fib(n-2)
+                return memo[n]
+    Bottom-Up (Tabulation): Iterative + table.
+        python:
+            def fib(n):
+                dp = [0, 1] + [0]*(n-1)
+                for i in range(2, n+1):
+                    dp[i] = dp[i-1] + dp[i-2]
+                return dp[n]
+e) Optimize Space (if possible)
+    Replace full tables with variables for states that depend on a few previous values.
+    Example: Fibonacci only needs prev and curr.

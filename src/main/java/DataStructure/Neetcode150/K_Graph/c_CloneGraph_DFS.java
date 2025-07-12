@@ -15,14 +15,14 @@ public class c_CloneGraph_DFS {
             curNode = new Node(node.val);
             visited.put(node.val, curNode);
             if(node.neighbors != null) {
-                List<Node> neighbors = new ArrayList<>(node.neighbors.size());
+                List<Node> neighborList = new ArrayList<>(node.neighbors.size());
                 for (Node neigh : node.neighbors) {
                     Node retNode = cloneGraph(neigh);
                     if (retNode != null) {
-                        neighbors.add(retNode);
+                        neighborList.add(retNode);
                     }
                 }
-                curNode.neighbors = neighbors;
+                curNode.neighbors = neighborList;
             }
         }
         return curNode;
@@ -47,16 +47,9 @@ public class c_CloneGraph_DFS {
 class Node {
     public int val;
     public List<Node> neighbors;
-    public Node() {
-        val = 0;
-        neighbors = new ArrayList<Node>();
-    }
+
     public Node(int _val) {
         val = _val;
-        neighbors = new ArrayList<Node>();
-    }
-    public Node(int _val, ArrayList<Node> _neighbors) {
-        val = _val;
-        neighbors = _neighbors;
+        neighbors = new ArrayList<>();
     }
 }

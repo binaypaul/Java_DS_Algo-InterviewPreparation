@@ -4,7 +4,7 @@ public class SynchronisedMethod {
 	public static void main(String[] args) throws InterruptedException {
 		CounterMethod c = new CounterMethod(1);
 //		Created the thread using thread class for practise.
-//		Thread created by Runnable and thread class does the same thind.
+//		Thread created by Runnable and thread class does the same thing.
 //		Can be tried by uncommenting below code.
 //		Runnable runnable = () -> {
 //			for (int i = 0; i < 2000; i++) {
