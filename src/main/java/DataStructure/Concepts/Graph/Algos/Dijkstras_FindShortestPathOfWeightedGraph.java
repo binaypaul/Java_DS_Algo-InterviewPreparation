@@ -3,7 +3,6 @@ package DataStructure.Concepts.Graph.Algos;
 import DataStructure.Concepts.Graph.AdjacencyList.AdjListMap.AdjListMap;
 import DataStructure.Concepts.Graph.AdjacencyList.AdjListMap.EdgeI;
 import DataStructure.Concepts.Graph.AdjacencyList.AdjListMap.PathI;
-
 import java.util.*;
 
 /**
@@ -16,9 +15,9 @@ import java.util.*;
 
 public class Dijkstras_FindShortestPathOfWeightedGraph {
     public Map<Integer, Integer> findShortestPathOfWeightedGraph(Map<Integer, Set<EdgeI>> graph, int src) {
-        //k:vertex, v:path to reach the vertex from src.
+        //k:vertex, v:path weight to reach the vertex from src.
         var shortestPaths = new LinkedHashMap<Integer, Integer>();
-        var minHeap = new PriorityQueue<PathI>(Comparator.comparingInt(EdgeI::getWeight));
+        var minHeap = new PriorityQueue<PathI>(Comparator.comparingInt(PathI::getWeight));
         minHeap.add(new PathI(src, src, 0));
 
         while (!minHeap.isEmpty()) {
@@ -49,14 +48,14 @@ public class Dijkstras_FindShortestPathOfWeightedGraph {
                         {3,5,2},
                         {4,5,5}
                 };
-        /**   Below graph is directed.
+        /**   Below graph is directed or unidirected.
          *             2
          *       2 -------- 4
-         *  10 /          / |
-         *   /          /   |
-         * 1        8 /     | 5
-         *   \      /       |
-         *  3 \   /         |
+         *  10 /|         / |
+         *   /  |       /   |
+         * 1    |4  8 /     | 5
+         *   \  |   /       |
+         *  3 \ | /         |
          *      3 --------- 5
          *             2
          */

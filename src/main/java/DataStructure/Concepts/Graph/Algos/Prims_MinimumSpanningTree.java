@@ -2,7 +2,6 @@ package DataStructure.Concepts.Graph.Algos;
 
 import DataStructure.Concepts.Graph.AdjacencyList.AdjListMap.AdjListMap;
 import DataStructure.Concepts.Graph.AdjacencyList.AdjListMap.EdgeI;
-
 import java.util.*;
 
 /**
@@ -25,7 +24,7 @@ public class Prims_MinimumSpanningTree {
                         {3,5,2},
                         {4,5,5}
                 };
-        /**   Below graph is undirected.
+        /**   Below graph is undirected or bidirected.
          *             1
          *       2 -------- 4
          *  10 / |        / |

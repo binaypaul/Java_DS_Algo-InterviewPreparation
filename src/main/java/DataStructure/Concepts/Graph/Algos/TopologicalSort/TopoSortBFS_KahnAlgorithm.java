@@ -2,12 +2,11 @@ package DataStructure.Concepts.Graph.Algos.TopologicalSort;
 
 import DataStructure.Concepts.Graph.AdjacencyList.AdjListMap.AdjListMap;
 import DataStructure.Concepts.Graph.AdjacencyList.AdjListMap.EdgeI;
-
 import java.util.*;
 
-public class BFS_KahnAlgorithm {
+public class TopoSortBFS_KahnAlgorithm {
     // Function to return list containing vertices in Topological order
-    static int[] topologicalSort(int V, int[][] edges) {
+    int[] sort(int V, int[][] edges) {
         Map<Integer, Set<EdgeI>> adj = AdjListMap.createDirectedAdjList(edges);
         var indegree = new HashMap<Integer, Integer>(V);
 
@@ -54,7 +53,7 @@ public class BFS_KahnAlgorithm {
         int V = 6;
         int[][] edges = {{0, 1}, {1, 2}, {2, 3}, {4, 5}, {5, 1}, {5, 2}};
 
-        int[] result = topologicalSort(V, edges);
+        int[] result = new TopoSortBFS_KahnAlgorithm().sort(V, edges);
 
         for (int i : result) {
             System.out.print(i + " ");
