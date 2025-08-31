@@ -20,12 +20,12 @@ public class TopoSortDFS {
         return new ArrayList<>(visit.reversed());
     }
 
-    private static void dfsPath(Integer src, Map<Integer, Set<EdgeI>> adj, LinkedHashSet<Integer> visitReverseSorted) {
-        if(!visitReverseSorted.contains(src)) {
+    private static void dfsPath(Integer src, Map<Integer, Set<EdgeI>> adj, LinkedHashSet<Integer> visit) {
+        if(!visit.contains(src)) {
             var edges = adj.get(src);
             for (EdgeI edge : edges) {
-                dfsPath(edge.getDest(), adj, visitReverseSorted);
-                visitReverseSorted.add(edge.getDest());
+                dfsPath(edge.getDest(), adj, visit);
+                visit.add(edge.getDest());
             }
         }
     }

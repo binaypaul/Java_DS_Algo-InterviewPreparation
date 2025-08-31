@@ -1,5 +1,7 @@
 package DataStructure.Concepts.Graph.AdjacencyList.AdjListMap;
 
+import lombok.Data;
+
 /**
  * Path and edge are used for better understanding. <p/>
  * Path :
@@ -7,7 +9,7 @@ package DataStructure.Concepts.Graph.AdjacencyList.AdjListMap;
  *       "dest" node is last edge's dest node.
  *       "weight" is the sum of weight of all the edges in the path.
  */
-
+@Data
 public class PathI extends EdgeI{
     public PathI(int src, int dest) {
         super(src, dest);
