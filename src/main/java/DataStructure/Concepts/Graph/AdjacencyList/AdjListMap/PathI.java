@@ -1,6 +1,7 @@
 package DataStructure.Concepts.Graph.AdjacencyList.AdjListMap;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * Path and edge are used for better understanding. <p/>
@@ -10,6 +11,7 @@ import lombok.Data;
  *       "weight" is the sum of weight of all the edges in the path.
  */
 @Data
+@NoArgsConstructor
 public class PathI extends EdgeI{
     public PathI(int src, int dest) {
         super(src, dest);

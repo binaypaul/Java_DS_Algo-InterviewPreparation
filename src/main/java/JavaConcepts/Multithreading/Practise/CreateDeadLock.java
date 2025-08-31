@@ -36,7 +36,6 @@ class Thread1 extends Thread {
 }
 
 @AllArgsConstructor
-@Data
 class Thread2 extends Thread {
     Resource resource1;
     Resource resource2;

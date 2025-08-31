@@ -1,8 +1,10 @@
 package DataStructure.Concepts.Graph.AdjacencyList.AdjListMap;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public class EdgeI {
     int src;
     int dest;
