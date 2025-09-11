@@ -21,7 +21,7 @@ public class b_MergeIntervals {
             i++;
         }
         mergedIntervals.add(intervals[i]);
-        return mergedIntervals.toArray(new int[mergedIntervals.size()][2]);
+        return mergedIntervals.toArray(new int[0][0]);
     }
 
     public static void main(String[] args) {

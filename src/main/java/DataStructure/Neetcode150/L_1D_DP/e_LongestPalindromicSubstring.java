@@ -9,7 +9,7 @@ public class e_LongestPalindromicSubstring {
         int maxLen = 0;
         int startIndex = 0;
         int len = s.length();
-
+//        "babad"
         for (int i = 0; i < len; i++) {
             for (int j = i; j < len; j++) {
                 if(isPalindrome(s, i, j)==1 && ((j-i+1) > maxLen)) {
