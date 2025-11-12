@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="814909fe-5aac-4109-a6d7-33c06bae83fd" name="Changes" comment="fixed createUndirectedAdjList(int[][] edges)">
+    <list default="true" id="814909fe-5aac-4109-a6d7-33c06bae83fd" name="Changes" comment="fixed prims algo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructure/Concepts/Graph/Algos/Prims_MinimumSpanningTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructure/Concepts/Graph/Algos/Prims_MinimumSpanningTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructure/Concepts/Graph/Algos/TopologicalSort/TopoSortDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructure/Concepts/Graph/Algos/TopologicalSort/TopoSortDFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructure/Concepts/Graph/Algos/TopologicalSort/graph.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +58,7 @@
     "Application.MoveZeros.executor": "Run",
     "Application.Prims_MinimumSpanningTree.executor": "Debug",
     "Application.Test1.executor": "Run",
+    "Application.TopoSortDFS.executor": "Debug",
     "Application.TrappingRainWater.executor": "Run",
     "Application.b_MergeIntervals.executor": "Run",
     "Application.d_CheckIfOneArrayIsSubsetOfAnother.executor": "Run",
@@ -83,14 +85,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Prims_MinimumSpanningTree">
-    <configuration name="ContainerWithMostWater" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructure.Neetcode150.B_TwoPointers.practise.ContainerWithMostWater" />
-      <module name="Java_DS_Algo-InterviewPreparation" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.TopoSortDFS">
     <configuration name="Dijkstras_FindShortestPathOfWeightedGraph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DataStructure.Concepts.Graph.Algos.Dijkstras_FindShortestPathOfWeightedGraph" />
       <module name="Java_DS_Algo-InterviewPreparation" />
@@ -112,6 +107,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TopoSortDFS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructure.Concepts.Graph.Algos.TopologicalSort.TopoSortDFS" />
+      <module name="Java_DS_Algo-InterviewPreparation" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="d_CheckIfOneArrayIsSubsetOfAnother" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="RandomProblems.d_CheckIfOneArrayIsSubsetOfAnother" />
       <module name="Java_DS_Algo-InterviewPreparation" />
@@ -121,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TopoSortDFS" />
         <item itemvalue="Application.Prims_MinimumSpanningTree" />
         <item itemvalue="Application.Dijkstras_FindShortestPathOfWeightedGraph" />
         <item itemvalue="Application.d_CheckIfOneArrayIsSubsetOfAnother" />
         <item itemvalue="Application.MoveZeros" />
-        <item itemvalue="Application.ContainerWithMostWater" />
       </list>
     </recent_temporary>
   </component>
@@ -169,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762914023102</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed prims algo">
+      <option name="closed" value="true" />
+      <created>1762915421426</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1762915421426</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -177,7 +187,8 @@
     <MESSAGE value="Array sol complete" />
     <MESSAGE value="Array complete" />
     <MESSAGE value="fixed createUndirectedAdjList(int[][] edges)" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed createUndirectedAdjList(int[][] edges)" />
+    <MESSAGE value="fixed prims algo" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed prims algo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -186,6 +197,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/DataStructure/Neetcode150/B_TwoPointers/practise/MoveZeros.java</url>
           <line>16</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructure/Concepts/Graph/Algos/TopologicalSort/TopoSortDFS.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DataStructure/Concepts/Graph/Algos/TopologicalSort/TopoSortDFS.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
