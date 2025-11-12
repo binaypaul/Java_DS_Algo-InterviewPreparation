@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="814909fe-5aac-4109-a6d7-33c06bae83fd" name="Changes" comment="Array complete">
-      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.ask.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.ask2agent.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructure/MockInterviews/DSA/Grok/Day1/TrappingRainWater.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructure/Neetcode150/B_TwoPointers/e_TrappingRainWater.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructure/Neetcode150/B_TwoPointers/practise/ContainerWithMostWater.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructure/Neetcode150/B_TwoPointers/practise/MoveZeros.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RandomProblems/d_CheckIfOneArrayIsSubsetOfAnother.java" afterDir="false" />
+    <list default="true" id="814909fe-5aac-4109-a6d7-33c06bae83fd" name="Changes" comment="fixed createUndirectedAdjList(int[][] edges)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructure/Concepts/Graph/AdjacencyList/AdjListMap/AdjListMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructure/Concepts/Graph/AdjacencyList/AdjListMap/AdjListMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructure/MockInterviews/DSA/Day1/LongestPalindromicSubstring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructure/MockInterviews/DSA/Gemini/Day1/LongestPalindromicSubstring.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructure/MockInterviews/DSA/Day1/MergeIntervals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructure/MockInterviews/DSA/Gemini/Day1/MergeIntervals.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructure/Neetcode150/B_TwoPointers/e_TrappingRainWater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructure/Neetcode150/B_TwoPointers/e_TrappingRainWater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructure/Neetcode150/B_TwoPointers/practise/c_3Sum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructure/Concepts/Graph/Algos/Prims_MinimumSpanningTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructure/Concepts/Graph/Algos/Prims_MinimumSpanningTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,14 +161,23 @@
       <option name="project" value="LOCAL" />
       <updated>1757562268990</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fixed createUndirectedAdjList(int[][] edges)">
+      <option name="closed" value="true" />
+      <created>1762914023102</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1762914023102</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="graph solutions" />
     <MESSAGE value="Array sol complete" />
     <MESSAGE value="Array complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="Array complete" />
+    <MESSAGE value="fixed createUndirectedAdjList(int[][] edges)" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed createUndirectedAdjList(int[][] edges)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -188,16 +186,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/DataStructure/Neetcode150/B_TwoPointers/practise/MoveZeros.java</url>
           <line>16</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructure/Concepts/Graph/Algos/Prims_MinimumSpanningTree.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructure/Concepts/Graph/AdjacencyList/AdjListMap/AdjListMap.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

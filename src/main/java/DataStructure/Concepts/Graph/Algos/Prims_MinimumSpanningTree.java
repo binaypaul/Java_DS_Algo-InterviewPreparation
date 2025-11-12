@@ -18,11 +18,11 @@ public class Prims_MinimumSpanningTree {
                 {
                         {1,2,10},
                         {1,3,3},
-                        {2,4,2},
+                        {2,4,1},
                         {3,2,4},
-                        {3,4,8},
-                        {3,5,2},
-                        {4,5,5}
+                        {3,4,4},
+                        {3,5,4},
+                        {4,5,2}
                 };
         /**   Below graph is undirected or bidirected.
          *             1
@@ -38,13 +38,13 @@ public class Prims_MinimumSpanningTree {
 
         var mst = new Prims_MinimumSpanningTree().minimumSpanningTree(AdjListMap.createUndirectedAdjList(edges));
 
-        for (Map.Entry<Integer, Integer> entry : mst.entrySet()) {
-            System.out.println("src " + entry.getKey() + " to node " + entry.getValue());
+        for (Map.Entry<Integer, List<Integer>> entry : mst.entrySet()) {
+            entry.getValue().forEach(dest -> System.out.println("src " + entry.getKey() + " to node " + dest));
         }
     }
 
-    public Map<Integer, Integer> minimumSpanningTree(Map<Integer, Set<EdgeI>> graph) {
-        var mst = new LinkedHashMap<Integer, Integer>(); //src->dest
+    public Map<Integer, List<Integer>> minimumSpanningTree(Map<Integer, Set<EdgeI>> graph) {
+        var mst = new LinkedHashMap<Integer, List<Integer>>(); //src->dest
         var minHeap = new PriorityQueue<EdgeI>((EdgeI x, EdgeI y) -> Integer.compare(x.getWeight(), y.getWeight()));
         var visit = new HashSet<Integer>();
 
@@ -57,7 +57,13 @@ public class Prims_MinimumSpanningTree {
             EdgeI minW8Edge = minHeap.poll();
             if(visit.contains(minW8Edge.getDest()))
                continue;
-            mst.put(minW8Edge.getSrc(), minW8Edge.getDest());
+            if(null == mst.get(minW8Edge.getSrc())) {
+                var destList = new ArrayList<Integer>(){{add(minW8Edge.getDest());}};
+                mst.put(minW8Edge.getSrc(), destList);
+            } else {
+                mst.get(minW8Edge.getSrc()).add(minW8Edge.getDest());
+            }
+
             visit.add(minW8Edge.getDest());
 
             for(EdgeI neighOfMinW8Edge : graph.get(minW8Edge.getDest())) {
