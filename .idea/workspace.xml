@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="814909fe-5aac-4109-a6d7-33c06bae83fd" name="Changes" comment="fixed prims algo">
+    <list default="true" id="814909fe-5aac-4109-a6d7-33c06bae83fd" name="Changes" comment="topo">
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructure/Concepts/practise/TopoSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DataStructure/Concepts/Graph/Algos/TopologicalSort/TopoSortDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructure/Concepts/Graph/Algos/TopologicalSort/TopoSortDFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructure/Concepts/Graph/Algos/TopologicalSort/graph.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +58,8 @@
     "Application.MoveZeros.executor": "Run",
     "Application.Prims_MinimumSpanningTree.executor": "Debug",
     "Application.Test1.executor": "Run",
-    "Application.TopoSortDFS.executor": "Debug",
+    "Application.TopoSort.executor": "Run",
+    "Application.TopoSortDFS.executor": "Run",
     "Application.TrappingRainWater.executor": "Run",
     "Application.b_MergeIntervals.executor": "Run",
     "Application.d_CheckIfOneArrayIsSubsetOfAnother.executor": "Run",
@@ -85,7 +86,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TopoSortDFS">
+  <component name="RunManager" selected="Application.TopoSort">
     <configuration name="Dijkstras_FindShortestPathOfWeightedGraph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DataStructure.Concepts.Graph.Algos.Dijkstras_FindShortestPathOfWeightedGraph" />
       <module name="Java_DS_Algo-InterviewPreparation" />
@@ -93,15 +94,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MoveZeros" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructure.Neetcode150.B_TwoPointers.practise.MoveZeros" />
+    <configuration name="Prims_MinimumSpanningTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructure.Concepts.Graph.Algos.Prims_MinimumSpanningTree" />
       <module name="Java_DS_Algo-InterviewPreparation" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Prims_MinimumSpanningTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructure.Concepts.Graph.Algos.Prims_MinimumSpanningTree" />
+    <configuration name="TopoSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructure.Concepts.practise.TopoSort" />
       <module name="Java_DS_Algo-InterviewPreparation" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -123,11 +124,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TopoSort" />
         <item itemvalue="Application.TopoSortDFS" />
         <item itemvalue="Application.Prims_MinimumSpanningTree" />
         <item itemvalue="Application.Dijkstras_FindShortestPathOfWeightedGraph" />
         <item itemvalue="Application.d_CheckIfOneArrayIsSubsetOfAnother" />
-        <item itemvalue="Application.MoveZeros" />
       </list>
     </recent_temporary>
   </component>
@@ -179,16 +180,36 @@
       <option name="project" value="LOCAL" />
       <updated>1762915421426</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="topo">
+      <option name="closed" value="true" />
+      <created>1762916560036</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1762916560036</updated>
+    </task>
+    <task id="LOCAL-00007" summary="topo">
+      <option name="closed" value="true" />
+      <created>1762916584764</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1762916584764</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="graph solutions" />
     <MESSAGE value="Array sol complete" />
     <MESSAGE value="Array complete" />
     <MESSAGE value="fixed createUndirectedAdjList(int[][] edges)" />
     <MESSAGE value="fixed prims algo" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed prims algo" />
+    <MESSAGE value="topo" />
+    <option name="LAST_COMMIT_MESSAGE" value="topo" />
+    <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -197,16 +218,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/DataStructure/Neetcode150/B_TwoPointers/practise/MoveZeros.java</url>
           <line>16</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructure/Concepts/Graph/Algos/TopologicalSort/TopoSortDFS.java</url>
-          <line>10</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructure/Concepts/Graph/Algos/TopologicalSort/TopoSortDFS.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
