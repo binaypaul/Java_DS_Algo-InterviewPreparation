@@ -1,4 +1,4 @@
-package DataStructure.MockInterviews.DSA.Day1;
+package DataStructure.MockInterviews.DSA.Gemini.Day1;
 
 /**
  * Given a string s, return the longest palindromic substring in s.

@@ -36,7 +36,7 @@ public class AdjListMap {
                 adjListInt.put(edge[1], new LinkedHashSet<>());
             }
             adjListInt.get(edge[0]).add(new EdgeI(edge[0], edge[1], edge.length==3?edge[2]:0));
-            adjListInt.get(edge[0]).add(new EdgeI(edge[1], edge[0], edge.length==3?edge[2]:0));
+            adjListInt.get(edge[1]).add(new EdgeI(edge[1], edge[0], edge.length==3?edge[2]:0));
         }
         return adjListInt;
     }

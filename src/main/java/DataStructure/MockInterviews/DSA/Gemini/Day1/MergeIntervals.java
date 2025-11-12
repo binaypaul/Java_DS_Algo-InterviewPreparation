@@ -1,4 +1,4 @@
-package DataStructure.MockInterviews.DSA.Day1;
+package DataStructure.MockInterviews.DSA.Gemini.Day1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
