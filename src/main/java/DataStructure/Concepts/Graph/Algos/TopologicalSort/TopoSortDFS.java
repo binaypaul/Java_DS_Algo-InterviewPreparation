@@ -17,25 +17,30 @@ public class TopoSortDFS {
 
     public ArrayList<Integer> topoSort(int[][] edges) {
         Map<Integer, Set<EdgeI>> adj = AdjListMap.createDirectedAdjList(edges);
-        var visit = new LinkedHashSet<Integer>();
+        Set<Integer> visited = new HashSet<>();
+        LinkedList<Integer> result = new LinkedList<>();
 
         for(Integer src : adj.keySet()) {
-            if(!visit.contains(src)) {
-                dfsPath(src, adj, visit);
-                visit.add(src);
+            if(!visited.contains(src)) {
+                dfsPath(src, adj, visited, result);
             }
         }
 
-        return new ArrayList<>(visit.reversed());
+        return new ArrayList<>(result);
     }
 
-    private void dfsPath(Integer src, Map<Integer, Set<EdgeI>> adj, LinkedHashSet<Integer> visit) {
-        if(!visit.contains(src)) {
-            var edges = adj.get(src);
+    private void dfsPath(Integer src, Map<Integer, Set<EdgeI>> adj, Set<Integer> visited, LinkedList<Integer> result) {
+        visited.add(src);
+        var edges = adj.get(src);
+
+        if(edges != null) {
             for (EdgeI edge : edges) {
-                dfsPath(edge.getDest(), adj, visit);
-                visit.add(edge.getDest());
+                if(!visited.contains(edge.getDest())) {
+                    dfsPath(edge.getDest(), adj, visited, result);
+                }
             }
         }
+
+        result.addFirst(src);
     }
 }
