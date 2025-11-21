@@ -6,7 +6,16 @@ import java.util.*;
 
 //post order dfs
 public class TopoSortDFS {
-    public static ArrayList<Integer> topoSort(int[][] edges) {
+    int V = 8; // vertices count
+    public static void main(String[] args) {
+        int[][] edges = {{1, 2}, {1, 3}, {2, 4}, {4,1}, {3, 5}, {4, 6}, {5, 6}, {7, 8}};
+//        int[][] edges = {{0, 1}, {1, 2}, {2, 3}, {4, 5}, {5, 1}, {5, 2}};
+//        int[][] edges = {{0, 1}, {1, 2}, {2, 3}, {0,4}, {4,5}, {5,3}, {6,7}, {8}, {9}};
+        List<Integer> res = new TopoSortDFS().topoSort(edges);
+        System.out.println(res);
+    }
+
+    public ArrayList<Integer> topoSort(int[][] edges) {
         Map<Integer, Set<EdgeI>> adj = AdjListMap.createDirectedAdjList(edges);
         var visit = new LinkedHashSet<Integer>();
 
@@ -20,7 +29,7 @@ public class TopoSortDFS {
         return new ArrayList<>(visit.reversed());
     }
 
-    private static void dfsPath(Integer src, Map<Integer, Set<EdgeI>> adj, LinkedHashSet<Integer> visit) {
+    private void dfsPath(Integer src, Map<Integer, Set<EdgeI>> adj, LinkedHashSet<Integer> visit) {
         if(!visit.contains(src)) {
             var edges = adj.get(src);
             for (EdgeI edge : edges) {
@@ -28,13 +37,5 @@ public class TopoSortDFS {
                 visit.add(edge.getDest());
             }
         }
-    }
-
-    public static void main(String[] args) {
-        int[][] edges = {{1, 2}, {1, 3}, {2, 4}, {3, 5}, {4, 6}, {5, 6}, {7, 8}};
-//        int[][] edges = {{0, 1}, {1, 2}, {2, 3}, {4, 5}, {5, 1}, {5, 2}};
-//        int[][] edges = {{0, 1}, {1, 2}, {2, 3}, {0,4}, {4,5}, {5,3}, {6,7}, {8}, {9}};
-        List<Integer> res = topoSort(edges);
-        System.out.println(res);
     }
 }

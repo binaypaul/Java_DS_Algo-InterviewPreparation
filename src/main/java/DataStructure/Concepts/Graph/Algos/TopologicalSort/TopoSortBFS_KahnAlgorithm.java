@@ -6,7 +6,7 @@ import java.util.*;
 
 public class TopoSortBFS_KahnAlgorithm {
     // Function to return list containing vertices in Topological order
-    int[] sort(int V, int[][] edges) {
+    public int[] sort(int V, int[][] edges) {
         Map<Integer, Set<EdgeI>> adj = AdjListMap.createDirectedAdjList(edges);
         var indegree = new HashMap<Integer, Integer>(V);
 
