@@ -1,19 +1,16 @@
 package DataStructure.Concepts.Graph.MatrixOrGrid;
 
+import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 //PoJo
 @EqualsAndHashCode
 @ToString
+@AllArgsConstructor
 public class GridRowCol {
     private int row;
     private int col;
-
-    public GridRowCol(int row, int col) {
-        this.row = row;
-        this.col = col;
-    }
 
     public int row() {
         return row;
