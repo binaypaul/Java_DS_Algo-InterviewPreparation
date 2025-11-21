@@ -8,7 +8,7 @@ import java.util.*;
 public class TopoSortDFS {
     int V = 8; // vertices count
     public static void main(String[] args) {
-        int[][] edges = {{1, 2}, {1, 3}, {2, 4}, {4,1}, {3, 5}, {4, 6}, {5, 6}, {7, 8}};
+        int[][] edges = {{1, 2}, {1, 3}, {2, 4}, {3, 5}, {4, 6}, {5, 6}, {7, 8}};
 //        int[][] edges = {{0, 1}, {1, 2}, {2, 3}, {4, 5}, {5, 1}, {5, 2}};
 //        int[][] edges = {{0, 1}, {1, 2}, {2, 3}, {0,4}, {4,5}, {5,3}, {6,7}, {8}, {9}};
         List<Integer> res = new TopoSortDFS().topoSort(edges);
