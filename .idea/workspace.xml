@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="814909fe-5aac-4109-a6d7-33c06bae83fd" name="Changes" comment="f_PacificAtlanticWaterFlow_DFS">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructure/Concepts/Graph/Algos/TopologicalSort/Practise/TopoSortCycleDetection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructure/Concepts/Graph/Algos/TopologicalSort/TopoSortDFS_withCycleDetection.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/DataStructure/Neetcode150/K_Graph/h_CourseSchedule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructure/Neetcode150/K_Graph/i_CourseScheduleII.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructure/Concepts/Graph/Algos/TopologicalSort/TopoSortDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructure/Concepts/Graph/Algos/TopologicalSort/TopoSortDFS.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +62,7 @@
     "Application.Prims_MinimumSpanningTree.executor": "Debug",
     "Application.Test1.executor": "Run",
     "Application.TopoSort.executor": "Run",
+    "Application.TopoSortCycleDetection.executor": "Run",
     "Application.TopoSortDFS.executor": "Debug",
     "Application.TrappingRainWater.executor": "Run",
     "Application.b_MergeIntervals.executor": "Run",
@@ -69,6 +74,7 @@
     "Application.f_TimeBasedKeyValueStore.executor": "Debug",
     "Application.h_CourseSchedule.executor": "Run",
     "Application.h_ValidSudoku.executor": "Debug",
+    "Application.i_CourseScheduleII.executor": "Run",
     "Maven.Java_DS_Algo-InterviewPreparation [clean].executor": "Run",
     "Maven.Java_DS_Algo-InterviewPreparation [compile].executor": "Run",
     "Maven.Java_DS_Algo-InterviewPreparation [install].executor": "Run",
@@ -81,7 +87,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "MTThemeSelectorConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -89,19 +95,13 @@
       <recent name="$PROJECT_DIR$/src/main/java/DataStructure/Neetcode150/B_TwoPointers" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="DataStructure.Concepts.Graph.Algos.TopologicalSort" />
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TopoSortDFS">
-    <configuration name="Prims_MinimumSpanningTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructure.Concepts.Graph.Algos.Prims_MinimumSpanningTree" />
-      <module name="Java_DS_Algo-InterviewPreparation" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TopoSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructure.Concepts.practise.TopoSort" />
+  <component name="RunManager" selected="Application.i_CourseScheduleII">
+    <configuration name="TopoSortCycleDetection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructure.Concepts.Graph.Algos.TopologicalSort.Practise.TopoSortCycleDetection" />
       <module name="Java_DS_Algo-InterviewPreparation" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -128,13 +128,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="i_CourseScheduleII" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructure.Neetcode150.K_Graph.i_CourseScheduleII" />
+      <module name="Java_DS_Algo-InterviewPreparation" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TopoSortDFS" />
+        <item itemvalue="Application.i_CourseScheduleII" />
+        <item itemvalue="Application.TopoSortCycleDetection" />
         <item itemvalue="Application.h_CourseSchedule" />
+        <item itemvalue="Application.TopoSortDFS" />
         <item itemvalue="Application.f_PacificAtlanticWaterFlow_DFS" />
-        <item itemvalue="Application.TopoSort" />
-        <item itemvalue="Application.Prims_MinimumSpanningTree" />
       </list>
     </recent_temporary>
   </component>
@@ -234,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763729419837</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="f_PacificAtlanticWaterFlow_DFS">
+      <option name="closed" value="true" />
+      <created>1763736146326</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1763736146326</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -257,31 +272,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/DataStructure/Neetcode150/B_TwoPointers/practise/MoveZeros.java</url>
           <line>16</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructure/Neetcode150/K_Graph/h_CourseSchedule.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructure/Concepts/Graph/Algos/TopologicalSort/TopoSortDFS.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructure/Concepts/Graph/Algos/TopologicalSort/TopoSortDFS.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructure/Concepts/Graph/Algos/TopologicalSort/TopoSortDFS.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructure/Concepts/Graph/Algos/TopologicalSort/TopoSortDFS.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
