@@ -57,10 +57,5 @@ public class g_FindMedianFromDataStream {
         System.out.println(mf.findMedian());
         mf.addNum(5);
         System.out.println(mf.findMedian());
-        System.out.println("Hello");
-        System.out.println("Hello");
-        int max = 6;
-        int i = max + 1;
-        double time = 12.44;
     }
 }
