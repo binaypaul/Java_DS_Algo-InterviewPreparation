@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="814909fe-5aac-4109-a6d7-33c06bae83fd" name="Changes" comment="surrounded regions">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructure/Neetcode150/A_ArraysAndHashing/practise/g_ProductOfArrayExceptSelf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataStructure/Neetcode150/J_Heap_OR_PriorityQueue/practise/MedianFinder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructure/Neetcode150/A_ArraysAndHashing/g_ProductOfArrayExceptSelf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructure/Neetcode150/A_ArraysAndHashing/g_ProductOfArrayExceptSelf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataStructure/Neetcode150/J_Heap_OR_PriorityQueue/g_FindMedianFromDataStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataStructure/Neetcode150/J_Heap_OR_PriorityQueue/g_FindMedianFromDataStream.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +53,7 @@
     "Application.ContainerWithMostWater.executor": "Run",
     "Application.Dijkstras_FindShortestPathOfWeightedGraph.executor": "Debug",
     "Application.LongestPalindromicSubstring.executor": "Run",
+    "Application.MedianFinder.executor": "Run",
     "Application.MergeIntervals.executor": "Run",
     "Application.MoveZeros.executor": "Run",
     "Application.Prims_MinimumSpanningTree.executor": "Debug",
@@ -99,7 +100,14 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.g_ProductOfArrayExceptSelf">
+  <component name="RunManager" selected="Application.MedianFinder">
+    <configuration name="MedianFinder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DataStructure.Neetcode150.J_Heap_OR_PriorityQueue.practise.MedianFinder" />
+      <module name="Java_DS_Algo-InterviewPreparation" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="c_TwoSums" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DataStructure.Neetcode150.A_ArraysAndHashing.c_TwoSums" />
       <module name="Java_DS_Algo-InterviewPreparation" />
@@ -128,20 +136,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="g_SurroundedRegions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DataStructure.Neetcode150.K_Graph.g_SurroundedRegions" />
-      <module name="Java_DS_Algo-InterviewPreparation" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MedianFinder" />
         <item itemvalue="Application.g_ProductOfArrayExceptSelf" />
         <item itemvalue="Application.f_EncodeAndDecodeStrings" />
         <item itemvalue="Application.d_Group_Anagrams" />
         <item itemvalue="Application.c_TwoSums" />
-        <item itemvalue="Application.g_SurroundedRegions" />
       </list>
     </recent_temporary>
   </component>
@@ -297,7 +298,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763881457943</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="surrounded regions">
+      <option name="closed" value="true" />
+      <created>1763883191173</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1763883191173</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -321,11 +330,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/DataStructure/Neetcode150/B_TwoPointers/practise/MoveZeros.java</url>
           <line>16</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DataStructure/Neetcode150/A_ArraysAndHashing/g_ProductOfArrayExceptSelf.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
