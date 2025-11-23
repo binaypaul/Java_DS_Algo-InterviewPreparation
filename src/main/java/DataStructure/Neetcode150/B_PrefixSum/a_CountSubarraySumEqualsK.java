@@ -13,7 +13,7 @@ import java.util.Map;
 public class a_CountSubarraySumEqualsK {
     public static void main(String[] args) {
         System.out.println(new a_CountSubarraySumEqualsK().subarraySum(new int[] {1, 1, 1, 2, 5, -2, -5, 3}, 3));
-    }
+    }                                                                           //1  2  3  5  10  8   3  0
     public int subarraySum(int[] nums, int k) {
         int count  = 0;
         Map<Integer, Integer> sumCount = new HashMap<>(){{put(0,1);}};
