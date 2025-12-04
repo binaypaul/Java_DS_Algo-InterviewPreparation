@@ -15,8 +15,10 @@ public class a_CountSubarraySumEqualsK {
         System.out.println(new a_CountSubarraySumEqualsK().subarraySum(new int[] {1, 1, 1, 2, 5, -2, -5, 3}, 3));
     }                                                                           //1  2  3  5  10  8   3  0
     public int subarraySum(int[] nums, int k) {
+        Map<Integer, Integer> sumCount = new HashMap<>();
+        sumCount.put(0,1);
+
         int count  = 0;
-        Map<Integer, Integer> sumCount = new HashMap<>(){{put(0,1);}};
         int sum = 0;
 
         for (int i = 0; i < nums.length; i++) {
