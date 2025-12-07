@@ -17,17 +17,17 @@ public class e_SearchInRotatedSortedArray {
 
             //Determine which side of mid is sorted:
             if(nums[low] <= nums[mid]) {//left side is sorted - starting from low till mid is sorted
-                //Check if the target falls within this sorted left half
-                if(nums[low] <= target && target < nums[mid]) {
+                //Check where the target lies wrt low, mid, high.
+                if(nums[low] <= target && target < nums[mid]) { //Target is in between low and mid-1
                     high = mid-1;
-                } else {
+                } else { //Target is in between mid+1 and high
                     low = mid+1;
                 }
             } else {//right side is sorted - starting from mid till high is sorted
-                //Check if the target falls within this sorted right half
-                if(target <= nums[high] && target > nums[mid]) {
+                //Check where the target lies wrt low, mid, high.
+                if(target <= nums[high] && target > nums[mid]) { //Target is in between mid+1 and high
                     low = mid+1;
-                } else {
+                } else { //Target is in between low and mid-1
                     high = mid-1;
                 }
             }
