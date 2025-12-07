@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 //https://leetcode.com/problems/n-queens/description/
 //https://youtu.be/Ph95IHmRp5M?si=ZMCLnceWD5AOGKkP
-public class i_NQueens {
+public class j_NQueens {
     List<List<String>> res = new ArrayList<>();
 
 //? this is required, as cols are incremented by 1 (via for loop) irrespective of a successful or unsuccessful Q fill to the board, so need to check if Q was filled in the same col previously.
@@ -77,6 +77,6 @@ public class i_NQueens {
     }
 
     public static void main(String[] args) {
-        System.out.println(new i_NQueens().solveNQueens(4));
+        System.out.println(new j_NQueens().solveNQueens(4));
     }
 }

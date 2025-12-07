@@ -4,14 +4,12 @@ import java.util.Arrays;
 
 public class c_KokoEatingBananas {
     public static void main(String[] args) {
-        System.out.println( minEatingSpeed(
-                new int[] {3,6,7,11}, 8
-        ) );
+        System.out.println(minEatingSpeed(new int[] {3,6,7,11}, 8));
     }
 
     public static int minEatingSpeed(int[] piles, int h) {
         Arrays.sort(piles);
-        int low = 1, high = piles[piles.length-1];
+        int low = 0, high = piles[piles.length-1];
         int minimum = high;
 
         while (low <= high) {

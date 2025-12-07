@@ -1,4 +1,4 @@
-package DataStructure.Neetcode150.A_ArraysAndHashing;
+package DataStructure.Neetcode150.Z_Random;
 
 import java.util.Arrays;
 import java.util.TreeSet;
@@ -19,13 +19,10 @@ public class z1_SmallestGreaterElementToTheRight {
         // Iterate from right to left
         for (int i = n - 1; i >= 0; i--) {
             // Find the smallest element in the set that is strictly greater than arr[i]
-            Integer higher = set.higher(arr[i] + 1);
+            Integer higher = set.higher(arr[i]);
 
-            if (higher != null) {
-                result[i] = higher;
-            } else {
-                result[i] = -1; // No greater element found to the right
-            }
+            result[i] = (higher != null) ? higher : -1;
+
             // Add the current element to the set for future comparisons
             set.add(arr[i]);
         }

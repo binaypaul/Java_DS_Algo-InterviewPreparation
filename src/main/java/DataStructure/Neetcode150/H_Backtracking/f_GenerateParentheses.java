@@ -1,9 +1,9 @@
-package DataStructure.Neetcode150.C_Stack;
+package DataStructure.Neetcode150.H_Backtracking;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class d_GenerateParentheses {
+public class f_GenerateParentheses {
     static List<String> list = new ArrayList<>();
     static int n = 0;
 

@@ -43,7 +43,6 @@ public class c_3Sum {
                     } else if (nums[l] + nums[r] < target) {
                         l++;
                     } else {
-                        List<Integer> list = Arrays.asList(nums[i], nums[l], nums[r]);
                         threeSumList.add(Arrays.asList(nums[i], nums[l], nums[r]));
                         // Skip duplicate values for the left element
                         while (l<r && nums[l] == nums[l+1]) {

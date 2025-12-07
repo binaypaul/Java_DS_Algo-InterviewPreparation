@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 //https://leetcode.com/problems/word-search/description/
-public class f_WordSearch {
+public class g_WordSearch {
     boolean exist = false;
     List<String> used = new ArrayList<>();
     List<Integer> diagVals = new ArrayList<>();
@@ -50,7 +50,7 @@ public class f_WordSearch {
                 {'A','A','A','A','A','A'},
                 {'A','A','A','A','A','B'},
                 {'A','A','A','A','B','A'}};
-        System.out.println(new f_WordSearch().exist(board,"AAAAAAAAAAAAABA")
+        System.out.println(new g_WordSearch().exist(board,"AAAAAAAAAAAAABA")
         );
     }
 }

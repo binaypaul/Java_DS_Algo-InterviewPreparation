@@ -43,7 +43,7 @@ public class f_SlidingWindowMaximum {
                 deque.pollFirst();
             }
             // Remove indices from the last if current element is larger than the last elements
-            while (!deque.isEmpty() && nums[deque.peekLast()] < nums[i]) {
+            while (!deque.isEmpty() && nums[i] > nums[deque.peekLast()]) {
                 deque.pollLast();
             }
 

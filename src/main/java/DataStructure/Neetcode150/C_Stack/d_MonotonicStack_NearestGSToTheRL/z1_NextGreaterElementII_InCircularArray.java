@@ -1,4 +1,4 @@
-package DataStructure.Neetcode150.C_Stack;
+package DataStructure.Neetcode150.C_Stack.d_MonotonicStack_NearestGSToTheRL;
 
 import java.util.Arrays;
 import java.util.Stack;
@@ -14,9 +14,9 @@ import java.util.Stack;
  * Input: nums = [1,2,3,4,3]
  * Output: [2,3,4,-1,4]
  */
-public class z1_NextGreaterElementII {
+public class z1_NextGreaterElementII_InCircularArray {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(new z1_NextGreaterElementII()
+        System.out.println(Arrays.toString(new z1_NextGreaterElementII_InCircularArray()
                 .nextGreaterElements(new int[] {5,4,3,2,1})));
     }
 
