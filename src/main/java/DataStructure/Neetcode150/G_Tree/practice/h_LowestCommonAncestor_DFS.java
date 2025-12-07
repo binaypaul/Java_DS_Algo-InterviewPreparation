@@ -1,6 +1,6 @@
 package DataStructure.Neetcode150.G_Tree.practice;
 
-import DataStructure.Neetcode150.G_Tree.Concept.TreeNode;
+import DataStructure.Neetcode150.G_Tree.Concept.BST.TreeNode;
 
 //https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/
 public class h_LowestCommonAncestor_DFS {

@@ -27,7 +27,7 @@ import java.util.*;
 public class e_MinimumWindowSubstring {
     public static void main(String[] args) {
         System.out.println(new e_MinimumWindowSubstring()
-                .minWindowQueue("ZADABOBEAHCODEBANC", "ABCA"));
+                .minWindow("ZADABOBEAHCODEBANC", "ABCA"));
     }
     public String minWindowQueue(String s, String t) {
         Map<Character, Integer> tStrCountMap = new HashMap<>(t.length());
@@ -64,15 +64,15 @@ public class e_MinimumWindowSubstring {
         return minLen == Integer.MAX_VALUE?"":s.substring(lminIdx, rminIdx+1);
     }
 
-    //optimised -- mathay dhukse na
+    //optimised -- https://youtu.be/WJaij9ffOIY?t=732
     public String minWindow(String s, String t) {
         if (s.length() < t.length()) {
             return "";
         }
 
-        Map<Character, Integer> tCharCount = new HashMap<>();
+        var tCharCountMap = new HashMap<Character, Integer>();
         for (char ch : t.toCharArray()) {
-            tCharCount.put(ch, tCharCount.getOrDefault(ch, 0) + 1);
+            tCharCountMap.put(ch, tCharCountMap.getOrDefault(ch, 0) + 1);
         }
 
         int targetCharsRemaining = t.length();
@@ -81,18 +81,18 @@ public class e_MinimumWindowSubstring {
 
         for (int r = 0; r < s.length(); r++) {
             char ch = s.charAt(r);
-            if (tCharCount.containsKey(ch) && tCharCount.get(ch) > 0) {
+            if (tCharCountMap.containsKey(ch) && tCharCountMap.get(ch) > 0) {
                 targetCharsRemaining--;
             }
-            tCharCount.put(ch, tCharCount.getOrDefault(ch, 0) - 1);
+            tCharCountMap.put(ch, tCharCountMap.getOrDefault(ch, 0) - 1);
 
             if (targetCharsRemaining == 0) {
                 while (true) {
                     char charAtStart = s.charAt(l);
-                    if (tCharCount.containsKey(charAtStart) && tCharCount.get(charAtStart) == 0) {
+                    if (tCharCountMap.containsKey(charAtStart) && tCharCountMap.get(charAtStart) == 0) {
                         break;
                     }
-                    tCharCount.put(charAtStart, tCharCount.getOrDefault(charAtStart, 0) + 1);
+                    tCharCountMap.put(charAtStart, tCharCountMap.getOrDefault(charAtStart, 0) + 1);
                     l++;
                 }
 
@@ -101,7 +101,7 @@ public class e_MinimumWindowSubstring {
                     minWindow[1] = r;
                 }
 
-                tCharCount.put(s.charAt(l), tCharCount.getOrDefault(s.charAt(l), 0) + 1);
+                tCharCountMap.put(s.charAt(l), tCharCountMap.getOrDefault(s.charAt(l), 0) + 1);
                 targetCharsRemaining++;
                 l++;
             }

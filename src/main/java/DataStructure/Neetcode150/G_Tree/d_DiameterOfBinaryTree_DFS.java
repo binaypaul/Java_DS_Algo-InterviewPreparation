@@ -2,7 +2,7 @@ package DataStructure.Neetcode150.G_Tree;
 
 //https://leetcode.com/problems/diameter-of-binary-tree/description/
 
-import DataStructure.Neetcode150.G_Tree.Concept.TreeNode;
+import DataStructure.Neetcode150.G_Tree.Concept.BST.TreeNode;
 
 public class d_DiameterOfBinaryTree_DFS {
 

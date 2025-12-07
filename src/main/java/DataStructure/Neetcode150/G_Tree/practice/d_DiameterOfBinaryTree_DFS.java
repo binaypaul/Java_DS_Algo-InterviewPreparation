@@ -1,7 +1,7 @@
 package DataStructure.Neetcode150.G_Tree.practice;
 
 import DataStructure.Neetcode150.G_Tree.Concept.BinaryTreeTraversal.BFS;
-import DataStructure.Neetcode150.G_Tree.Concept.TreeNode;
+import DataStructure.Neetcode150.G_Tree.Concept.BST.TreeNode;
 
 public class d_DiameterOfBinaryTree_DFS {
     int maxDia = 0;

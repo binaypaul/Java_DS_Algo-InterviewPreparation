@@ -1,6 +1,6 @@
 package DataStructure.Neetcode150.G_Tree.Concept.BinaryTreeTraversal.DFS;
 
-import DataStructure.Neetcode150.G_Tree.Concept.TreeNode;
+import DataStructure.Neetcode150.G_Tree.Concept.BST.TreeNode;
 
 public class RecursiveDFS {
     //recursive - start

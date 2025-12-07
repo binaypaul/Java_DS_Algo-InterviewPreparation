@@ -1,6 +1,6 @@
 package DataStructure.Neetcode150.G_Tree;
 
-import DataStructure.Neetcode150.G_Tree.Concept.TreeNode;
+import DataStructure.Neetcode150.G_Tree.Concept.BST.TreeNode;
 
 //https://leetcode.com/problems/maximum-depth-of-binary-tree/description/
 public class b_MaximumDepthOfBinaryTree_DFS {

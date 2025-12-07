@@ -1,6 +1,6 @@
 package RandomProblems;
 
-import DataStructure.Neetcode150.G_Tree.Concept.TreeNode;
+import DataStructure.Neetcode150.G_Tree.Concept.BST.TreeNode;
 
 public class c_CountUniValueSubtrees {
 

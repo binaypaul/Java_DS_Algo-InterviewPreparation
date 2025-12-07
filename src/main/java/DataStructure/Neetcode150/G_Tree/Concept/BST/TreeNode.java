@@ -1,4 +1,4 @@
-package DataStructure.Neetcode150.G_Tree.Concept;
+package DataStructure.Neetcode150.G_Tree.Concept.BST;
 
 import lombok.ToString;
 

@@ -1,6 +1,6 @@
 package DataStructure.Neetcode150.G_Tree.Concept.BinaryTreeTraversal;
 
-import DataStructure.Neetcode150.G_Tree.Concept.TreeNode;
+import DataStructure.Neetcode150.G_Tree.Concept.BST.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

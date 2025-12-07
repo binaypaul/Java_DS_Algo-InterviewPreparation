@@ -1,10 +1,26 @@
 package DataStructure.Neetcode150.F_LinkedList;
+/*
+Given an array of integers nums containing n + 1 integers where each integer is in the range [1, n] inclusive.
+There is only one repeated number in nums, return this repeated number.
+You must solve the problem without modifying the array nums and using only constant extra space.
 
-public class i_FindTheDuplicateNumber {
+Example 1:
+Input: nums = [1,3,4,2,2]
+Output: 2
+
+Example 2:
+Input: nums = [3,1,3,4,2]
+Output: 3
+
+Example 3:
+Input: nums = [3,3,3,3,3]
+Output: 3
+ */
+public class i_FindTheDuplicateNumber_WithConstantSpace {
     public static void main(String[] args) {
         int[] nums = {2,5,9,6,5,3,8,5,7,1};
         System.out.println(
-                new i_FindTheDuplicateNumber()
+                new i_FindTheDuplicateNumber_WithConstantSpace()
                 .findDuplicate(nums)
         );
     }
