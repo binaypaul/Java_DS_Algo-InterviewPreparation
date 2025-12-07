@@ -14,7 +14,7 @@ public class i_BinaryTreeLevelOrderTraversal_BFS {
         if(root == null) {
             return list;
         }
-        Queue<TreeNode> q = new LinkedList();
+        Queue<TreeNode> q = new LinkedList<>();
         q.add(root);
 
         while (!q.isEmpty()) {

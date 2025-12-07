@@ -20,9 +20,9 @@ public class b_CombinationSum_ForLoopWithSingleRecursion {
         }
 
         for (int i = start; i < can.length; i++) {
-            if(target-can[i] < 0)
+            if(target-can[i] < 0) {
                 continue;
-            else {
+            } else {
                 cur.add(can[i]);
                 dfs(can, target - can[i], i);
                 cur.remove(cur.size()-1);

@@ -6,6 +6,11 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 //https://leetcode.com/problems/maximum-depth-of-binary-tree/description/
+/*
+Given the root of a binary tree, return its maximum depth.
+
+A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+ */
 public class b_MaximumDepthOfBinaryTree_BFS {
     public static void main(String[] args) {
         TreeNode root = new TreeNode(
