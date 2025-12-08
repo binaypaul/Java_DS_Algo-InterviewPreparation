@@ -6,16 +6,21 @@ import java.util.stream.Collectors;
 //https://leetcode.com/problems/n-queens/description/
 //https://youtu.be/Ph95IHmRp5M?si=ZMCLnceWD5AOGKkP
 public class j_NQueens {
+    public static void main(String[] args) {
+        System.out.println(new j_NQueens().solveNQueens(4));
+    }
+
     List<List<String>> res = new ArrayList<>();
 
 //? this is required, as cols are incremented by 1 (via for loop) irrespective of a successful or unsuccessful Q fill to the board, so need to check if Q was filled in the same col previously.
     Set<Integer> cols = new HashSet<>();
 
 //? this is NOT required, as rows are incremented by 1 only after a successful Q fill to the board, so no need to check if Q was filled in the same row previously as we have moved to next row only after a successful row fill.
-    //? this is added to avoid remembering and getting confused which among cols and rows set is required.
+//? this is added to avoid remembering and getting confused which among cols and rows set is required.
     Set<Integer> rows = new HashSet<>();
-    Set<Integer> positiveDiagonal = new HashSet<>(); //south-west to north-east diagonal
-    Set<Integer> negativeDiagonal = new HashSet<>(); //north-west to south-east diagonal
+
+    Set<Integer> positiveDiagonal = new HashSet<>(); //south-west to north-east diagonal (maharashtra - assam - positive (map))
+    Set<Integer> negativeDiagonal = new HashSet<>(); //north-west to south-east diagonal (rajasthan - odisha - negative (ron))
 
     public List<List<String>> solveNQueens(int n) {
         //create or initialize an n*n board with "."
@@ -74,9 +79,5 @@ public class j_NQueens {
             }
             return sb.toString();
         }).collect(Collectors.toList())));
-    }
-
-    public static void main(String[] args) {
-        System.out.println(new j_NQueens().solveNQueens(4));
     }
 }

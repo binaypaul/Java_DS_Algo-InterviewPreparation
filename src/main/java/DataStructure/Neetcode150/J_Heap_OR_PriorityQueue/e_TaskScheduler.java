@@ -4,51 +4,57 @@ import java.util.*;
 
 //https://leetcode.com/problems/task-scheduler/description/
 public class e_TaskScheduler {
+    // Max-Heap: Stores tasks ready to run, ordered by frequency (tf2.freq - tf1.freq for descending)
     private Map<Character, Integer> map = new HashMap<>();
-    private Queue<TaskFreq> allowedMaxHeap = new PriorityQueue<>((tf1, tf2)-> (tf2.freq-tf1.freq));
-    private Queue<TaskFreq> notAllowedMaxHeap = new PriorityQueue<>(Comparator.comparingInt(tf -> tf.usedInterval));
+    private Queue<TaskFreq> allowedMaxHeap = new PriorityQueue<>((tf1, tf2) -> (tf2.freq - tf1.freq));
 
+    // Cooldown Queue (Min-Heap): Stores tasks that must wait, ordered by the time they were used (usedInterval)
+    private Queue<TaskFreq> notAllowedMinHeap = new PriorityQueue<>(Comparator.comparingInt(tf -> tf.usedInterval));
+
+    // For debugging output only
     private List<Character> ll = new LinkedList<>();
 
     public int leastInterval(char[] tasks, int n) {
-        int resInt = 0;
         for (char task : tasks) {
             map.merge(task, 1, Integer::sum);
         }
-        //A=3, B=3
-       for (Map.Entry<Character, Integer> mapent : map.entrySet()) {
-           allowedMaxHeap.add(new TaskFreq(mapent.getKey(), mapent.getValue(), 0));
-       }
-        System.out.println("allowedMaxHeap:    " + allowedMaxHeap);
+
+        for (Map.Entry<Character, Integer> mapent : map.entrySet()) {
+            allowedMaxHeap.add(new TaskFreq(mapent.getKey(), mapent.getValue(), 0));
+        }
 
         int curInt = 0;
-        while (!allowedMaxHeap.isEmpty() || !notAllowedMaxHeap.isEmpty()) {
-            TaskFreq tf = allowedMaxHeap.poll();
+
+        // Loop continues only as long as there are tasks to run OR tasks cooling down
+        while (!allowedMaxHeap.isEmpty() || !notAllowedMinHeap.isEmpty()) {
             curInt++;
+            TaskFreq taskToRun = allowedMaxHeap.poll();
 
-            if(null == tf) {
+            // 1. Execute task or take idle slot
+            if (taskToRun == null) {
                 ll.add('_');
-                resInt++;
             } else {
-                ll.add(tf.task);
-                resInt++;
+                ll.add(taskToRun.task);
+                taskToRun.freq--; // Decrement frequency immediately
 
-                if(tf.freq > 1) {
-                    tf.freq--;
-                    tf.usedInterval = curInt;
-                    notAllowedMaxHeap.add(tf);
+                // 2. Only put tasks with remaining work into the cooldown queue
+                if (taskToRun.freq > 0) {
+                    taskToRun.usedInterval = curInt; // Mark the time it was used
+                    notAllowedMinHeap.add(taskToRun);
                 }
             }
 
-            if (!notAllowedMaxHeap.isEmpty() && curInt - notAllowedMaxHeap.peek().usedInterval >= n) {
-                allowedMaxHeap.add(notAllowedMaxHeap.poll());
-            }
+            // 3. Move tasks from cooldown to allowed heap if they are ready
+            if (!notAllowedMinHeap.isEmpty()) {
+                TaskFreq earliestUsedTask = notAllowedMinHeap.peek();
 
-            System.out.println("allowedMaxHeap:    " + allowedMaxHeap);
-            System.out.println("notAllowedMaxHeap: " + notAllowedMaxHeap);
-            System.out.println(ll);
+                // Task is ready if current time - time used >= n
+                if (curInt - earliestUsedTask.usedInterval >= n) {
+                    allowedMaxHeap.add(notAllowedMinHeap.poll());
+                }
+            }
         }
-        return resInt;
+        return curInt;
     }
 
     public static void main(String[] args) {
