@@ -21,6 +21,7 @@ public class j_NQueens {
 
     Set<Integer> positiveDiagonal = new HashSet<>(); //south-west to north-east diagonal (maharashtra - assam - positive (map))
     Set<Integer> negativeDiagonal = new HashSet<>(); //north-west to south-east diagonal (rajasthan - odisha - negative (ron))
+    //mapron
 
     public List<List<String>> solveNQueens(int n) {
         //create or initialize an n*n board with "."

@@ -1,4 +1,4 @@
-package DataStructure.Neetcode150.G_Tree.Concept.BST;
+package DataStructure.Concepts.Tree.BST;
 
 public class BST {
 

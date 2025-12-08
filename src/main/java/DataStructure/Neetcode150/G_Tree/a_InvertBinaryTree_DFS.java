@@ -1,7 +1,7 @@
 package DataStructure.Neetcode150.G_Tree;
 
-import DataStructure.Neetcode150.G_Tree.Concept.BinaryTreeTraversal.BFS;
-import DataStructure.Neetcode150.G_Tree.Concept.BST.TreeNode;
+import DataStructure.Concepts.Tree.BinaryTreeTraversal.BFS;
+import DataStructure.Concepts.Tree.BST.TreeNode;
 //https://leetcode.com/problems/invert-binary-tree/description/
 /*
 Given the root of a binary tree, invert the tree, and return its root.

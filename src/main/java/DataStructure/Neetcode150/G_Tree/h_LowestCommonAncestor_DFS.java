@@ -1,6 +1,6 @@
 package DataStructure.Neetcode150.G_Tree;
 
-import DataStructure.Neetcode150.G_Tree.Concept.BST.TreeNode;
+import DataStructure.Concepts.Tree.BST.TreeNode;
 
 //https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/
 /*

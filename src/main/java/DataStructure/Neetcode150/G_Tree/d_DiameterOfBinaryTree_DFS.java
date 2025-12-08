@@ -2,7 +2,7 @@ package DataStructure.Neetcode150.G_Tree;
 
 //https://leetcode.com/problems/diameter-of-binary-tree/description/
 
-import DataStructure.Neetcode150.G_Tree.Concept.BST.TreeNode;
+import DataStructure.Concepts.Tree.BST.TreeNode;
 /*
 Given the root of a binary tree, return the length of the diameter of the tree.
 

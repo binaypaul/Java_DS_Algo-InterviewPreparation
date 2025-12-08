@@ -1,6 +1,6 @@
 package DataStructure.Neetcode150.G_Tree;
 
-import DataStructure.Neetcode150.G_Tree.Concept.BST.TreeNode;
+import DataStructure.Concepts.Tree.BST.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
