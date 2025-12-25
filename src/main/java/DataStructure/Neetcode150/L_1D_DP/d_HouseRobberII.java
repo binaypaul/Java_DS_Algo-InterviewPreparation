@@ -27,7 +27,7 @@ public class d_HouseRobberII {
                 dpR(Arrays.copyOfRange(nums, 0, nums.length-1), nums.length-2)
         );
     }
-
+    //{200, 3, 140,20, 10}
     private int dpR(int[] nums, int i) {
         if(i< 0) return 0;
         if(i==0) return nums[i];
@@ -93,6 +93,6 @@ public class d_HouseRobberII {
     }
     public static void main(String[] args) {
         System.out.println(new d_HouseRobberII()
-                .robT(new int[]{200, 3, 140,20, 10}));
+                .robR(new int[]{200, 3, 140,20, 10}));
     }                         //200,200,340,340,350
 }

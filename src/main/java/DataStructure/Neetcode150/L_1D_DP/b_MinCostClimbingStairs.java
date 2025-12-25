@@ -52,7 +52,7 @@ public class b_MinCostClimbingStairs {
 
     public static void main(String[] args) {
         System.out.println(new b_MinCostClimbingStairs()
-                .minCostClimbingStairsBUT(
+                .minCostClimbingStairsTDM(
                         new int[]{2,3,4,5}
                 ));
     }                                              //0 1  2  3 4 5  6  7 8  9  10

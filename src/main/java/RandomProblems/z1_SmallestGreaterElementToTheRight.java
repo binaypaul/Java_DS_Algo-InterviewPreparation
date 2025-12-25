@@ -1,4 +1,4 @@
-package DataStructure.Neetcode150.Z_Random;
+package RandomProblems;
 
 import java.util.Arrays;
 import java.util.TreeSet;
