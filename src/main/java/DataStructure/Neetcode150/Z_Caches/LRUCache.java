@@ -1,4 +1,4 @@
-package DataStructure.Concepts.Cache;
+package DataStructure.Neetcode150.Z_Caches;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

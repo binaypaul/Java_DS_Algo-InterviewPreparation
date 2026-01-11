@@ -1,11 +1,16 @@
-package DataStructure.Neetcode150.H_Backtracking;
+package DataStructure.Neetcode150.a_a_Practice.Mock6_4Q90Min;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-//https://leetcode.com/problems/word-search/description/
-public class g_WordSearch {
-    private boolean exist(char[][] board, String word) {
+public class WordSearch {
+    public static void main(String[] args) {
+        char[][] board = {
+                {'A','B','C','E'},
+                {'S','F','C','S'},
+                {'A','D','E','E'}
+        };
+        System.out.println(new WordSearch().search(board, "ABCCEDS"));
+    }
+
+    private boolean search(char[][] board, String word) {
         int rl = board.length, cl = board[0].length;
         boolean[][] visited = new boolean[rl][cl];
         int wordCharIdx = 0;
@@ -24,14 +29,13 @@ public class g_WordSearch {
         int rl = board.length, cl = board[0].length;
 
         if(r < 0 || c < 0 ||
-                r>=rl || c >= cl ||
-                visited[r][c] ||
-                board[r][c] != word.charAt(wordCharIdx)) {
+        r>=rl || c >= cl ||
+        visited[r][c] ||
+        board[r][c] != word.charAt(wordCharIdx)) {
             return false;
         }
         visited[r][c] = true;
 
-        //if wordCharIdx has reached to the last index of the word, it means we found the word.
         if(word.length()-1 == wordCharIdx)
             return true;
 
@@ -41,17 +45,5 @@ public class g_WordSearch {
         if(dfs(board, word, wordCharIdx+1, r, c-1, visited)) return true;
         visited[r][c] = false;
         return false;
-    }
-
-    public static void main(String[] args) {
-        char[][] board = new char[][] {
-                {'A','A','A','A','A','A'},
-                {'A','A','A','A','A','A'},
-                {'A','A','A','A','A','A'},
-                {'A','A','A','A','A','A'},
-                {'A','A','A','A','A','B'},
-                {'A','A','A','A','B','A'}};
-        System.out.println(new g_WordSearch().exist(board,"AAAAAAAAAAAAABA")
-        );
     }
 }

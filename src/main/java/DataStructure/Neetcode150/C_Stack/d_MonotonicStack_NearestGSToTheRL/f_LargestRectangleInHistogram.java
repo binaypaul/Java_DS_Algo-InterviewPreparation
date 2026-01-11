@@ -27,7 +27,7 @@ public class f_LargestRectangleInHistogram {
         int[] nsr = new int[hl];
         var s = new Stack<HI>();
 
-        //fill nsl array
+        //fill nsl array - nearest greater to left
         nsl[0] = -1;
         s.push(new HI(heights[0], 0));
         for (int i = 1; i < hl; i++) {
@@ -46,7 +46,7 @@ public class f_LargestRectangleInHistogram {
         //clear the stack
         s.clear();
 
-        //fill nsr array
+        //fill nsr array - nearest smaller to right
         nsr[hl-1] = hl;
         s.push(new HI(heights[hl-1], hl-1));
         for (int i = hl-2; i >=0 ; i--) {
