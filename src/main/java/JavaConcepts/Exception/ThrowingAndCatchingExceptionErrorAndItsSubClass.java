@@ -20,11 +20,11 @@ public class ThrowingAndCatchingExceptionErrorAndItsSubClass {
 	public void throwingException() throws Error, MyCheckedExcepton{
 		try {
 			throw new MyCheckedExcepton("-message-");
-			//throw new IOException();
-			//throw new ArrayIndexOutOfBoundsException(); //can throw checked exception.
-			//throw new MyRunntimeExcepton("-message-");	//can throw child class checked exception.
-			//throw new NullPointerException();	//can throw unchecked exception.
-			//throw new Exception();
+			//throw new IOException(); //parent class exception cannot be caught or thrown by child class exception
+//			throw new ArrayIndexOutOfBoundsException(); //can throw unchecked exception.
+//			throw new MyRunntimeExcepton("-message-");	//can throw child class unchecked exception.
+//			throw new NullPointerException();	//can throw unchecked exception.
+//			throw new Exception(); //parent class exception cannot be caught or thrown by child class exception
 			//throw new Error();
 			//throw new MyError("-message-"); //can throw child class.
 			//throw new Throwable();	//can throw a throwable

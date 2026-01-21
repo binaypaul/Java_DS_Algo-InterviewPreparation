@@ -1,9 +1,6 @@
 package JavaConcepts.Collections.ListRelated;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class SortingAList {
@@ -28,5 +25,12 @@ public class SortingAList {
         //reverse order
         l = l.stream().sorted((x,y)->Integer.compare(y,x)).collect(Collectors.toList());
         System.out.println(l);
+
+        //reverse sorting int array using Java streams
+        //.stream method returns IntStream for primitive int arr
+        //.stream method returns Stream<Integer> for Object/Wrapper Integer arr
+        int[] arr = {1,2,3,4};
+        arr=Arrays.stream(arr).boxed().sorted((x,y)->Integer.compare(y,x)).mapToInt(Integer::intValue).toArray();
+        System.out.println(Arrays.toString(arr));
     }
 }

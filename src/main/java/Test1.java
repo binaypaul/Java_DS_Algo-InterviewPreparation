@@ -1,10 +1,14 @@
-import java.util.Arrays;
-import java.util.TreeSet;
+import java.util.*;
+import java.util.stream.*;
 
 public class Test1 {
 
     public static void main(String[] args) {
-        System.out.println((int) '2');
+        List<String> passwords = List.of("$$$$$$$$$");
+        String str = passwords.stream()
+                .filter(password->password.matches("^(?=.*[a-zA-Z])(?=.*\\d).{5,}$"))
+                .collect(Collectors.joining(" "));
+        System.out.println(str);
     }
 
 }
