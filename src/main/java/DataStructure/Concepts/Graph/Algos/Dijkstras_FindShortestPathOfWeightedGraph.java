@@ -18,6 +18,7 @@ public class Dijkstras_FindShortestPathOfWeightedGraph {
         //k:vertex, v:path weight to reach the vertex from src.
         var shortestPaths = new LinkedHashMap<Integer, Integer>();
         var minHeap = new PriorityQueue<PathI>(Comparator.comparingInt(PathI::getWeight));
+
         minHeap.add(new PathI(src, src, 0));
 
         while (!minHeap.isEmpty()) {

@@ -11,7 +11,7 @@ When multiple types of conversions are possible, Java follows a strict "order of
 
 1.E - Exact Match
 2.A - Automatic Type Promotion (e.g., int to long)
-3.W - Widening Reference Conversion (e.g. int to Number/Object
+3.W - Widening Reference Conversion (e.g. int to Number/Object)
 4.B - Boxing/Autoboxing(e.g., int to Integer)
 5.V - Varargs (e.g., int...)
  */

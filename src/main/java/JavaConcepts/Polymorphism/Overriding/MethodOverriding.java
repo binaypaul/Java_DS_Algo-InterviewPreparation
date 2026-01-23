@@ -1,4 +1,4 @@
-package JavaConcepts.Polymorphism;
+package JavaConcepts.Polymorphism.Overriding;
 
 public class MethodOverriding {
 	public static void main(String[] args) {
