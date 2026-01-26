@@ -5,11 +5,11 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;
 //https://www.geeksforgeeks.org/callable-future-java/?ref=lbp
 
-public class FutureTaskDemo {
+public class c_FutureTaskDemo {
     public static void main(String[] args) throws Exception {
         Callable<Integer> rgCallable = new RandomGenerator();
         FutureTask<Integer> ft = new FutureTask<>(rgCallable);
-        Thread t = new Thread(ft);
+        Thread t = new Thread(ft); //FutureTask can be run by a thread (as it implements Runnable) or ExecutorService.
         t.start();
         System.out.println("FutureTask is also blocking in nature!");
         System.out.println("From futureTasks:: "+ft.get());

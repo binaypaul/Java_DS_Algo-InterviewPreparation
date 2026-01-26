@@ -3,10 +3,10 @@ package JavaConcepts.Multithreading.CallableAndFuture;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
-public class CompletableFutureDemo {
+public class d_CompletableFutureDemo {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         // Example using supplyAsync
-        CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {
+        CompletableFuture<String> completableFuture = CompletableFuture.supplyAsync(() -> {
             // Simulate a long-running task
             try {
                 System.out.println("CompletableFuture thread started to run!");
@@ -19,7 +19,7 @@ public class CompletableFutureDemo {
         System.out.println("CompletableFuture is non blocking in nature - 1!");
 
         // Using thenApply to transform the result
-        CompletableFuture<String> transformedFuture = future.thenApply(result -> result + " Transformed");
+        CompletableFuture<String> transformedFuture = completableFuture.thenApply(result -> result + " Transformed");
 
         System.out.println("CompletableFuture is non blocking in nature - 2!");
 

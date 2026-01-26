@@ -2,14 +2,15 @@ package JavaConcepts.Multithreading.CallableAndFuture;
 
 import java.util.concurrent.*;
 
-public class FutureTaskSimpleDemo {
+public class b_FutureTaskSimpleDemo {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         ExecutorService es = Executors.newSingleThreadExecutor();
+
         FutureTask<String> ftc = new FutureTask<>(new FutureTaskCallable());
         es.submit(ftc);
         System.out.println("From futureTasks:: " + ftc.get());
         System.out.println("FutureTask is also blocking in nature!");
-        System.out.println("Future is a class that provides implementation of the interface!");
+        System.out.println("FutureTask is a class that provides implementation of the interface RunnableFuture which extends both Future and Runnable!");
     }
 }
 

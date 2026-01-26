@@ -14,8 +14,8 @@ public class CreateADeadlock {
 }
 @AllArgsConstructor
 class RunnableA implements Runnable {
-	private SharedRes sharedRes1;
-	private SharedRes sharedRes2;
+	private final SharedRes sharedRes1;
+	private final SharedRes sharedRes2;
 	@Override
 	public void run() {
 		System.out.println("In RunnableA run");
