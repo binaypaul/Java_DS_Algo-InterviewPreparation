@@ -25,7 +25,7 @@ public class a_CountSubarraySumEqualsK {
             sum+=nums[i];
 
             if(sumCount.containsKey(sum-k)) {
-                count+=sumCount.get(sum-k);
+                count=count+sumCount.get(sum-k);
             }
 
             sumCount.put(sum, sumCount.getOrDefault(sum, 0) + 1);
