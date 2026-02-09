@@ -1,7 +1,19 @@
-Good article on Multithreading:
-1. https://aeontanvir.medium.com/java-multithreading-a-step-by-step-guide-for-concurrent-programming-3bf5dccbbfa1
-2. https://engineeringdigest.medium.com/multithreading-in-java-39f34724bbf6
-JVM Architecture:
-https://medium.com/java-for-beginners/understanding-java-virtual-machine-jvm-architecture-e68d1c611026
-Garbage Collector:
-https://alibabatech.medium.com/how-does-garbage-collection-work-in-java-cf4e31343e43
+1. Good article on Multithreading:
+    1. https://aeontanvir.medium.com/java-multithreading-a-step-by-step-guide-for-concurrent-programming-3bf5dccbbfa1
+    2. https://engineeringdigest.medium.com/multithreading-in-java-39f34724bbf6
+
+2. JVM Architecture:
+    https://medium.com/java-for-beginners/understanding-java-virtual-machine-jvm-architecture-e68d1c611026
+
+3. Garbage Collector:
+    https://alibabatech.medium.com/how-does-garbage-collection-work-in-java-cf4e31343e43
+
+4. Java Custom Annotation:
+    1. https://www.baeldung.com/java-custom-annotation
+    2. https://medium.com/thefreshwrites/create-your-own-custom-annotation-in-spring-boot-be6ac6452c88
+
+5. Consumer, Predicate, Supplier and Function:
+    https://medium.com/javarevisited/java-8s-consumer-predicate-supplier-and-function-bbc609a29ff9
+
+6. Interface With Default Methods vs Abstract Class
+    https://www.baeldung.com/java-interface-default-method-vs-abstract-class

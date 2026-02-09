@@ -1,8 +1,8 @@
-package JavaConcepts.Collections.MapRelated.Grouping;
+package JavaConcepts.Collections.MapRelated.Collectors.Grouping;
 
+import JavaConcepts.Collections.MapRelated.Collectors.*;
 import java.util.*;
 import java.util.stream.*;
-import lombok.*;
 
 class Grouping_Sorting_SummingOnGroup {
     public static void main(String[] args) {
@@ -15,21 +15,13 @@ class Grouping_Sorting_SummingOnGroup {
         List<Emp> emps = List.of(ram, shyam, tom, harry, ricky);
 
         //Grouping on deptName -> Sorting by deptName(key) using TreeMap-> summing the salary in each group created Grouping on deptName
-        Map<String, Integer> treeMap = emps.stream().collect(Collectors.groupingBy(x->x.deptName, TreeMap::new, Collectors.summingInt(x -> x.salary)));
+        Map<String, Integer> treeMap = emps.stream().collect(
+                Collectors.groupingBy(Emp::getDeptName, TreeMap::new, Collectors.summingInt(Emp::getSalary))
+        );
         System.out.println(treeMap);
 
         //Grouping on deptName -> summing the salary in each group created Grouping on deptName
-        Map<String, Integer> map = emps.stream().collect(Collectors.groupingBy(x->x.name, Collectors.summingInt(x -> x.salary)));
+        Map<String, Integer> map = emps.stream().collect(Collectors.groupingBy(Emp::getName, Collectors.summingInt(Emp::getSalary)));
         System.out.println(map);
     }
-}
-
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-class Emp {
-    int id;
-    String name;
-    int salary;
-    String deptName;
 }
