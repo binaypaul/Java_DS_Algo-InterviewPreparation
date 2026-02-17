@@ -1,7 +1,7 @@
 import java.util.*;
 import java.util.stream.*;
 
-public class Test1 {
+public class Test {
 
     public static void main(String[] args) {
         List<String> passwords = List.of("$$$$$$$$$");
