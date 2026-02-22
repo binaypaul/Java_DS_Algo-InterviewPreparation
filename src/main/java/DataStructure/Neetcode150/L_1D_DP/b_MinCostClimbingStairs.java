@@ -11,7 +11,7 @@ public class b_MinCostClimbingStairs {
     public int minCostClimbingStairsR(int[] cost) {
         return dp(cost, cost.length);
     }
-
+    //1,2,3,_
     private int dp(int[] costs, int n) {
         if(n < 2) return 0;
         return Math.min((costs[n-1] + dp(costs, n-1)) , (costs[n-2] + dp(costs, n-2)));

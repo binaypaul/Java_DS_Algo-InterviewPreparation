@@ -1,50 +1,43 @@
 package DataStructure.Neetcode150.L_1D_DP;
 //https://leetcode.com/problems/house-robber/
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class c_HouseRobber {
     //! Top down recursion
-    public int robR2(int[] nums) {
-        return dpR(nums, nums.length-1);
+    public int robR(int[] nums) {
+        return dpR(nums, nums.length);
     }
 
-    private int dpR(int[] nums, int i) {
-        if(i < 0) return 0;
-        if(i == 0) return nums[0];
-        if(i == 1) return Math.max(nums[0], nums[1]);
+    private int dpR(int[] nums, int i) { // "i" is index of the house after last house.
+        if(i < 1) return 0;
 
         return Math.max(
-                //? The maximum amount of money that can be robbed by robbing the current house (i) and considering houses up to the house before the previous one (i-2).
-                nums[i]+ dpR(nums, i-2),
-                //? The maximum amount of money that can be robbed by not robbing the current house (i) and considering houses up to the previous house (i-1).
-                dpR(nums, i-1)
+            //? The maximum amount of money that can be robbed by robbing the last house (i-1) + amount of money till house previous to the house previous to the last house (i-2).
+            nums[i-1] + dpR(nums, i-2),
+            //? The maximum amount of money that can be robbed by not robbing the last house (i-1) but amount of money till the house previous to last house (i-1) .
+            dpR(nums, i-1)
         );
     }
     //!
 
     //! Top down Memoization (TDM)
     public int robM(int[] nums) {
-        int ret = dpM(nums, nums.length-1);
-        return ret;
-    }
-    //2,1,4,1,3
-    Map<Integer, Integer> mapM = new HashMap<>();
-    private int dpM(int[] nums, int i) {
-        if(i < 0) return 0;
-        if(i == 0) return nums[0];
-        if(i==1) return Math.max(nums[0], nums[1]);
-
-        if(mapM.containsKey(i)) return mapM.get(i);
-
-        int robCurrent = nums[i] + dpM(nums, i-2);
-        int skipCurrent = dpM(nums, i-1);
-        mapM.put(i,Math.max(robCurrent, skipCurrent));
-
-        return mapM.get(i);
+        int[] memo = new int[nums.length+1];
+        Arrays.fill(memo, -1);
+        return dpM(nums, memo, nums.length);
     }
 
+    int dpM(int[] nums, int[] memo, int i) {
+        if(i < 1) return 0;
+        if(memo[i] != -1) return memo[i];
+
+        memo[i] = Math.max(
+                nums[i-1] + dpM(nums, memo, i-2),
+                dpM(nums, memo, i-1)
+        );
+        return memo[i];
+    }
     //!
 
     //! Bottom up tabulation (BUT) using map
