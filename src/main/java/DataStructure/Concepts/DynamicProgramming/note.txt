@@ -15,11 +15,11 @@ Solve problems ins: https://www.geeksforgeeks.org/top-20-dynamic-programming-int
     The problem involves sequences (e.g., arrays, strings) or states (e.g., grid paths, knapsack).
 
 3. Steps to Solve DP Problems (Mantra of DP)
-a) Define the State.                            -> What does dp[i] or dp[i][j] represent?
-b) Formulate the Recurrence/Recursive Relation. -> How does the state relate to overlapping smaller subproblems?
-c) Initialize Base Cases.                       -> Set the smallest subproblem solutions.
-d) Choose a Direction (Top-Down or Bottom-Up).  -> TDM or BUT
-e) Optimize Space (if possible)                 -> state array vs previous 2 state in variables.
+    a) Define the State.                            -> What does dp[i] or dp[i][j] represent?
+    b) Formulate the Recurrence/Recursive Relation. -> How does the state relate to overlapping smaller subproblems?
+    c) Initialize Base Cases.                       -> Set the smallest subproblem solutions.
+    d) Choose a Direction (Top-Down or Bottom-Up).  -> TDM or BUT
+    e) Optimize Space (if possible)                 -> state array vs previous 2 state in variables.
 
 
 a) Define the State:

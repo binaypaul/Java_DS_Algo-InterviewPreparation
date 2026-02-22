@@ -26,6 +26,17 @@ public class a_ClimbingStairs {
         cache.putIfAbsent(n, dpTDM(n-1, cache) + dpTDM(n-2, cache));
         return cache.get(n);
     }
+
+    public int climbStairsTDMArr(int n) {
+        return dpTDMArr(n, new int[n+1]);
+    }
+
+    private int dpTDMArr(int n, int[] dp) {
+        if(n<3) return n;
+        if(dp[n]==0)
+            dp[n] = dpTDMArr(n-1, dp) + dpTDMArr(n-2, dp);
+        return dp[n];
+    }
     //!
 
     //! Bottom Up Tabulation (BUT) DP
@@ -42,6 +53,6 @@ public class a_ClimbingStairs {
     //!
 
     public static void main(String[] args) {
-        System.out.println(new a_ClimbingStairs().climbStairsBUT(40));
+        System.out.println(new a_ClimbingStairs().climbStairsTDMArr(3));
     }
 }
