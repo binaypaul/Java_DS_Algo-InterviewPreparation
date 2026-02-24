@@ -1,31 +1,34 @@
+import java.lang.reflect.*;
 import java.util.*;
 import java.util.stream.*;
 
 public class Test {
 
     public static void main(String[] args) {
-        System.out.println(new Test().houseRobberII(new int[]{1,2,3}));
-    }
-    public int houseRobberII(int[] nums) {
-        //nums=[2,9,8,3,6]
-        int[] memo = new int[nums.length];
-        int[] memo1 = new int[nums.length];
-        Arrays.fill(memo, -1);
-        Arrays.fill(memo1, -1);
-        return Math.max(
-                dp(Arrays.copyOfRange(nums, 0, nums.length-1), memo1, nums.length-1),
-                dp(Arrays.copyOfRange(nums, 1, nums.length), memo, nums.length-1)
-        );
+        System.out.println(new Test().coinChange(new int[]{1,2,5}, 100));
     }
 
-    int dp(int[] nums, int[] memo, int i) {
-        if(i < 1) return 0;
-        if(memo[i] != -1) return memo[i];
+    public int coinChange(int[] coins, int amount) {
+        return dpR(coins, amount, 0, new Integer[amount+1]);
+    }
 
-        memo[i] = Math.max(
-                nums[i-1] + dp(nums, memo, i-2),
-                dp(nums, memo, i-1)
-        );
-        return memo[i];
+    int dpR(int[] coins, int amount, int count, Integer[] memo) {
+        if(amount == 0) {
+            return 0;
+        } else if(amount < 0) {
+            return Integer.MAX_VALUE;
+        }
+        if(memo[amount] != null) return memo[amount];
+
+        int min = Integer.MAX_VALUE;
+        for(int coin : coins) {
+            if(amount-coin < 0)
+                continue;
+            int res = dpR(coins, amount-coin, count+1, memo);
+            if(res != Integer.MAX_VALUE) {
+                min = Math.min(min, res+1);
+            }
+        }
+        return memo[amount] = min;
     }
 }

@@ -4,6 +4,17 @@ package DataStructure.Neetcode150.L_1D_DP;
 //There is also expand around center approach to solve this which is not dp, but simple and efficient.
 //https://www.youtube.com/watch?v=XYQecbcd6_c
 public class e_LongestPalindromicSubstring {
+
+    //Simple to code to test palindrome
+    boolean isPalindrome(String s, int l, int r) {
+        while(l<=r) {
+            if(s.charAt(l)!=s.charAt(r))
+                return false;
+            l++;
+            r--;
+        }
+        return true;
+    }
     //! Recursion approach
     public String longestPalindromeR(String s) {
         int maxLen = 0;
@@ -12,7 +23,7 @@ public class e_LongestPalindromicSubstring {
 //        "babad"
         for (int i = 0; i < len; i++) {
             for (int j = i; j < len; j++) {
-                if(isPalindrome(s, i, j)==1 && ((j-i+1) > maxLen)) {
+                if(isPalindromeR(s, i, j)==1 && ((j-i+1) > maxLen)) {
                     maxLen = (j-i+1);
                     startIndex = i;
                 }
@@ -22,11 +33,11 @@ public class e_LongestPalindromicSubstring {
     }
 
     //if s is Palindrome, return 1 else return 2
-    private int isPalindrome(String s, int l, int r) {
+    private int isPalindromeR(String s, int l, int r) {
         if(l>=r)
             return 1;
         if(s.charAt(l) == s.charAt(r)) {
-            return isPalindrome(s, l + 1, r - 1);
+            return isPalindromeR(s, l + 1, r - 1);
         } else {
             return 2;
         }
@@ -44,7 +55,7 @@ public class e_LongestPalindromicSubstring {
 
         for (int i = 0; i < len; i++) {
             for (int j = i; j < len; j++) {
-                if(isPalindrome(s, i, j, dp)==1 && ((j-i+1) > maxLen)) {
+                if(isPalindromeM(s, i, j, dp)==1 && ((j-i+1) > maxLen)) {
                     maxLen = (j-i+1);
                     startIndex = i;
                 }
@@ -54,12 +65,12 @@ public class e_LongestPalindromicSubstring {
     }
 
     //if s is Palindrome, return 1 else return 2
-    private int isPalindrome(String s, int l, int r, int[][] dp) {
+    private int isPalindromeM(String s, int l, int r, int[][] dp) {
         if(l>=r)
             return 1;
         if(s.charAt(l) == s.charAt(r)) {
             if(dp[l][r]==0) {
-                dp[l][r] = isPalindrome(s, l + 1, r - 1, dp);
+                dp[l][r] = isPalindromeM(s, l + 1, r - 1, dp);
             }
             return dp[l][r];
         } else {
