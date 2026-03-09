@@ -4,12 +4,51 @@ package DataStructure.Neetcode150.L_1D_DP;
 
 public class i_MaximumProductSubarray {
     public static void main(String[] args) {
-        System.out.println(new i_MaximumProductSubarray().maxProduct(new int[]{-2,-3,0,-2,-4,-5}));
-    }                                                               // max:   {-2, 6,0,-2, 8,20
-                                                                    // min:   {-2,-3,0,-2,-4,-40
+        System.out.println(new i_MaximumProductSubarray().maxProductRightApproachWithoutDP(new int[]{-2,-3,0,-2,-4,-5}));
+    }                                                               // max:   [-2, 6,0,-2, 8,20]
+                                                                    // min:   [-2,-3,0,-2,-4,-40]
+    //!Normal Bruteforce
+    public int maxProductBruteForce(int[] nums) {
+        int maxProd = nums[0];
+        int len = nums.length;
+        for(int i = 0; i<len; i++) {
+            int cur = nums[i];
+            maxProd = Math.max(maxProd, cur);
+            for (int j = i+1; j<len; j++) {
+                cur *= nums[j];
+                maxProd = Math.max(maxProd, cur);
+            }
+        }
+        return maxProd;
+    }
+    //!
+    //! Right approach
+    //! new int[]{-2,-3,0,-2,-4,-5}));
+    // min:   [-2,-3,0,-2,-4,-40]
+    // max:   [-2, 6,0,0, 8,20]
+    public int maxProductRightApproachWithoutDP(int[] nums) {
+        int min=1 , max =1;
+        int res = nums[0];
+        for(int i = 0 ; i < nums.length ; i++){
+            int curMin = min * nums[i];
+            int curMax = max * nums[i];
 
-    //!BUT
-    public int maxProduct(int[] nums) {
+            min = Math.min(nums[i] , Math.min(curMin , curMax));
+            max = Math.max(nums[i] , Math.max(curMin , curMax));
+
+            res = Math.max(res , max);
+        }
+
+        return res;
+    }
+    //!
+
+    //!BUT - Right approach is easier and works better
+    //? Key insight: At each index, you need both max and min values because:
+    //? A negative number × large negative = large positive
+    //? A negative number × large positive = large negative
+
+    public int maxProductBut(int[] nums) {
         int n = nums.length;
         int max = nums[0], min = nums[0];
         int[][] dp = new int[n][2];

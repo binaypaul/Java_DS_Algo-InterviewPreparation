@@ -3,7 +3,7 @@ package DataStructure.Neetcode150.L_1D_DP;
 import java.util.*;
 
 public class j_WordBreak {
-    //! performance of this solution is also quite good!
+    // ! performance of this solution is also quite good!
     public boolean wordBreak_NormalSolution(String s, List<String> wordDict) {
         Set<String> wordSet = new HashSet<>(wordDict);
         var segEndIdxs = new LinkedList<Integer>();
@@ -12,9 +12,9 @@ public class j_WordBreak {
         boolean flag = false;
         for (int i = 1; i <= s.length(); i++) {
             flag = false;
-            for(int endIdx : segEndIdxs) {
+            for (int endIdx : segEndIdxs) {
                 String sub = s.substring(endIdx, i);
-                if(wordSet.contains(sub)) {
+                if (wordSet.contains(sub)) {
                     segEndIdxs.addFirst(i);
                     flag = true;
                     break;
@@ -24,7 +24,8 @@ public class j_WordBreak {
         return flag;
     }
 
-    //! top down recursion with memoization (quite difficult to come up in an interview).
+    // ! top down recursion with memoization (quite difficult to come up in an
+    // interview).
     public boolean wordBreak_booleanArrayMemo(String s, List<String> wordDict) {
         Set<String> wordSet = new HashSet<>(wordDict);
         Boolean[] dp = new Boolean[s.length()];
@@ -49,12 +50,37 @@ public class j_WordBreak {
 
         return dp[start] = false;
     }
-    //!
+    // !
+
+    // ! top down recursion with memoization (Simplest solution!)
+    Map<String, Boolean> memo = new HashMap<>();
+
+    public boolean wordBreak(String s, List<String> wordDict) {
+        if (s.isEmpty())
+            return true;
+
+        var fromMemo = memo.get(s);
+        if (fromMemo != null)
+            return fromMemo;
+
+        for (String word : wordDict) {
+            if (s.length() >= word.length() && s.substring(0, word.length()).equals(word)) {
+                var res = wordBreak(s.substring(word.length()), wordDict);
+                if (res) {
+                    memo.put(s, true);
+                    return true;
+                }
+            }
+        }
+        memo.put(s, false);
+        return false;
+    }
+    // !
 
     public static void main(String[] args) {
         System.out.println(new j_WordBreak().wordBreak_booleanArrayMemo(
-            "catsandog", Arrays.asList(
-            // [012345678]9
-            "cats","dog","sand","and","cat")));
+                "catsandog", Arrays.asList(
+                        // [012345678]9
+                        "cats", "dog", "sand", "and", "cat")));
     }
 }
