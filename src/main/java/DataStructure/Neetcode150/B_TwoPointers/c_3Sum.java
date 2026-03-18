@@ -44,14 +44,6 @@ public class c_3Sum {
                         l++;
                     } else {
                         threeSumList.add(Arrays.asList(nums[i], nums[l], nums[r]));
-                        // Skip duplicate values for the left element
-                        while (l<r && nums[l] == nums[l+1]) {
-                            l++;
-                        }
-                        // Skip duplicate values for the right element
-                        while (l<r && nums[r] == nums[r-1]) {
-                            r--;
-                        }
                         l++;
                         r--;
                     }
