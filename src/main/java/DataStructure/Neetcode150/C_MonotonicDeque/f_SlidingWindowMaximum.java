@@ -38,11 +38,11 @@ public class f_SlidingWindowMaximum {
         int[] result = new int[n - k + 1];
         Deque<Integer> deque = new ArrayDeque<>(); // Stores indices (not values)
         for (int i = 0; i < nums.length; i++) {
-            // Remove indices outside the current window
+            // Remove indices from start of queue which are outside the current window
             while (!deque.isEmpty() && deque.peekFirst() == i-k){
                 deque.pollFirst();
             }
-            // Remove indices from the last if current element is larger than the last elements
+            // Remove indices from end of queue if current element is larger than the last elements
             while (!deque.isEmpty() && nums[i] > nums[deque.peekLast()]) {
                 deque.pollLast();
             }
