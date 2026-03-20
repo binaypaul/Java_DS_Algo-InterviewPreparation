@@ -22,7 +22,7 @@ public class a_Subsets_DoubleRecursion {
 
         cur.add(nums[i]);
         dfs(i+1, nums);
-        cur.remove(cur.size()-1);
+        cur.removeLast();
 
         dfs(i+1, nums);
     }
