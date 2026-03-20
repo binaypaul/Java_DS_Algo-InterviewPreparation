@@ -23,6 +23,7 @@ public class d_Permutations_ForLoopWithSingleRecursion {
         for (int i = 0; i < nums.length; i++) {
             if(used[i])
                 continue;
+
             cur.add(nums[i]);
             used[i] = true;
             dfs(nums,used);

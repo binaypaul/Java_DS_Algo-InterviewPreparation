@@ -13,7 +13,8 @@ public class d_PermutationsII_ForLoopWithSingleRecursion {
 
     public List<List<Integer>> permuteUnique(int[] nums) {
         Arrays.sort(nums);
-        dfs(nums, new boolean[nums.length]);
+        boolean[] used = new boolean[nums.length];
+        dfs(nums, used);
         return res;
     }
 
@@ -27,6 +28,7 @@ public class d_PermutationsII_ForLoopWithSingleRecursion {
                 ||
             (i>0 && nums[i] == nums[i-1] && !used[i-1])) //this is important when for loop is executing for the original sorted array.
                 continue;
+
             cur.add(nums[i]);
             used[i] = true;
             dfs(nums, used);
