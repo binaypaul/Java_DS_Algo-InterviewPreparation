@@ -2,7 +2,9 @@ package DataStructure.Neetcode150.D_BinarySearch;
 
 public class d_FindMinimumInRotatedSortedArray {
     public static void main(String[] args) {
-        System.out.println(new d_FindMinimumInRotatedSortedArray().findMinWithDup(new int[] {4,5,6,7,8,9,1,2,3}));
+        System.out.println(new d_FindMinimumInRotatedSortedArray()
+                .findMinWithDup(new int[] {4,5,6,7,8,9,1,2,3}));
+                                        // 0,1,2,3,4,5,6,7,8
     }
 /*
 * Comparison Summary
@@ -40,7 +42,7 @@ It's worth noting that if the array contains duplicates (e.g., [3, 3, 1, 3]), ev
             if (nums[mid] > nums[r]) {  //check Comparison Summary to understand why mid element is compared with right element.
                 l = mid + 1;
             } else if (nums[mid] < nums[r]) {
-                r = mid;
+                r = mid-1;
             } else {
                 r--; // Handle duplicates.
             }

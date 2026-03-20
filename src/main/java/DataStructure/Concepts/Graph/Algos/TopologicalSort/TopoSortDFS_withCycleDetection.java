@@ -13,6 +13,17 @@ public class TopoSortDFS_withCycleDetection {
 //        int[][] edges = {{0, 1}, {1, 2}, {2, 3}, {0,4}, {4,5}, {5,3}, {6,7}, {8}, {9}};
         List<Integer> res = new TopoSortDFS_withCycleDetection().topoSort(edges);
         System.out.println(res);
+        /*
+            1
+          /   \
+        2       3   7
+        |       |   |
+        4       5   8
+          \    /
+            6
+
+    O/P: [1, 3, 5, 2, 4, 6, 7, 8]
+         */
     }
 
     public ArrayList<Integer> topoSort(int[][] edges) {

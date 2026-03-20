@@ -45,11 +45,12 @@ public class Prims_MinimumSpanningTree {
 
     public Map<Integer, List<Integer>> minimumSpanningTree(Map<Integer, Set<EdgeI>> graph) {
         var mst = new LinkedHashMap<Integer, List<Integer>>(); //src->dest
-        var minHeap = new PriorityQueue<EdgeI>((EdgeI x, EdgeI y) -> Integer.compare(x.getWeight(), y.getWeight()));
+        var minHeap = new PriorityQueue<EdgeI>(Comparator.comparing(EdgeI::getWeight));
         var visit = new HashSet<Integer>();
 
         //randomly taking the first element from the graph
         Integer firstSrcNode = graph.keySet().stream().findFirst().get();
+
         graph.get(firstSrcNode).forEach(edgeI -> minHeap.add(edgeI));
         visit.add(firstSrcNode);
 

@@ -27,12 +27,17 @@ public class d_ReorderList {
         mid.next = null;
         ListNode leftPart = head;
 
+        // leftPart = 1->2
+        //rightPart = 4->3
         while (rightPart != null) {
-            ListNode leftNext = leftPart.next; //2,3
-            leftPart.next = new ListNode(rightPart.val, leftNext);
+            ListNode leftNext = leftPart.next; //2
+            ListNode rightNext = rightPart.next; //3
 
-            leftPart = leftPart.next.next;
-            rightPart = rightPart.next;
+            leftPart.next = rightPart;
+            leftPart.next.next = leftNext; //"leftPart.next.next" is "rightPart" here
+
+            leftPart = leftNext;
+            rightPart = rightNext;
         }
     }
 

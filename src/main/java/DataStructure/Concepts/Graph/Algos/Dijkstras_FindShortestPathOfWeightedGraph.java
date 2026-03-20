@@ -16,25 +16,27 @@ import java.util.*;
 public class Dijkstras_FindShortestPathOfWeightedGraph {
     public Map<Integer, Integer> findShortestPathOfWeightedGraph(Map<Integer, Set<EdgeI>> graph, int src) {
         //k:vertex, v:path weight to reach the vertex from src.
-        var shortestPaths = new LinkedHashMap<Integer, Integer>();
-        var minHeap = new PriorityQueue<PathI>(Comparator.comparingInt(PathI::getWeight));
+        var shortestPathMap = new HashMap<Integer, Integer>();
+        var pq = new PriorityQueue<PathI>(Comparator.comparing(PathI::getWeight));
 
-        minHeap.add(new PathI(src, src, 0));
+        pq.add(new PathI(src, src, 0));
+        while (!pq.isEmpty()) {
+            var polledPath = pq.poll();
+            if(!shortestPathMap.containsKey(polledPath.getDest())) {
+                shortestPathMap.put(polledPath.getDest(), polledPath.getWeight());
 
-        while (!minHeap.isEmpty()) {
-            PathI prevMinW8Path = minHeap.poll();
-            if(shortestPaths.containsKey(prevMinW8Path.getDest()))
-                continue;
-            shortestPaths.put(prevMinW8Path.getDest(), prevMinW8Path.getWeight());
-
-            for (EdgeI edgeFromDestOfPrevMinW8Edge : graph.get(prevMinW8Path.getDest())) {
-                if (!shortestPaths.containsKey(edgeFromDestOfPrevMinW8Edge.getDest())){
-                    PathI path = new PathI(src, edgeFromDestOfPrevMinW8Edge.getDest(), (edgeFromDestOfPrevMinW8Edge.getWeight() + prevMinW8Path.getWeight()));
-                    minHeap.add(path);
+                var destEdges = graph.get(polledPath.getDest());
+                if(null != destEdges && !destEdges.isEmpty()) {
+                    for (EdgeI destEdge : destEdges) {
+                        if(!shortestPathMap.containsKey(destEdge.getDest())) {
+                            PathI path = new PathI(src, destEdge.getDest(), polledPath.getWeight() + destEdge.getWeight());
+                            pq.add(path);
+                        }
+                    }
                 }
             }
         }
-        return shortestPaths;
+        return shortestPathMap;
     }
 
     public static void main(String[] args) {

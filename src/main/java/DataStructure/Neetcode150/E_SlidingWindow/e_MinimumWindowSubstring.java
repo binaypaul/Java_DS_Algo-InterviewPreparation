@@ -27,11 +27,12 @@ import java.util.*;
 public class e_MinimumWindowSubstring {
     public static void main(String[] args) {
         System.out.println(new e_MinimumWindowSubstring()
-                .minWindow("ZADABOBEAHCODEBANC", "ABCA"));
+                .minWindowQueue("ZADABOBEAHCODEBANC", "ABC"));
     }
     public String minWindowQueue(String s, String t) {
         Map<Character, Integer> tStrCountMap = new HashMap<>(t.length());
         List<Character> tCharList = new ArrayList<>(t.length());
+
         for (Character tc : t.toCharArray()) {
             tStrCountMap.compute(tc, (k, v) -> v == null ? 1 : v + 1);
             tCharList.add(tc);
@@ -62,52 +63,6 @@ public class e_MinimumWindowSubstring {
             }
         }
         return minLen == Integer.MAX_VALUE?"":s.substring(lminIdx, rminIdx+1);
-    }
-
-    //optimised -- https://youtu.be/WJaij9ffOIY?t=732
-    public String minWindow(String s, String t) {
-        if (s.length() < t.length()) {
-            return "";
-        }
-
-        var tCharCountMap = new HashMap<Character, Integer>();
-        for (char ch : t.toCharArray()) {
-            tCharCountMap.put(ch, tCharCountMap.getOrDefault(ch, 0) + 1);
-        }
-
-        int targetCharsRemaining = t.length();
-        int[] minWindow = {0, Integer.MAX_VALUE};
-        int l = 0;
-
-        for (int r = 0; r < s.length(); r++) {
-            char ch = s.charAt(r);
-            if (tCharCountMap.containsKey(ch) && tCharCountMap.get(ch) > 0) {
-                targetCharsRemaining--;
-            }
-            tCharCountMap.put(ch, tCharCountMap.getOrDefault(ch, 0) - 1);
-
-            if (targetCharsRemaining == 0) {
-                while (true) {
-                    char charAtStart = s.charAt(l);
-                    if (tCharCountMap.containsKey(charAtStart) && tCharCountMap.get(charAtStart) == 0) {
-                        break;
-                    }
-                    tCharCountMap.put(charAtStart, tCharCountMap.getOrDefault(charAtStart, 0) + 1);
-                    l++;
-                }
-
-                if (r - l < minWindow[1] - minWindow[0]) {
-                    minWindow[0] = l;
-                    minWindow[1] = r;
-                }
-
-                tCharCountMap.put(s.charAt(l), tCharCountMap.getOrDefault(s.charAt(l), 0) + 1);
-                targetCharsRemaining++;
-                l++;
-            }
-        }
-
-        return minWindow[1] >= s.length() ? "" : s.substring(minWindow[0], minWindow[1] + 1);
     }
 }
 
