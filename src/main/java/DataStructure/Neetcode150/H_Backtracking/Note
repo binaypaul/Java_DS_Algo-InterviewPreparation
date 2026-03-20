@@ -1,6 +1,6 @@
-Use double recursion for subsets and combinations as its easy to visualize with recursive tree
-(one recursion with choosing the i element and one without choosing the i element)
+Use double recursion for subsets and combinations as its easy to visualize with recursive tree.
+(one recursion with adding the i element to cur and one without adding the i element to cur)
 
-Use for loop with single recursion for permutation.
+Use for loop with single recursion for permutation. Difficult to visualize in recursive tree.
 (memorise the code pattern.
 Its basically keep looping over each element from start of array and recurse only when found one element which is not already used.)
