@@ -9,22 +9,25 @@ public class d_Permutations_ForLoopWithSingleRecursion {
     List<List<Integer>> res = new ArrayList<>();
 
     public List<List<Integer>> permute(int[] nums) {
-        dfs(nums);
+        boolean[] used = new boolean[nums.length];
+        dfs(nums, used);
         return res;
     }
 
-    private void dfs(int[] nums) {
-        if(cur.size() == nums.length) {
+    private void dfs(int[] nums,boolean[] used) {
+        if(cur.size()== nums.length) {
             res.add(new ArrayList<>(cur));
             return;
         }
 
         for (int i = 0; i < nums.length; i++) {
-            if(!cur.contains(nums[i])) {
-                cur.add(nums[i]);
-                dfs(nums);
-                cur.remove(cur.size()-1);
-            }
+            if(used[i])
+                continue;
+            cur.add(nums[i]);
+            used[i] = true;
+            dfs(nums,used);
+            used[i] = false;
+            cur.removeLast();
         }
     }
 

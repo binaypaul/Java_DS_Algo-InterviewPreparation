@@ -30,8 +30,8 @@ public class d_PermutationsII_ForLoopWithSingleRecursion {
             cur.add(nums[i]);
             used[i] = true;
             dfs(nums, used);
-            cur.remove(cur.size() - 1);
             used[i] = false;
+            cur.removeLast();
         }
     }
 
