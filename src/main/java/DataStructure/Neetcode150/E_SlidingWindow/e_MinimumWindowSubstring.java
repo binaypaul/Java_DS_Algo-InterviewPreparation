@@ -27,7 +27,7 @@ import java.util.*;
 public class e_MinimumWindowSubstring {
     public static void main(String[] args) {
         System.out.println(new e_MinimumWindowSubstring()
-                .minWindowQueue("ZADABOBEAHCODEBANC", "ABC"));
+                .minWindowQueue("ZADABOBEAHCODEBANC", "ABCB")); //BOBEAHC
     }
     public String minWindowQueue(String s, String t) {
         Map<Character, Integer> tStrCountMap = new HashMap<>(t.length());
