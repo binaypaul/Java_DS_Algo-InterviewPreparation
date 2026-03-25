@@ -31,7 +31,7 @@ public class h_CoinChange {
         // Time limit exceeds error because of below line.
         // Still kept this line just to maintain consistency of initialization of memo
         // array.
-        // Instead we can create "Integer" memo array and do the base checks as follows:
+        // Instead, we can create "Integer" memo array and do the base checks as follows:
         // if (memo[amount] != null)
         // return memo[amount];
         Arrays.fill(memo, Integer.MAX_VALUE);

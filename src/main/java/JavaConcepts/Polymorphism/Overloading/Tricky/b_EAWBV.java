@@ -2,10 +2,8 @@ package JavaConcepts.Polymorphism.Overloading.Tricky;
 
 //^ Automatic Type Promotion -> (byte → short → int → long → float → double).
 //^                                      char ---^
-//^ Widening Reference Conversion -> Sub-Class to Parent class.
-
 //^ Autoboxing means conversion to Wrapper.
-
+//^ Widening Reference Conversion -> Sub-Class to Parent class.
 /*
 When multiple types of conversions are possible, Java follows a strict "order of preference":
 

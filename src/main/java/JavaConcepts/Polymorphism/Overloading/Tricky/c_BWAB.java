@@ -5,7 +5,8 @@ package JavaConcepts.Polymorphism.Overloading.Tricky;
 * You can pass an int to a method expecting an Object (it Boxes to Integer, then Widening Reference Conversion to Number/Object).
 
 ^! Forbidden: Automatic Type Promotion then Boxing.
-! You cannot pass an int to a method expecting a Long object. The compiler will not do Automatic Type Promotion of int to long and then Box it into Long.
+! You cannot pass an int to a method expecting a Long object.
+! The compiler will not do Automatic Type Promotion of int to long and then Box it into Long.
  */
 public class c_BWAB {
     //? int to Integer to Number is allowed.

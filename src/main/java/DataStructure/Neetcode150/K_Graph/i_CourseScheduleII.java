@@ -41,7 +41,11 @@ public class i_CourseScheduleII {
         return new int[0];
     }
 
-    private boolean dfs(Integer src, HashMap<Integer, HashSet<Integer>> srcDestsMap, HashSet<Integer> visit, HashSet<Integer> recStack, LinkedHashSet<Integer> res) {
+    private boolean dfs(Integer src,
+                        HashMap<Integer, HashSet<Integer>> srcDestsMap,
+                        HashSet<Integer> visit,
+                        HashSet<Integer> recStack,
+                        LinkedHashSet<Integer> res) {
         visit.add(src);
         recStack.add(src);
 

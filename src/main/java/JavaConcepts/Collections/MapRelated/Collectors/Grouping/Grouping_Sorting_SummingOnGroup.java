@@ -18,7 +18,6 @@ class Grouping_Sorting_SummingOnGroup {
         Map<String, Integer> treeMap = emps.stream().collect(
                 Collectors.groupingBy(Emp::getDeptName, TreeMap::new, Collectors.summingInt(Emp::getSalary))
         );
-        System.out.println(treeMap);
 
         //Grouping on deptName -> summing the salary in each group created Grouping on deptName
         Map<String, Integer> map = emps.stream().collect(Collectors.groupingBy(Emp::getName, Collectors.summingInt(Emp::getSalary)));
