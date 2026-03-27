@@ -5,8 +5,8 @@ import java.util.*;
 
 public class n_ConstructBinaryTreeFromPreorderAndInorderTraversal {
     public static void main(String[] args) {
-        int[] preorder = {1,2,4,5,3,6,7}; // ro-le-ri
-        int[] inorder  = {4,2,5,1,6,3,7}; // le-ro-ri
+        int[] preorder = {1,2,4,5,3,6,7}; // root-left-right
+        int[] inorder  = {4,2,5,1,6,3,7}; // left-root-right
         /*x
                   1
                 /   \
@@ -24,7 +24,7 @@ public class n_ConstructBinaryTreeFromPreorderAndInorderTraversal {
             return null;
         }
         var inMap = new HashMap<Integer, Integer>();
-        for (int i = 0; i < preorder.length; i++) {
+        for (int i = 0; i < inorder.length; i++) {
             inMap.put(inorder[i], i);
         }
 

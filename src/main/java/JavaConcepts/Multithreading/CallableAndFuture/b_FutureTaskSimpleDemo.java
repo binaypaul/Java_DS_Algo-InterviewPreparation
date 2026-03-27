@@ -7,9 +7,10 @@ public class b_FutureTaskSimpleDemo {
         ExecutorService es = Executors.newSingleThreadExecutor();
 
         FutureTask<String> ftc = new FutureTask<>(new FutureTaskCallable());
-        var fs = es.submit(ftc);
+        es.submit(ftc);
+//        var fs = es.submit(ftc);//does not work
         System.out.println("From futureTasks:: " + ftc.get());
-        System.out.println("From future:: " + fs.get());
+//        System.out.println("From future:: " + fs.get());//does not work
         System.out.println("FutureTask is also blocking in nature!");
         System.out.println("FutureTask is a class that provides implementation of the interface RunnableFuture which extends both Future and Runnable!");
     }
