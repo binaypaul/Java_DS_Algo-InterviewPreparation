@@ -1,0 +1,14 @@
+Calling stored procedure from springboot jpa:
+    https://www.geeksforgeeks.org/advance-java/configuring-store-procedure-in-spring-boot-application/
+
+FAQ: https://github.com/anjitagargi/JavaSpringBoot_Interview_Questions?tab=readme-ov-file#what-is-spring-boot-actuator
+    read detailed answers by googling.
+
+How to test SpringBoot Apps?:
+    Annotation 	            Purpose	                                                Level
+    @WebMvcTest	            Tests only the controller; mocks everything else.	    Unit
+    @DataJpaTest	        Tests only the repository/database layer.	            Data
+    @RestClientTest	        Tests clients that call external APIs.	                Client
+    @SpringBootTest	        Loads the full context; can start a real server.	    Integration
+
+Basic spring security setting: https://www.baeldung.com/spring-security-login-react
