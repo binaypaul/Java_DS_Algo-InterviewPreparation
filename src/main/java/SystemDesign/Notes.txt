@@ -1,1 +1,2 @@
 Choosing SQL vs NoSql Database: https://medium.com/@kganesk/beyond-it-scales-a-framework-for-choosing-databases-in-system-design-interviews-b58fd862759f
+Ticket booking: https://www.youtube.com/watch?v=fhdPyoO6aXI

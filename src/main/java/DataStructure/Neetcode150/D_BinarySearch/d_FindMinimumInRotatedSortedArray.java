@@ -37,10 +37,10 @@ It's worth noting that if the array contains duplicates (e.g., [3, 3, 1, 3]), ev
         //3,4,5,1,2
         //4,5,1,2,3
         //?If the array is rotated more than 0 times.
-        while (l < r) {
-            int mid = l + (r - l) / 2;
+        while (l<r) {
+            int mid = l+(r-l)/2;
             if (nums[mid] > nums[r]) {  //check Comparison Summary to understand why mid element is compared with right element.
-                l = mid + 1;
+                l = mid+1;
             } else if (nums[mid] < nums[r]) {
                 r = mid-1;
             } else {

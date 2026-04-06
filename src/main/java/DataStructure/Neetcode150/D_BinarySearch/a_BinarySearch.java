@@ -17,7 +17,7 @@ public class a_BinarySearch {
             } else if (target > nums[mid]) {
                 low = mid+1;
             } else if (target < nums[mid]) {
-                high = mid - 1;
+                high = mid-1;
             }
         }
         return -1;
