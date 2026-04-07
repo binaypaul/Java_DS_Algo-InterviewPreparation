@@ -1,4 +1,4 @@
-package DataStructure.Neetcode150.C_Stack.d_MonotonicStack_NearestGSToTheRL;
+package DataStructure.Neetcode150.C_Stack.d_MonotonicStack_Nearest_GorS_ToThe_RorL;
 
 import java.util.Stack;
 
@@ -19,7 +19,7 @@ Output: 4
 public class f_LargestRectangleInHistogram {
     public static void main(String[] args) {
         System.out.println(new f_LargestRectangleInHistogram()
-                .largestRectangleArea(new int[] {2,1,5,6,2,3}));
+                .largestRectangleArea(new int[] {2,1,3,3,2,3,1,1,1}));
     }
     public int largestRectangleArea(int[] heights) {
         int hl = heights.length;

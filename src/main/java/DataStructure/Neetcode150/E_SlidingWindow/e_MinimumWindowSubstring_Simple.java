@@ -27,7 +27,7 @@ import java.util.*;
 public class e_MinimumWindowSubstring_Simple {
     public static void main(String[] args) {
         System.out.println(new e_MinimumWindowSubstring_Simple()
-                .minWindow("ZADABOBEAHCODEBANC", "ABCB")); //BOBEAHC
+                .minWindow("ADOBECODEBANC", "ABC")); //BANC
     }
     public String minWindow(String s, String t) {
         if (s.length() < t.length()) return "";

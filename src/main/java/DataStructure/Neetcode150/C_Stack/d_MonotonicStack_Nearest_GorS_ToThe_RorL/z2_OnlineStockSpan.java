@@ -1,4 +1,4 @@
-package DataStructure.Neetcode150.C_Stack.d_MonotonicStack_NearestGSToTheRL;
+package DataStructure.Neetcode150.C_Stack.d_MonotonicStack_Nearest_GorS_ToThe_RorL;
 
 import java.util.Stack;
 
