@@ -73,7 +73,7 @@ It's worth noting that if the array contains duplicates (e.g., [3, 3, 1, 3]), ev
         //4,5,1,2,3
         //5,1,2,3,4
         while (l<r) {
-            int mid = l+(r-l)/2;
+            int mid = l+(r-l+1)/2;
             if (nums[mid] > nums[l]) {  //check Comparison Summary to understand why mid element is compared with right element.
                 l = mid;
             } else if (nums[mid] < nums[l]) {
@@ -82,7 +82,7 @@ It's worth noting that if the array contains duplicates (e.g., [3, 3, 1, 3]), ev
                 l++; // Handle duplicates.
             }
         }
-        return nums[l];
+        return nums[l]; //nums[r] also will work
     }
 }
 
