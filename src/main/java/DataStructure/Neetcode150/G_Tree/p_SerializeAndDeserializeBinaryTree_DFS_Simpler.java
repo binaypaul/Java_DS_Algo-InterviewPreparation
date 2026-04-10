@@ -6,7 +6,9 @@ import java.util.*;
 public class p_SerializeAndDeserializeBinaryTree_DFS_Simpler {
     public static void main(String[] args) {
         p_SerializeAndDeserializeBinaryTree_DFS_Simpler codec = new p_SerializeAndDeserializeBinaryTree_DFS_Simpler();
-        TreeNode root = TreeNode.create(1,2,3,null,null,4,5);
+
+//        TreeNode root = TreeNode.create(1,2,3,null,null,4,5);
+        TreeNode root = null;
 /*
         1
        / \
@@ -20,6 +22,7 @@ public class p_SerializeAndDeserializeBinaryTree_DFS_Simpler {
     }
     // Encodes a tree to a single string.
     public String serialize(TreeNode root) {
+        if(root==null) return "null";
         StringBuilder sb = new StringBuilder();
         preOrder(root, sb);
         return sb.toString();
@@ -37,7 +40,7 @@ public class p_SerializeAndDeserializeBinaryTree_DFS_Simpler {
 
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
-        List<String> ll = new LinkedList<>(Arrays.asList(data.split(",")));
+        List<String> ll = new ArrayList<>(Arrays.asList(data.split(",")));
         return create(ll);
     }
     // 1,2,null,null,3,4,null,null,5,null,null
@@ -51,7 +54,7 @@ public class p_SerializeAndDeserializeBinaryTree_DFS_Simpler {
         TreeNode node = new TreeNode(Integer.parseInt(cur));
 
         node.left=create(ll);
-        node.right = create(ll);
+        node.right=create(ll);
         return node;
     }
 }
