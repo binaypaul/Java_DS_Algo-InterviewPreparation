@@ -34,6 +34,21 @@ class MedianFinder {
             minHeap.add(maxHeap.remove());
         }
     }
+    public void addNum1(int num) {
+        if(minHeap.isEmpty()) {
+            minHeap.add(num);
+        } else {
+            if(num > minHeap.peek()) {
+                maxHeap.add(minHeap.remove());
+                minHeap.add(num);
+            } else {
+                maxHeap.add(num);
+            }
+            if(maxHeap.size()-minHeap.size()>1) {
+                minHeap.add(maxHeap.remove());
+            }
+        }
+    }
 
     public double findMedian() {
          if(maxHeap.size() == minHeap.size()) {
@@ -42,20 +57,29 @@ class MedianFinder {
              return maxHeap.peek();
          }
     }
+    public double findMedian1() {
+        if(minHeap.size()==maxHeap.size()) {
+            return (minHeap.peek()+ maxHeap.peek())/2.0;
+        } else if(maxHeap.size()==0){
+            return (double) minHeap.peek();
+        } else {
+            return maxHeap.peek();
+        }
+    }
 }
 
 public class g_FindMedianFromDataStream {
     public static void main(String[] args) {
         MedianFinder mf = new MedianFinder();
-        mf.addNum(1);
-        System.out.println(mf.findMedian());
-        mf.addNum(2);
-        System.out.println(mf.findMedian());
-        mf.addNum(3);
-        System.out.println(mf.findMedian());
-        mf.addNum(4);
-        System.out.println(mf.findMedian());
-        mf.addNum(5);
-        System.out.println(mf.findMedian());
+        mf.addNum1(1);
+        System.out.println(mf.findMedian1());
+        mf.addNum1(2);
+        System.out.println(mf.findMedian1());
+        mf.addNum1(3);
+        System.out.println(mf.findMedian1());
+        mf.addNum1(4);
+        System.out.println(mf.findMedian1());
+        mf.addNum1(5);
+        System.out.println(mf.findMedian1());
     }
 }

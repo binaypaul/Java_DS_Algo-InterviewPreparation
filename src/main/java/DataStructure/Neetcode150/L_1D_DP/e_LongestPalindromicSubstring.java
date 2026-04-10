@@ -34,8 +34,10 @@ public class e_LongestPalindromicSubstring {
 
     //if s is Palindrome, return 1 else return 2
     private int isPalindromeR(String s, int l, int r) {
-        if(l>=r)
+        if(l>=r) {
             return 1;
+        }
+
         if(s.charAt(l) == s.charAt(r)) {
             return isPalindromeR(s, l + 1, r - 1);
         } else {

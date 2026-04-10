@@ -33,8 +33,8 @@ public class i_MaximumProductSubarray {
             int curMin = min * nums[i];
             int curMax = max * nums[i];
 
-            min = Math.min(nums[i] , Math.min(curMin , curMax));
-            max = Math.max(nums[i] , Math.max(curMin , curMax));
+            min = Math.min(nums[i] , Math.min(curMin , curMax)); // min among nums[i], curMin, curMax
+            max = Math.max(nums[i] , Math.max(curMin , curMax)); // max among nums[i], curMin, curMax
 
             res = Math.max(res , max);
         }
