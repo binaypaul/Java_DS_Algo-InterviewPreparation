@@ -24,6 +24,8 @@ public class i_FindTheDuplicateNumber_WithConstantSpace {
                 .findDuplicate(nums)
         );
     }
+    //Its easy, its typical Floyd's Cycle Detection Algorithm (phase 1) and then find the entrance in the cycle (phase 2).
+    //Both phase 1 and phase 2 are part by Floyd's Cycle Detection Algorithm.
     public int findDuplicate(int[] nums) {
         // Phase 1: Detect the intersection point of the two runners.
         int tortoise = nums[0];
@@ -32,11 +34,10 @@ public class i_FindTheDuplicateNumber_WithConstantSpace {
 //                  Ex  nums={2,5,9,6,5,3,8,5,7,1};
 //                            0,1,2,3,4,5,6,7,8,9
 //        List representation: 2-9-1-5-3-6-8-7
-//                               ^-----------'
+//                                   ^-------'
 //!        NOTE: Given the list, to construct array from the list, apply rule:
 //!              "cur node val is the index of the next node"
 
-        // Advance tortoise by one step and hare by two steps until they meet.
         do {
             tortoise = nums[tortoise];
             hare = nums[nums[hare]];
@@ -48,7 +49,7 @@ public class i_FindTheDuplicateNumber_WithConstantSpace {
         int ptr1 = nums[0];
         int ptr2 = tortoise; // Keep the other pointer at the meeting point.
         // Advance both pointers one step at a time until they meet.
-        // This meeting point is the start of the cycle, which is the duplicate number.
+        // This meeting point is the entrance of the cycle, which is the duplicate number.
         while (ptr1 != ptr2) {
             ptr1 = nums[ptr1];
             ptr2 = nums[ptr2];

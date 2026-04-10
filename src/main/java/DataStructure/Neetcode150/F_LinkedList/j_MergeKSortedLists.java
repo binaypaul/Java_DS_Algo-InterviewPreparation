@@ -37,7 +37,7 @@ Output: []
  */
 public class j_MergeKSortedLists {
     public static void main(String[] args) {
-        int[][] listsArr = new int[][]{{1,4,5}, {1,3,4}, {2,6}};
+        int[][] listsArr = new int[][]{{1}, {1,4,5}, {1,3,4}, {2,6}};
         ListNode[] lists = new ListNode[listsArr.length];
         for (int i = 0; i < listsArr.length; i++) {
             lists[i] = ListNode.create(listsArr[i]);
