@@ -4,7 +4,7 @@ package DataStructure.Neetcode150.B_TwoPointers;
 
 public class e_TrappingRainWater {
     public static void main(String[] args) {
-        System.out.println(new e_TrappingRainWater().trapWater_2pointerApproach(new int[] {0,1,0,2,1,0,1,3,2,1,2,1}));
+        System.out.println(new e_TrappingRainWater().trap_prefixMaxSuffixMaxApproach(new int[] {0,1,0,2,1,0,1,3,2,1,2,1}));
     }
 
     //! prefix max & suffix max approach
@@ -20,6 +20,7 @@ public class e_TrappingRainWater {
             else
                 prefixMax[l] = prefixMax[l-1];
         }
+        //[0,1,1,2,2,2,2,3,3,3,3,3]
 
         suffixMax[len-1] = height[len-1];
         for (int r = len-2; r >= 0; r--) {
@@ -28,7 +29,7 @@ public class e_TrappingRainWater {
             else
                 suffixMax[r] = suffixMax[r+1];
         }
-
+        //[3,3,3,3,3,3,3,3,2,2,2,1]
 
         int total = 0;
 
