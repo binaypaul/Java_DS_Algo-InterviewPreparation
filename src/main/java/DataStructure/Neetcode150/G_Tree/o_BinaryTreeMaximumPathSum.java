@@ -4,7 +4,7 @@ import DataStructure.Concepts.Tree.BST.*;
 
 public class o_BinaryTreeMaximumPathSum {
     public static void main(String[] args) {
-//        TreeNode root = TreeNode.create(-10,44,20,null,null,15,7);
+        TreeNode root = TreeNode.create(-10,44,20,null,null,15,7);
 /*
      -10
      /  \
@@ -12,7 +12,7 @@ public class o_BinaryTreeMaximumPathSum {
          / \
         15   7
 */
-        TreeNode root = TreeNode.create(-1,null,9,-6,3,null,null,null,-2);
+//        TreeNode root = TreeNode.create(-1,null,9,-6,3,null,null,null,-2);
 /*
        -1
          \

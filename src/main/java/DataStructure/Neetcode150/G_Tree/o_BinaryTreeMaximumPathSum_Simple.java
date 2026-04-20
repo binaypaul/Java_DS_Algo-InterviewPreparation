@@ -42,7 +42,7 @@ public class o_BinaryTreeMaximumPathSum_Simple {
 
         maxSum = Math.max(maxSum, left + root.val + right);
 
-        return Math.max(left,right) + root.val;
+        return Math.max(left, right) + root.val;
     }
 /*
        -1

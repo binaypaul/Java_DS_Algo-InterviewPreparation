@@ -1,7 +1,6 @@
 package DataStructure.Neetcode150.L_1D_DP;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class k_LongestIncreasingSubsequence {
     /**
@@ -27,29 +26,32 @@ public class k_LongestIncreasingSubsequence {
     Map<String, Integer> memo = new HashMap<>();
     public int lengthOfLIS(int[] nums) {
         memo.clear();
-        return dp(nums, 0, Integer.MIN_VALUE);
+        int ret = dp(nums, 0, Integer.MIN_VALUE);
+        return ret==Integer.MIN_VALUE?1:ret;
     }
-
     private int dp(int[] nums, int start, int prevVal) {
-        if (start == nums.length) return 0;
-        if (memo.containsKey(start + "," + prevVal)) return memo.get(start + "," + prevVal);
+        if(start >= nums.length) return 0;
+        if(memo.containsKey(nums[start]+","+prevVal))
+            return memo.get(nums[start]+","+prevVal);
 
-        int maxCount = 0;
+        int longest = Integer.MIN_VALUE;
         for (int i = start; i < nums.length; i++) {
-            if(nums[i] > prevVal) {
-                // Include nums[i] in LIS
-                int count = 1 + dp(nums, i + 1, nums[i]);
-                maxCount = Math.max(maxCount, count);
+            if(prevVal<nums[i]) {
+                int cur = dp(nums, i+1, nums[i]);
+                if(cur!=Integer.MIN_VALUE)
+                    longest = Math.max(longest, 1+cur);
             }
         }
-
-        memo.put(start + "," + prevVal, maxCount);
-        return maxCount;
+        memo.put(nums[start]+","+prevVal, longest);
+        return memo.get(nums[start]+","+prevVal);
     }
-    //!
-
 
     public static void main(String[] args) {
-        System.out.println(new k_LongestIncreasingSubsequence().lengthOfLIS(new int[]{0,1,0,3,2,3}));
+        System.out.println(new k_LongestIncreasingSubsequence().lengthOfLIS(new int[]{10,9,2,5,3,4,7,101,18}));
     }
+    /*
+     * Input: nums = [10,9,2,5,3,4,7,101,18]
+     * Output: 5
+     * [2,3,4,7,101]
+     */
 }
