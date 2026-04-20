@@ -15,7 +15,7 @@ public class SortMapByValue_ComplexValueObject {
 
         hashMap = hashMap.entrySet()
                 .stream()
-                .sorted(Map.Entry.comparingByValue(new AgeComparator()))
+                .sorted(Map.Entry.comparingByValue(new NameComparator()))
                 .collect(
                         Collectors.toMap(
                                 e->e.getKey(),
@@ -83,5 +83,12 @@ class AgeComparator implements Comparator<Person> {
     @Override
     public int compare(Person o1, Person o2) {
         return Integer.compare(o1.age, o2.age);
+    }
+}
+
+class NameComparator implements Comparator<Person> {
+    @Override
+    public int compare(Person p1, Person p2) {
+        return p1.name.compareTo(p2.name);
     }
 }
