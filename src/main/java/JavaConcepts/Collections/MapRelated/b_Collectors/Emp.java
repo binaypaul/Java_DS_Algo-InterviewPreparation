@@ -1,4 +1,4 @@
-package JavaConcepts.Collections.MapRelated.Collectors;
+package JavaConcepts.Collections.MapRelated.b_Collectors;
 
 import lombok.*;
 

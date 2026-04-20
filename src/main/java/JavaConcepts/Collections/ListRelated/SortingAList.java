@@ -30,7 +30,7 @@ public class SortingAList {
         //.stream method returns IntStream for primitive int arr
         //.stream method returns Stream<Integer> for Object/Wrapper Integer arr
         int[] arr = {1,2,3,4};
-        arr=Arrays.stream(arr).boxed().sorted((x,y)->Integer.compare(y,x)).mapToInt(Integer::intValue).toArray();
+        arr=Arrays.stream(arr).boxed().sorted((x,y)->y-x).mapToInt(Integer::intValue).toArray();
         System.out.println(Arrays.toString(arr));
     }
 }

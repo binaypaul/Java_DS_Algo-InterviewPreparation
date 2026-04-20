@@ -1,4 +1,4 @@
-package JavaConcepts.Collections.MapRelated.SortMapByValue;
+package JavaConcepts.Collections.MapRelated.a_SortMapByValue;
 
 import java.util.*;
 import java.util.stream.Collectors;

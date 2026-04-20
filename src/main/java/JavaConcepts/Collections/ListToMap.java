@@ -1,5 +1,6 @@
-package JavaConcepts.Collections.MapRelated.Collectors;
+package JavaConcepts.Collections;
 
+import JavaConcepts.Collections.MapRelated.b_Collectors.*;
 import java.util.*;
 import java.util.stream.*;
 
@@ -13,7 +14,13 @@ public class ListToMap {
 
         List<Emp> emps = List.of(ram, shyam, tom, harry, ricky);
 
-        LinkedHashMap<String, Integer> map = emps.stream().collect(Collectors.toMap(Emp::getName, Emp::getSalary, (ov, nv) -> nv, LinkedHashMap::new));
+        LinkedHashMap<String, Integer> map = emps
+                .stream()
+                .collect(Collectors.toMap(
+                        Emp::getName,
+                        Emp::getSalary,
+                        (ov, nv) -> nv,
+                        LinkedHashMap::new));
         System.out.println(map);
     }
 }

@@ -1,6 +1,6 @@
-package JavaConcepts.Collections.MapRelated.Collectors.Grouping;
+package JavaConcepts.Collections.MapRelated.b_Collectors.Grouping;
 
-import JavaConcepts.Collections.MapRelated.Collectors.*;
+import JavaConcepts.Collections.MapRelated.b_Collectors.*;
 import java.util.*;
 import java.util.stream.*;
 

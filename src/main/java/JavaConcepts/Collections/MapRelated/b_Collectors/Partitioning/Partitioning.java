@@ -1,6 +1,6 @@
-package JavaConcepts.Collections.MapRelated.Collectors.Partitioning;
+package JavaConcepts.Collections.MapRelated.b_Collectors.Partitioning;
 
-import JavaConcepts.Collections.MapRelated.Collectors.*;
+import JavaConcepts.Collections.MapRelated.b_Collectors.*;
 import java.util.*;
 import java.util.stream.*;
 
