@@ -7,8 +7,8 @@ public class p_SerializeAndDeserializeBinaryTree_DFS_Simpler {
     public static void main(String[] args) {
         p_SerializeAndDeserializeBinaryTree_DFS_Simpler codec = new p_SerializeAndDeserializeBinaryTree_DFS_Simpler();
 
-//        TreeNode root = TreeNode.create(1,2,3,null,null,4,5);
-        TreeNode root = null;
+        TreeNode root = TreeNode.create(1,2,3,null,null,4,5);
+//        TreeNode root = null;
 /*
         1
        / \
