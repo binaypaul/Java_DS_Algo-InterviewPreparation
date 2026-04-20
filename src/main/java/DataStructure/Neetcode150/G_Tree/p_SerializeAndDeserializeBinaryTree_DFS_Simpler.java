@@ -40,12 +40,12 @@ public class p_SerializeAndDeserializeBinaryTree_DFS_Simpler {
 
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
-        List<String> al = new ArrayList<>(Arrays.asList(data.split(",")));
+        List<String> al = new LinkedList<>(Arrays.asList(data.split(",")));
         return create(al);
     }
     // 1,2,null,null,3,4,null,null,5,null,null
-    private TreeNode create(List<String> al) {
-        String cur = al.removeFirst();
+    private TreeNode create(List<String> ll) {
+        String cur = ll.removeFirst();
 
         if(cur.equals("null")) {
             return null;
@@ -53,8 +53,8 @@ public class p_SerializeAndDeserializeBinaryTree_DFS_Simpler {
 
         TreeNode node = new TreeNode(Integer.parseInt(cur));
 
-        node.left=create(al);
-        node.right=create(al);
+        node.left=create(ll);
+        node.right=create(ll);
         return node;
     }
 }
