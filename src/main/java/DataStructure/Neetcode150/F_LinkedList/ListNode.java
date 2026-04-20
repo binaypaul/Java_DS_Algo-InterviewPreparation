@@ -1,5 +1,8 @@
 package DataStructure.Neetcode150.F_LinkedList;
 
+import lombok.*;
+
+@Getter
 public class ListNode implements Cloneable{
     public int val;
     public ListNode next;

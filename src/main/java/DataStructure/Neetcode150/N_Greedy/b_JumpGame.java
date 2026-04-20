@@ -43,6 +43,7 @@ public class b_JumpGame {
     }
 
     public static void main(String[] args) {
-        System.out.println(new b_JumpGame().canJump(new int[]{2,3,1,1,4}));
+        System.out.println(new b_JumpGame()
+                .canJump(new int[]{2,3,1,1,4}));
     }
 }

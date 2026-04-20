@@ -25,6 +25,9 @@ Example 3:
 Input: lists = [[]]
 Output: []
  */
+
+import java.util.*;
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -46,47 +49,25 @@ public class j_MergeKSortedLists {
         ListNode.printList(new j_MergeKSortedLists().mergeKLists(lists));
     }
     public ListNode mergeKLists(ListNode[] lists) {
-        ListNode cur = null;
-        ListNode head = null;
-        int count = 0;
+        ListNode head = null, cur = null;
 
-        Integer[] arr = new Integer[lists.length];
-
+        var pq = new PriorityQueue<>(Comparator.comparing(ListNode::getVal));
         for (int i = 0; i < lists.length; i++) {
-            if (lists[i] != null) {
-                arr[i] = lists[i].val;
-                count++;
-                lists[i] = lists[i].next;
+            if(lists[i]!=null) {
+                pq.add(lists[i]);
             }
         }
 
-        while (count > 0) {
-            int curMinI = 0;
-            int curMin = Integer.MAX_VALUE;
-
-
-            for (int i = 0; i < arr.length; i++) {
-                if(arr[i] != null) {
-                    if(arr[i] < curMin) {
-                        curMin = arr[i];
-                        curMinI = i;
-                    }
-                }
-            }
-            if (head == null) {
-                head = new ListNode(curMin);
+        while (!pq.isEmpty()) {
+            ListNode min = pq.remove();
+            if(min.next != null)
+                pq.add(min.next);
+            if(head == null) {
+                head = min;
                 cur = head;
             } else {
-                cur.next = new ListNode(curMin);
+                cur.next = min;
                 cur = cur.next;
-            }
-
-            if(lists[curMinI] != null) {
-                arr[curMinI] = lists[curMinI].val;
-                lists[curMinI] = lists[curMinI].next;
-            } else {
-                arr[curMinI] = null;
-                count--;
             }
         }
         return head;

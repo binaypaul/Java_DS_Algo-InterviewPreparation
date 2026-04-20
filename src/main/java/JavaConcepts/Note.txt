@@ -17,3 +17,6 @@
 
 6. Interface With Default Methods vs Abstract Class
     https://www.baeldung.com/java-interface-default-method-vs-abstract-class
+
+7. Multiple database with SpringBootJPA:
+    https://medium.com/@ayyappansubramanian77/configuring-multiple-data-sources-in-spring-boot-with-jpa-b66de7a96332

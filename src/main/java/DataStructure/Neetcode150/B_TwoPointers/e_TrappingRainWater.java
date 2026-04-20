@@ -90,7 +90,7 @@ public class e_TrappingRainWater {
                 left++;
             } else {
                 //as rightMax is derived from height[right] inside above 'else'
-                //this means rightMax will always be less than to heights[left] and leftMax (leftMax derived from heights[left)
+                //this means rightMax will always be less than to heights[left] and leftMax (leftMax derived from heights[left])
                 if (heights[right] >= rightMax) {
                     rightMax = heights[right];
                 } else {
