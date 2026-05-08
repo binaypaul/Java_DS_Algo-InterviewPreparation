@@ -60,8 +60,10 @@ public class j_MergeKSortedLists {
 
         while (!pq.isEmpty()) {
             ListNode min = pq.remove();
-            if(min.next != null)
+            if(min.next != null) {
                 pq.add(min.next);
+            }
+
             if(head == null) {
                 head = min;
                 cur = head;

@@ -24,6 +24,6 @@ public class FirstNonRepeatingCharInString {
     }
 
     public static void main(String[] args) {
-        System.out.println(new FirstNonRepeatingCharInString().getFirstNonRepChar("dacedaccfij"));
+        System.out.println(new FirstNonRepeatingCharInString().getFirstNonRepChar("dacedzaccfij"));
     }
 }

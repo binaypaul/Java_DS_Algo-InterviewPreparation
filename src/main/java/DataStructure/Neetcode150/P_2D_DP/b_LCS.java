@@ -16,9 +16,7 @@ public class b_LCS {
         // If characters match, add 1 and recurse for remaining strings
         if (s1.charAt(m - 1) == s2.charAt(n - 1)) {
             return memo[m][n] = 1 + lcsTopDown(s1, s2, m - 1, n - 1);
-        }
-        // If they don't match, take the maximum of two recursive calls
-        else {
+        } else { // If they don't match, take the maximum of two recursive calls
             return memo[m][n] = Math.max(lcsTopDown(s1, s2, m, n - 1),
                     lcsTopDown(s1, s2, m - 1, n));
         }
@@ -32,7 +30,9 @@ public class b_LCS {
 
         // Initialize memo table with -1
         memo = new int[m + 1][n + 1];
-        for (int[] row : memo) Arrays.fill(row, -1);
+        for (int[] row : memo) {
+            Arrays.fill(row, -1);
+        }
 
         System.out.println("Length of LCS: " + lcsTopDown(s1, s2, m, n));
     }

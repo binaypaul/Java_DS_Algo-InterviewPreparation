@@ -11,4 +11,6 @@ How to test SpringBoot Apps?:
     @RestClientTest	        Tests clients that call external APIs.	                Client
     @SpringBootTest	        Loads the full context; can start a real server.	    Integration
 
-Basic spring security setting: https://www.baeldung.com/spring-security-login-react
+Basic spring security setting:
+    Authentication: https://www.baeldung.com/spring-security-login-react
+    RBAC/Authorization: https://medium.com/@chanuthmaduka1986/secure-spring-boot-application-with-easy-role-based-access-control-8c2355933902

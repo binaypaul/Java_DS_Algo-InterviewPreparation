@@ -4,7 +4,11 @@ package DataStructure.Neetcode150.B_TwoPointers;
 
 public class e_TrappingRainWater {
     public static void main(String[] args) {
-        System.out.println(new e_TrappingRainWater().trap_prefixMaxSuffixMaxApproach(new int[] {0,1,0,2,1,0,1,3,2,1,2,1}));
+        System.out.println(new e_TrappingRainWater()
+                .trap_prefixMaxSuffixMaxApproach(
+                        new int[] {0,1,0,2,1,0,1,3,2,1,2,1}
+                )
+        );
     }
 
     //! prefix max & suffix max approach

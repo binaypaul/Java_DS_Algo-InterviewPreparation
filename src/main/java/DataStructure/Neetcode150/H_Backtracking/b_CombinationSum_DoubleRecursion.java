@@ -16,8 +16,9 @@ public class b_CombinationSum_DoubleRecursion {
 
     private void dfs(int[] can, int target, int i) {
         if(i == can.length || target <= 0) {
-            if(target == 0)
+            if(target == 0) {
                 res.add(new ArrayList<>(cur));
+            }
             return;
         }
 
