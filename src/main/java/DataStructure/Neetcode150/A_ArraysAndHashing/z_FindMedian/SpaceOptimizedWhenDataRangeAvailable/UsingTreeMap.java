@@ -18,6 +18,7 @@ public class UsingTreeMap {
     }
     Map<Integer, Integer> tempCountMap = new TreeMap<>(); // Indices 0-400 represent temps -200 to 200
     int count = 0;
+
     public void recordTemp(int temp) {
         tempCountMap.put(temp, tempCountMap.getOrDefault(temp,0)+1);
         count++;

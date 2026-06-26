@@ -22,11 +22,9 @@ public class b_CombinationSum_DoubleRecursion {
             return;
         }
 
-        if(target-can[i] >= 0) {
-            cur.add(can[i]);
-            dfs(can, target - can[i], i);
-            cur.remove(cur.size() - 1);
-        }
+        cur.add(can[i]);
+        dfs(can, target - can[i], i);
+        cur.remove(cur.size() - 1);
 
         dfs(can, target, i+1);
     }
