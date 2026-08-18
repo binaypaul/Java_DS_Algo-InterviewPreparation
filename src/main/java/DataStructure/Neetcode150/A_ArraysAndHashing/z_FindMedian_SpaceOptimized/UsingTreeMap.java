@@ -7,7 +7,7 @@ import java.util.*;
 public class UsingTreeMap {
     public static void main(String[] args) {
         UsingTreeMap m = new UsingTreeMap();
-        m.recordTemp(-200); // -200,-100,-100,0,0,100,200
+        m.recordTemp(-200);
         m.recordTemp(-100);
         m.recordTemp(0);
         m.recordTemp(-100);

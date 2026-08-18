@@ -3,9 +3,10 @@ package DataStructure.Neetcode150.A_ArraysAndHashing;
 import java.util.HashMap;
 import java.util.Map;
 
+// https://leetcode.com/problems/contains-duplicate/description/
 public class a_ContainsDuplicate {
     public static void main(String[] args) {
-        System.out.println(containsDuplicate(new int[]{1,2,3}));
+        System.out.println(containsDuplicate(new int[] { 1, 2, 3 }));
     }
 
     public static boolean containsDuplicate(int[] nums) {
