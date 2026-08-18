@@ -1,34 +1,50 @@
-import java.lang.reflect.*;
-import java.util.*;
-import java.util.stream.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class Test {
-
     public static void main(String[] args) {
-        System.out.println(new Test().coinChange(new int[]{1,2,5}, 100));
+        Test m = new Test();
+        m.recordTemp(-200); //-200,-100,-100,0,0,100,200
+        m.recordTemp(-100);
+        m.recordTemp(0);
+        m.recordTemp(-100);
+        m.recordTemp(0);
+        m.recordTemp(100);
+        m.recordTemp(200);
+        m.recordTemp(201);
+        m.recordTemp(202);
+        m.recordTemp(203);
+        System.out.println(m.findMedian());
     }
 
-    public int coinChange(int[] coins, int amount) {
-        return dpR(coins, amount, 0, new Integer[amount+1]);
+    Map<Integer, Integer> map = new TreeMap();
+    int count = 0;
+
+    private void recordTemp(int temp) {
+        map.put(temp, map.getOrDefault(temp, 0)+1);
+        count++;
     }
 
-    int dpR(int[] coins, int amount, int count, Integer[] memo) {
-        if(amount == 0) {
-            return 0;
-        } else if(amount < 0) {
-            return Integer.MAX_VALUE;
+    private double findMedian() {
+        if(count%2==0) {
+            return (double) ((findVal(count/2+1)+findVal(count/2))/2);
+        } else {
+            return (double) findVal(count/2+1);
         }
-        if(memo[amount] != null) return memo[amount];
+    }
 
-        int min = Integer.MAX_VALUE;
-        for(int coin : coins) {
-            if(amount-coin < 0)
-                continue;
-            int res = dpR(coins, amount-coin, count+1, memo);
-            if(res != Integer.MAX_VALUE) {
-                min = Math.min(min, res+1);
+    private int findVal(int position) {
+        var set = map.entrySet().stream().toList();
+        var posCo = 0;
+
+        for (var e : set) {
+            posCo += e.getValue();
+            if(posCo >= position) {
+                return e.getKey();
             }
         }
-        return memo[amount] = min;
+        return 0;
     }
 }

@@ -14,6 +14,9 @@ public class UsingTreeMap {
         m.recordTemp(0);
         m.recordTemp(100);
         m.recordTemp(200);
+        m.recordTemp(201);
+        m.recordTemp(202);
+        m.recordTemp(203);
         System.out.println(m.findMedian());
     }
     Map<Integer, Integer> tempCountMap = new TreeMap<>(); // Indices 0-400 represent temps -200 to 200
