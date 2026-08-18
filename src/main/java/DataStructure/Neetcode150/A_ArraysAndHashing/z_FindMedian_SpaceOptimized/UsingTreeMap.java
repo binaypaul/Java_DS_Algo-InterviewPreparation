@@ -1,4 +1,4 @@
-package DataStructure.Neetcode150.A_ArraysAndHashing.z_FindMedian.SpaceOptimizedWhenDataRangeAvailable;
+package DataStructure.Neetcode150.A_ArraysAndHashing.z_FindMedian_SpaceOptimized;
 
 import java.util.*;
 
@@ -7,7 +7,7 @@ import java.util.*;
 public class UsingTreeMap {
     public static void main(String[] args) {
         UsingTreeMap m = new UsingTreeMap();
-        m.recordTemp(-200); //-200,-100,-100,0,0,100,200
+        m.recordTemp(-200); // -200,-100,-100,0,0,100,200
         m.recordTemp(-100);
         m.recordTemp(0);
         m.recordTemp(-100);
@@ -19,11 +19,12 @@ public class UsingTreeMap {
         m.recordTemp(203);
         System.out.println(m.findMedian());
     }
+
     Map<Integer, Integer> tempCountMap = new TreeMap<>(); // Indices 0-400 represent temps -200 to 200
     int count = 0;
 
     public void recordTemp(int temp) {
-        tempCountMap.put(temp, tempCountMap.getOrDefault(temp,0)+1);
+        tempCountMap.put(temp, tempCountMap.getOrDefault(temp, 0) + 1);
         count++;
     }
 
