@@ -1,21 +1,14 @@
-import java.util.Arrays;
-import java.util.HashMap;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Test {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(new Test().twoSum(new int[]{2,3,8,4,11,6,5}, 9)));
+        // System.out.println(Arrays.toString(new Test().threeSum(new int[] { -1, 0, 1, 2, -1, -4 }, 2)));
+        System.out.println(new Test().trap(new int[]    {4,2,0,3,2,5}));
+                                                    //   0,1,2,3,4,5,6,7,8,9,10,11
     }
 
-    public int[] twoSum(int[] nums, int target) {
-        var map = new HashMap<Integer, Integer>();
-
-        for(int i=0;i< nums.length;i++) {
-            if(map.containsKey(target-nums[i])) {
-                return new int[]{i, map.get(target-nums[i])};
-            }
-            map.put(nums[i],i);
-        }
-        return null;
+    public int trap(int[] height) {
+        return 0;
     }
 }

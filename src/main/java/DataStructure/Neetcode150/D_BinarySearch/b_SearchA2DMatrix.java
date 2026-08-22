@@ -12,7 +12,7 @@ public class b_SearchA2DMatrix {
         int low = 0, high = n*m - 1;      // 11
 
         while (low <= high) {
-            int mid = (low + high)/2;   // 5
+            int mid = low + (high - low)/2;   // 5
             int row = mid/n;   //1
             int col = mid%n;   //1
 

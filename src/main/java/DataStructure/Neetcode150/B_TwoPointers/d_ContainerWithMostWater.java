@@ -28,10 +28,10 @@ public class d_ContainerWithMostWater {
 
             maxArea = Math.max(maxArea, curArea);
 
-            if(height[l] > height[r]) {
-                r--;
-            } else {
+            if(height[l] < height[r]) {
                 l++;
+            } else {
+                r--;
             }
         }
         return maxArea;
