@@ -20,7 +20,7 @@ public class p_SerializeAndDeserializeBinaryTree_DFS_Simpler {
         System.out.println(s);// 1,2,null,null,3,4,null,null,5,null,null
         System.out.println(codec.deserialize(s));
     }
-    // Encodes a tree to a single string.
+    // Encodes a tree to a single string. Use preOrder.
     public String serialize(TreeNode root) {
         if(root==null) return "null";
         StringBuilder sb = new StringBuilder();

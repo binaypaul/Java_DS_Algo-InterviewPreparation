@@ -47,7 +47,7 @@ public class l_ValidateBinarySearchTree_DFS {
     }
 
     public static void main(String[] args) {
-        TreeNode root = TreeNode.create(-2147483648,null,2147483647);
+        TreeNode root = TreeNode.create(2,1,3);
         System.out.println(new l_ValidateBinarySearchTree_DFS().isValidBST(root));
     }
 }

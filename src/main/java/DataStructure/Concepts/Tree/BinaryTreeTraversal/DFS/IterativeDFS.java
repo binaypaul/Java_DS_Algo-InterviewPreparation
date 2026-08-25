@@ -62,16 +62,16 @@ public class IterativeDFS {
 
 //        new RecursiveDFS().inOrder(root);
 //        System.out.println();
-//        new IterativeDFS().inOrder(root);
-//        System.out.println();
-//
+        new IterativeDFS().inOrder(root);
+        System.out.println();
+
 //        new RecursiveDFS().preOrder(root);
 //        System.out.println();
-//        new IterativeDFS().preOrder(root);
-//        System.out.println();
-
-        new RecursiveDFS().postOrder(root);
+        new IterativeDFS().preOrder(root);
         System.out.println();
+
+//        new RecursiveDFS().postOrder(root);
+//        System.out.println();
         new IterativeDFS().postOrder(root);
         System.out.println();
     }
