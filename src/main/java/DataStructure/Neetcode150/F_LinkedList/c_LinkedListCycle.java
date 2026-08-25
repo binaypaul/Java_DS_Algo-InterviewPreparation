@@ -12,7 +12,7 @@ public class c_LinkedListCycle {
         two.next = thi;
         thi.next = fou;
         fou.next = fif;
-//        fif.next = two;
+        fif.next = two;
 
         System.out.println(hasCycle(one));
     }

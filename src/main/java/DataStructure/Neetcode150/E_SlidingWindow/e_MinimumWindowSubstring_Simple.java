@@ -32,33 +32,34 @@ public class e_MinimumWindowSubstring_Simple {
     public String minWindow(String s, String t) {
         if (s.length() < t.length()) return "";
 
-        Map<Character, Integer> need = new HashMap<>();
-        Map<Character, Integer> window = new HashMap<>();
+        Map<Character, Integer> needMap = new HashMap<>();
+        Map<Character, Integer> windowMap = new HashMap<>();
 
         for (char c : t.toCharArray())
-            need.put(c, need.getOrDefault(c, 0) + 1);
+            needMap.put(c, needMap.getOrDefault(c, 0) + 1);
 
-        int haveCount = 0, needCount = need.size();
+        int haveCount = 0, needCount = needMap.size();
         int l = 0, minl = 0, minr = 0, minLen = Integer.MAX_VALUE;
 
         for (int r = 0; r < s.length(); r++) {
             char c = s.charAt(r);
-            window.put(c, window.getOrDefault(c, 0) + 1);
+            windowMap.put(c, windowMap.getOrDefault(c, 0) + 1);
 
-            // Check if current char satisfies the need
-            if (need.containsKey(c) && window.get(c).equals(need.get(c)))
+            // Check if current char satisfies the needMap
+            if (needMap.containsKey(c) && windowMap.get(c).equals(needMap.get(c)))
                 haveCount++;
 
-            // Try to shrink window from left
+            // Try to shrink windowMap from left
             while (haveCount == needCount) {
-                if (r - l + 1 < minLen) {
-                    minLen = r - l + 1;
+                int len = r - l + 1;
+                if (len < minLen) {
+                    minLen = len;
                     minl = l;
                     minr = r;
                 }
                 char lc = s.charAt(l);
-                window.put(lc, window.get(lc) - 1);
-                if (need.containsKey(lc) && window.get(lc) < need.get(lc))
+                windowMap.put(lc, windowMap.get(lc) - 1);
+                if (needMap.containsKey(lc) && windowMap.get(lc) < needMap.get(lc))
                     haveCount--;
                 l++;
             }

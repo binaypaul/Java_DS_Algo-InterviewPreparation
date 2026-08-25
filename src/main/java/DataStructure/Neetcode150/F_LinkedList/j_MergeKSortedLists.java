@@ -51,7 +51,7 @@ public class j_MergeKSortedLists {
     public ListNode mergeKLists(ListNode[] lists) {
         ListNode head = null, cur = null;
 
-        var pq = new PriorityQueue<>(Comparator.comparing(ListNode::getVal));
+        var pq = new PriorityQueue<ListNode>(Comparator.comparing(ListNode::getVal));
         for (int i = 0; i < lists.length; i++) {
             if(lists[i]!=null) {
                 pq.add(lists[i]);
