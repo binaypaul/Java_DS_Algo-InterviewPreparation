@@ -6,6 +6,20 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class CountUniquePathsFromTopLeftToBottomRight_DFS {
+    public static void main(String[] args) {
+        //'0' represents valid path
+        //'1' represents blocked path
+        int[][] grid = new int[][]{
+                {0,0,0,0},
+                {1,1,0,0},
+                {0,0,0,1},
+                {0,1,0,0}
+        };
+        System.out.println(
+                new CountUniquePathsFromTopLeftToBottomRight_DFS()
+                        .findPaths(grid, 0, 0, new HashSet<GridRowCol>()));
+        //shortest path is: (1,0)->(0,1)->(0,2)->(1,2)->(2,2)->(3,2)->(3,3)
+    }
 
     private int findPaths(int [][] grid, int r, int c, Set<GridRowCol> visited) {
         int rl = grid.length, cl = grid[0].length;
@@ -34,19 +48,5 @@ public class CountUniquePathsFromTopLeftToBottomRight_DFS {
         visited.remove(grc);
 
         return count;
-    }
-
-    public static void main(String[] args) {
-        //'0' represents valid path
-        //'1' represents blocked path
-        System.out.println(
-                new CountUniquePathsFromTopLeftToBottomRight_DFS()
-                .findPaths(new int[][]{
-                    {0,0,0,0},
-                    {1,1,0,0},
-                    {0,0,0,1},
-                    {0,1,0,0}
-        }, 0, 0, new HashSet<GridRowCol>()));
-        //shortest path is: (1,0)->(0,1)->(0,2)->(1,2)->(2,2)->(3,2)->(3,3)
     }
 }

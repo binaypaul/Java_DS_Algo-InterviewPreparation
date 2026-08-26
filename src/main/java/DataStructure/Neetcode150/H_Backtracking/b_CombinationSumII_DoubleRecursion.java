@@ -20,7 +20,7 @@ public class b_CombinationSumII_DoubleRecursion {
     }
 
     private void dfs(int[] candidates, int target, int i) {
-        if(target<=0 || i > candidates.length-1) {
+        if(target<=0 || i == candidates.length) {
             if(target==0 && !res.contains(cur)) {
                 res.add(new ArrayList<>(cur));
             }

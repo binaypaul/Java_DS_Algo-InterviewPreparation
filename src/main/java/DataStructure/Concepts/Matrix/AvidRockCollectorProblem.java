@@ -2,7 +2,7 @@ package DataStructure.Concepts.Matrix;
 
 /* You are an avid rock collector who lives in southern California. Some rare and desirable rocks just became available in New York, so you are planning a cross-country road trip. There are several other rare rocks that you could pick up along the way. You have been given a grid filled with numbers, representing the number of rare rocks available in various cities across the country. Your objective is to find the optimal path from So_Cal to New_York that would allow you to accumulate the most rocks along the way.
 
-Note.txt: You can only travel either north (up) or east (right).
+A_Note.txt.txt: You can only travel either north (up) or east (right).
 b) Consider adding some additional tests in doTestsPass().
 c) Implement optimalPath() correctly.
 d) Here is an example:

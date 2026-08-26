@@ -19,7 +19,7 @@ public class b_SubarraysWhichSumEqualsK {
         var res = new LinkedHashSet<int[]>();
         var sum = 0;
         //! key: sum of nums values till i from 0,  value: Set of (1+i), "1" is a constant,"i" is the index in array till values in nums arr adds to be equal to sum.
-        //* Note:
+        //* A_Note.txt:
         //*      There could be multiple index where sum of values till that index creates same sum.
         //*      Constant "1" is added to i in the value set of map, so that we can create subarr (line 34) from the next index till which sum was previously put in map.
         //?      (Bit tricky to understand, remove +1 in line 40 to see what actually happens)

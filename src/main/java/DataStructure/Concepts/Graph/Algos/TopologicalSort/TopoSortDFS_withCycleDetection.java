@@ -41,7 +41,13 @@ public class TopoSortDFS_withCycleDetection {
         return new ArrayList<>(result);
     }
 
-    private void dfs(Integer src, Map<Integer, Set<EdgeI>> adj, Set<Integer> visited, Set<Integer> recStack, LinkedList<Integer> result) {
+    private void dfs(
+            Integer src,
+            Map<Integer, Set<EdgeI>> adj,
+            Set<Integer> visited,
+            Set<Integer> recStack,
+            LinkedList<Integer> result
+    ) {
         visited.add(src);
         recStack.add(src);
 

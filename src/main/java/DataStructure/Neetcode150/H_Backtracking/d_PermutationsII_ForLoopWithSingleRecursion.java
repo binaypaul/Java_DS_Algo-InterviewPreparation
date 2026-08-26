@@ -7,6 +7,12 @@ import java.util.List;
 //https://leetcode.com/problems/permutations-ii/description/
 //https://www.youtube.com/watch?v=YW5F0WqBBWY
 public class d_PermutationsII_ForLoopWithSingleRecursion {
+    public static void main(String[] args) {
+        System.out.println(
+                new d_PermutationsII_ForLoopWithSingleRecursion()
+                        .permuteUnique(new int[]{1,1,2}) //[[1,1,2],[1,2,1],[2,1,1]]
+        );
+    }
 
     List<Integer> cur = new ArrayList<>();
     List<List<Integer>> res = new ArrayList<>();
@@ -35,12 +41,5 @@ public class d_PermutationsII_ForLoopWithSingleRecursion {
             used[i] = false;
             cur.removeLast();
         }
-    }
-
-    public static void main(String[] args) {
-        System.out.println(
-                new d_PermutationsII_ForLoopWithSingleRecursion()
-                        .permuteUnique(new int[]{1,1,2}) //[[1,1,2],[1,2,1],[2,1,1]]
-        );
     }
 }

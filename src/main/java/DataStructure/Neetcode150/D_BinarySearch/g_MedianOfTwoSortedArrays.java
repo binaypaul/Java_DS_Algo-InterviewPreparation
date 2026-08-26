@@ -24,7 +24,7 @@ public class g_MedianOfTwoSortedArrays {
 //                 0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10
 //                 1, 2,12,13,15,17,26,30,38,45,60
         while (l <= r) {
-            // Note:
+            // A_Note.txt:
             // If totalLen (11) is ODD -> count of elem in left part(p1+p2) is 1 greater than right part (totalLen-(p1+p2)) //6 is 1 greater 5
             // If totalLen (eg: 10) is EVEN -> valid partition = count of elem in left part(p1+p2) == right part (totalLen-(p1+p2)) //5==5
             int p1 = (l+(r-l)/2);

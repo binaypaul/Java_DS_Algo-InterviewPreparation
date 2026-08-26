@@ -4,16 +4,16 @@ import java.util.*;
 
 //https://leetcode.com/problems/clone-graph/description/
 public class c_CloneGraph_DFS {
-    Map<Integer, Node> visited = new HashMap<>();
+    Map<Integer, Node> clonedNodeMap = new HashMap<>();
     public Node cloneGraph(Node node) {
         Node curNode = null;
         if(node == null) {
             return null;
-        } else if (visited.containsKey(node.val)) {
-            return visited.get(node.val);
+        } else if (clonedNodeMap.containsKey(node.val)) {
+            return clonedNodeMap.get(node.val);
         } else {
             curNode = new Node(node.val);
-            visited.put(node.val, curNode);
+            clonedNodeMap.put(node.val, curNode);
             if(node.neighbors != null) {
                 List<Node> neighborList = new ArrayList<>(node.neighbors.size());
                 for (Node neigh : node.neighbors) {

@@ -1,4 +1,4 @@
-package DataStructure.Concepts.Graph.Algos.TopologicalSort.Practise;
+package DataStructure.Concepts.Graph.Algos.practise;
 
 import DataStructure.Concepts.Graph.AdjacencyList.AdjListMap.AdjListMap;
 import DataStructure.Concepts.Graph.AdjacencyList.AdjListMap.EdgeI;

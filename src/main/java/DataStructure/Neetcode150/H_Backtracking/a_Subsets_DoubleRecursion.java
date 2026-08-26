@@ -5,7 +5,6 @@ import java.util.List;
 
 //https://leetcode.com/problems/subsets/description/
 public class a_Subsets_DoubleRecursion {
-
     List<List<Integer>> res = new ArrayList<>();
     List<Integer> cur = new ArrayList<>();
 

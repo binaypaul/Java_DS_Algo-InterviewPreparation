@@ -1,6 +1,22 @@
 package DataStructure.Neetcode150.K_Graph;
 //https://leetcode.com/problems/max-area-of-island/
 public class b_MaxAreaOfIsland_DFS {
+    public static void main(String[] args) {
+        int [][] grid = new int[][]
+                {
+                        {0,0,1,0,0,0,0,1,0,0,0,0,0},
+                        {0,0,0,0,0,0,0,1,1,1,0,0,0},
+                        {0,1,1,0,1,0,0,0,0,0,0,0,0},
+                        {0,1,0,0,1,1,0,0,1,0,1,0,0},
+                        {0,1,0,0,1,1,0,0,1,1,1,0,0},
+                        {0,0,0,0,0,0,0,0,0,0,1,0,0},
+                        {0,0,0,0,0,0,0,1,1,1,0,0,0},
+                        {0,0,0,0,0,0,0,1,1,0,0,0,0}
+                };
+
+        System.out.println(new b_MaxAreaOfIsland_DFS().maxAreaOfIsland(grid));
+    }
+
     int maxArea = 0, curMaxArea;
     public int maxAreaOfIsland(int[][] grid) {
         int rl = grid.length, cl = grid[0].length;
@@ -22,8 +38,7 @@ public class b_MaxAreaOfIsland_DFS {
                 (c == cl) ||
                 (grid[r][c] == 0)) {
             return;
-        } else if (grid[r][c] == 1)
-        {
+        } else if (grid[r][c] == 1) {
             grid[r][c] = 0;
             curMaxArea++;
         }
@@ -31,21 +46,5 @@ public class b_MaxAreaOfIsland_DFS {
         dfs(grid, r-1, rl, c, cl);
         dfs(grid, r, rl, c+1, cl);
         dfs(grid, r, rl, c-1, cl);
-    }
-
-    public static void main(String[] args) {
-        int [][] grid = new int[][]
-        {
-            {0,0,1,0,0,0,0,1,0,0,0,0,0},
-            {0,0,0,0,0,0,0,1,1,1,0,0,0},
-            {0,1,1,0,1,0,0,0,0,0,0,0,0},
-            {0,1,0,0,1,1,0,0,1,0,1,0,0},
-            {0,1,0,0,1,1,0,0,1,1,1,0,0},
-            {0,0,0,0,0,0,0,0,0,0,1,0,0},
-            {0,0,0,0,0,0,0,1,1,1,0,0,0},
-            {0,0,0,0,0,0,0,1,1,0,0,0,0}
-        };
-
-        System.out.println(new b_MaxAreaOfIsland_DFS().maxAreaOfIsland(grid));
     }
 }
