@@ -22,15 +22,39 @@ public class k_LongestIncreasingSubsequence {
      * @param nums
      * @return
      */
+    //! Revursive
+    int maxLen=Integer.MIN_VALUE;
+    public int lengthOfLIS_R(int[] nums) {
+        dpR(nums, 0, Integer.MIN_VALUE);
+        return maxLen==Integer.MIN_VALUE?1:maxLen;
+    }
+    private int dpR(int[] nums, int start, int prev) {
+        if(start==nums.length) return 0;
+
+        int len=Integer.MIN_VALUE;
+        for (int i = start; i < nums.length; i++) {
+            if(nums[i]>prev) {
+                int cur = dp(nums, i+1, nums[i]);
+                if(cur!=Integer.MIN_VALUE) {
+                    len = Math.max(len, cur + 1);
+                }
+            }
+
+            maxLen = Math.max(maxLen, len);
+        }
+        return len;
+    }
+    //
+
     //! TDM
     Map<String, Integer> memo = new HashMap<>();
     public int lengthOfLIS(int[] nums) {
-        memo.clear();
         int ret = dp(nums, 0, Integer.MIN_VALUE);
         return ret==Integer.MIN_VALUE?1:ret;
     }
+    //{10,9,2,5,3,7,101,18}
     private int dp(int[] nums, int start, int prevVal) {
-        if(start >= nums.length) return 0;
+        if(start == nums.length) return 0;
         if(memo.containsKey(nums[start]+","+prevVal))
             return memo.get(nums[start]+","+prevVal);
 
@@ -38,8 +62,10 @@ public class k_LongestIncreasingSubsequence {
         for (int i = start; i < nums.length; i++) {
             if(prevVal<nums[i]) {
                 int cur = dp(nums, i+1, nums[i]);
-                if(cur!=Integer.MIN_VALUE)
-                    longest = Math.max(longest, 1+cur);
+                if(cur==Integer.MIN_VALUE) {
+                    cur=0;
+                }
+                longest = Math.max(longest, cur + 1);
             }
         }
         memo.put(nums[start]+","+prevVal, longest);
@@ -47,7 +73,8 @@ public class k_LongestIncreasingSubsequence {
     }
 
     public static void main(String[] args) {
-        System.out.println(new k_LongestIncreasingSubsequence().lengthOfLIS(new int[]{10,9,2,5,3,4,7,101,18}));
+//        System.out.println(new k_LongestIncreasingSubsequence().lengthOfLIS(new int[]{10,9,2,5,3,4,7,101,18}));
+        System.out.println(new k_LongestIncreasingSubsequence().lengthOfLIS(new int[]{1,3,6,7,9,4,10,5}));
     }
     /*
      * Input: nums = [10,9,2,5,3,4,7,101,18]

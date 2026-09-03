@@ -9,23 +9,21 @@ public class c_HouseRobber {
         return dpR(nums, nums.length);
     }
 
-    private int dpR(int[] nums, int i) { // "i" is index of the house after last house.
-        if(i < 1) return 0;
-
+    private int dpR(int[] nums, int i) {
+        if(i<=0) return 0;
+        if(i==1) return nums[i-1];
         return Math.max(
-            //? The maximum amount of money that can be robbed by robbing the last house (i-1) + amount of money till house previous to the house previous to the last house (i-2).
-            nums[i-1] + dpR(nums, i-2),
-            //? The maximum amount of money that can be robbed by not robbing the last house (i-1) but amount of money till the house previous to last house (i-1) .
-            dpR(nums, i-1)
+                nums[i-1]+dpR(nums, i-2),
+                nums[i-2]+dpR(nums, i-3)
         );
     }
     //!
 
     //! Top down Memoization (TDM)
     public int robM(int[] nums) {
-        int[] memo = new int[nums.length+1];
+        var memo = new int[nums.length+1];
         Arrays.fill(memo, -1);
-        return dpM(nums, memo, nums.length);
+        return dpM(nums, nums.length, memo);
     }
 
     /**
@@ -33,13 +31,13 @@ public class c_HouseRobber {
      * Output: 10
      */
 
-    int dpM(int[] nums, int[] memo, int i) {
-        if(i < 1) return 0;
+    private int dpM(int[] nums, int i, int[] memo) {
+        if(i<=0) return 0;
+        if(i==1) return nums[i-1];
         if(memo[i] != -1) return memo[i];
-
         memo[i] = Math.max(
-                nums[i-1] + dpM(nums, memo, i-2),
-                dpM(nums, memo, i-1)
+                nums[i-1]+dpM(nums, i-2, memo),
+                nums[i-2]+dpM(nums, i-3, memo)
         );
         return memo[i];
     }

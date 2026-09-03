@@ -1,8 +1,7 @@
 package DataStructure.Neetcode150.M_Intervals;
 //https://neetcode.io/problems/meeting-schedule
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class d_MeetingRooms {
     public static void main(String[] args) {
@@ -16,7 +15,7 @@ public class d_MeetingRooms {
     }
 
     public boolean canAttendMeetings(List<Interval> intervals) {
-        intervals.sort((o1,o2)-> Integer.compare(o1.start, o2.start));
+        intervals.sort(Comparator.comparingInt(o -> o.start));
         for (int i = 1; i < intervals.size(); i++) {
             if(intervals.get(i-1).end > intervals.get(i).start)
                 return false;

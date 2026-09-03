@@ -6,24 +6,23 @@ import java.util.Map;
 //https://leetcode.com/problems/decode-ways/
 public class g_DecodeWays {
     private Map<String, Integer> memo = new HashMap<>();
-    public int numDecodings(String s) {
-        int x = dpR(s);
-        return x;
+    public int numDecoding(String s) {
+        return dpM(s);
     }
 
-    private int dpR(String s) {
+    private int dpM(String s) {
         if(s.isEmpty()) return 1;
         if(s.charAt(0) == '0') return 0;
         if(memo.containsKey(s)) return memo.get(s);
 
         int count = 0;
 
-        count += dpR(s.substring(1));
+        count += dpM(s.substring(1));
 
         if (s.length() >= 2) {
             int twoDigit = Integer.parseInt(s.substring(0, 2));
             if (twoDigit >= 10 && twoDigit <= 26) {
-                count += dpR(s.substring(2));
+                count += dpM(s.substring(2));
             }
         }
 
@@ -33,7 +32,7 @@ public class g_DecodeWays {
     }
 
     public static void main(String[] args) {
-        System.out.println(new g_DecodeWays().numDecodings("123"));
+        System.out.println(new g_DecodeWays().numDecoding("11106"));
     }
 }
 /**

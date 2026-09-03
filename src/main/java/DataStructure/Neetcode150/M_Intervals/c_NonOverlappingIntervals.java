@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class c_NonOverlappingIntervals {
     public int eraseOverlapIntervals(int[][] intervals) {
+//        {1,100},{1,11},{2,12},{11,22}
         Arrays.sort(intervals, (x,y) -> Integer.compare(x[0], y[0]));
         int count = 0;
         int prevIndex = -1;
@@ -35,6 +36,8 @@ public class c_NonOverlappingIntervals {
     }
 
     public static void main(String[] args) {
-        System.out.println(new c_NonOverlappingIntervals().eraseOverlapIntervals(new int[][]{{1,100},{11,22},{1,11},{2,12}}));
+        System.out.println(new c_NonOverlappingIntervals().eraseOverlapIntervals(new int[][]{
+                {1,100},{11,22},{1,11},{2,12}
+        }));
     }
 }

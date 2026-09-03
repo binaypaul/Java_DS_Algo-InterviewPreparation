@@ -4,7 +4,7 @@ package DataStructure.Neetcode150.L_1D_DP;
 
 public class i_MaximumProductSubarray {
     public static void main(String[] args) {
-        System.out.println(new i_MaximumProductSubarray().maxProductRightApproachWithoutDP(new int[]{-2,-3,0,-2,-4,-5}));
+        System.out.println(new i_MaximumProductSubarray().maxProductRightApproachWithoutDP_simple(new int[]{-2,-3,0,-2,-4,-5}));
     }                                                               // max:   [-2, 6,0,-2, 8,20]
                                                                     // min:   [-2,-3,0,-2,-4,-40]
     //!Normal Bruteforce
@@ -21,22 +21,43 @@ public class i_MaximumProductSubarray {
         }
         return maxProd;
     }
-    //!
-    //! Right approach
-    //! new int[]{-2,-3,0,-2,-4,-5}));
-    // min:   [-2,-3,0,-2,-4,-40]
-    // max:   [-2, 6,0,0, 8,20]
-    public int maxProductRightApproachWithoutDP(int[] nums) {
-        int min=1 , max =1;
+
+    //{-2,-3,0,-2,-4,-5}
+    // A variety of Kadane's Algo.
+    public int maxProductRightApproachWithoutDP_simple(int[] nums) {
         int res = nums[0];
-        for(int i = 0 ; i < nums.length ; i++){
-            int curMin = min * nums[i];
-            int curMax = max * nums[i];
+        int maxProd = nums[0];
+        int minProd = nums[0];
 
-            min = Math.min(nums[i] , Math.min(curMin , curMax)); // min among nums[i], curMin, curMax
-            max = Math.max(nums[i] , Math.max(curMin , curMax)); // max among nums[i], curMin, curMax
+        // Traverse from second element
+        for (int i = 1; i < nums.length; i++) {
+            int curr = nums[i];
 
-            res = Math.max(res , max);
+            // Swap if current is negative to make Kadane's Algo work correctly.
+            /* because: (-ve * larger number) < (-ve * smaller number)
+            eg: curr from array is -ve number: -2
+                    prev iteration          current iteration->swap                 current iteration->product
+        minProd         2                           3                                       3*-2 = -6
+        maxProd         3                           2                                       2*-2 = -4
+
+        minProd        -3                           2                                       2*-2 = -4
+        maxProd         2                          -3                                      -3*-2 =  6
+
+        minProd        -3                          -2                                      -2*-2 = 4
+        maxProd        -2                          -3                                      -3*-2 = 6
+             */
+            if (curr < 0) {
+                int temp = maxProd;
+                maxProd = minProd;
+                minProd = temp;
+            }
+            // Kadane's Algo.
+            // Update max and min product
+            maxProd = Math.max(curr, maxProd * curr);
+            minProd = Math.min(curr, minProd * curr);
+
+            // Update result
+            res = Math.max(res, maxProd);
         }
 
         return res;

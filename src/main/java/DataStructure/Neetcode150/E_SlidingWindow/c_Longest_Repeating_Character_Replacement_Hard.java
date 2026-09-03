@@ -27,6 +27,7 @@ public class c_Longest_Repeating_Character_Replacement_Hard {
             for (int count : counts) {
                 maxCount = Math.max(maxCount, count);
             }
+            //(r-l+1): cur window size
             while ((r-l+1)-maxCount > k) {
                 counts[s.charAt(l)-'A']--;
                 l++;

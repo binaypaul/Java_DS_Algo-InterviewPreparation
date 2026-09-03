@@ -1,7 +1,7 @@
 package DataStructure.Neetcode150.L_1D_DP;
 
 //https://leetcode.com/problems/longest-palindromic-substring/description/
-//There is also expand around center approach to solve this which is not dp, but simple and efficient.
+//There is also expand around center approach to find if a string is palindrome which is not dp, but simple and efficient.
 //https://www.youtube.com/watch?v=XYQecbcd6_c
 public class e_LongestPalindromicSubstring {
 
@@ -81,7 +81,7 @@ public class e_LongestPalindromicSubstring {
     }
     //!
 
-    //There is also expand around center approach to solve this which is not dp, but simple and efficient.
+    //There is also expand around center approach to find if a string is palindrome which is not dp, but simple and efficient.
     //https://www.youtube.com/watch?v=XYQecbcd6_c
     public static void main(String[] args) {
         System.out.println(new e_LongestPalindromicSubstring().longestPalindromeR("acivilwartestingwhetherthatnaptionoranynartionsoconceivedandsodedicatedcanlongendureWeareqmetonagreatbattlefiemldoftzhatwarWehavecometodedicpateaportionofthatfieldasafinalrestingplaceforthosewhoheregavetheirlivesthatthatnationmightliveItisaltogetherfangandproperthatweshoulddothisButinalargersensewecannotdedicatewecannotconsecratewecannothallowthisgroundThebravelmenlivinganddeadwhostruggledherehaveconsecrateditfaraboveourpoorponwertoaddordetractTgheworldadswfilllittlenotlenorlongrememberwhatwesayherebutitcanneverforgetwhattheydidhereItisforusthelivingrathertobededicatedheretotheulnfinishedworkwhichtheywhofoughtherehavethusfarsonoblyadvancedItisratherforustobeherededicatedtothegreattdafskremainingbeforeusthatfromthesehonoreddeadwetakeincreaseddevotiontothatcauseforwhichtheygavethelastpfullmeasureofdevotionthatweherehighlyresolvethatthesedeadshallnothavediedinvainthatthisnationunsderGodshallhaveanewbirthoffreedomandthatgovernmentofthepeoplebythepeopleforthepeopleshallnotperishfromtheearth"));

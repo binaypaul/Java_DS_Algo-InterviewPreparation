@@ -29,8 +29,7 @@ public class h_CoinChange {
     public int coinChangeTDM(int[] coins, int amount) {
         int[] memo = new int[amount + 1];
         // Time limit exceeds in LeetCode error because of below line.
-        // Still kept this line just to maintain consistency of initialization of memo
-        // array.
+        // Still kept this line just to maintain consistency of initialization of memo array.
         // Instead, we can create "Integer" memo array and do the base checks as follows:
         // if (memo[amount] != null)
         // return memo[amount];
