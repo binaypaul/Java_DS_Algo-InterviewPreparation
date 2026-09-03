@@ -38,6 +38,7 @@ public class c_NonOverlappingIntervals {
     public static void main(String[] args) {
         System.out.println(new c_NonOverlappingIntervals().eraseOverlapIntervals(new int[][]{
                 {1,100},{11,22},{1,11},{2,12}
+//                {1,100},{1,11},{2,12},{11,22}
         }));
     }
 }
