@@ -25,11 +25,26 @@ public class h_LowestCommonAncestor_BT_DFS {
         if(leftAns == null && rightAns == null) {
             return null;
         } else if (leftAns != null && rightAns == null) {
-            return root;
+            // read notes why leftAns is returned
+            return leftAns;
         } else if (leftAns == null && rightAns != null) {
-            return root;
+            // read notes why rightAns is returned
+            return rightAns;
         } else {
             return root;
         }
     }
 }
+/*
+Notes:
+    * leftAns is returned because :
+        eg: p=5, q=7:
+            5 returned to 3 from left subtree of 3 (leftAns)
+            null is returned from right subtree of 3 (rightAns)
+            O/P: 5 (leftAns)
+
+        eg: p=2, q=4
+            2 returned to 5 from right subtree of 5 (rightAns)
+            null is returned from left subtree of 5 (rightAns)
+            O/P: 2 (rightAns)
+ */
