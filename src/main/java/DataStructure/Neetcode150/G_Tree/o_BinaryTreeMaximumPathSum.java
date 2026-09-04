@@ -1,6 +1,6 @@
 package DataStructure.Neetcode150.G_Tree;
 
-import DataStructure.Concepts.Tree.BST.*;
+import DataStructure.Concepts.Tree.*;
 
 public class o_BinaryTreeMaximumPathSum {
     public static void main(String[] args) {

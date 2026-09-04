@@ -1,6 +1,6 @@
 package DataStructure.Neetcode150.G_Tree;
 
-import DataStructure.Concepts.Tree.BST.TreeNode;
+import DataStructure.Concepts.Tree.TreeNode;
 
 //https://leetcode.com/problems/count-good-nodes-in-binary-tree/description/
 public class k_Count_Good_Nodes_In_Binary_Tree_DFS {

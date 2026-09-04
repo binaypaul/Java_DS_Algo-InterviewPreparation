@@ -1,6 +1,6 @@
 package DataStructure.Neetcode150.a_a_Practice.March.Mock_30_03_26;
 
-import DataStructure.Concepts.Tree.BST.*;
+import DataStructure.Concepts.Tree.*;
 
 public class BinaryTreeMaximumPathSum {
     public static void main(String[] args) {

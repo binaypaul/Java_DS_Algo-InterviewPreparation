@@ -1,6 +1,6 @@
 package DataStructure.Concepts.Tree.BinaryTreeTraversal.DFS;
 
-import DataStructure.Concepts.Tree.BST.TreeNode;
+import DataStructure.Concepts.Tree.TreeNode;
 
 import java.util.Stack;
 

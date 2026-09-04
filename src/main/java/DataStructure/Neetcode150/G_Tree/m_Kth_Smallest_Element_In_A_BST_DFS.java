@@ -1,6 +1,6 @@
 package DataStructure.Neetcode150.G_Tree;
 
-import DataStructure.Concepts.Tree.BST.TreeNode;
+import DataStructure.Concepts.Tree.TreeNode;
 //https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/
 /**
  * NOTE: In-order DFS Traversal prints a BST in smallest-to-largest order.

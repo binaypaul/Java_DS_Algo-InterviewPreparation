@@ -1,6 +1,6 @@
 package DataStructure.Concepts.Tree.BinaryTreeTraversal;
 
-import DataStructure.Concepts.Tree.BST.TreeNode;
+import DataStructure.Concepts.Tree.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

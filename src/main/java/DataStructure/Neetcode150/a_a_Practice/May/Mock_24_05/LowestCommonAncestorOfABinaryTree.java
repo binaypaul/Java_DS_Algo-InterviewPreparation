@@ -1,6 +1,6 @@
 package DataStructure.Neetcode150.a_a_Practice.May.Mock_24_05;
 
-import DataStructure.Concepts.Tree.BST.TreeNode;
+import DataStructure.Concepts.Tree.TreeNode;
 
 public class LowestCommonAncestorOfABinaryTree {
     public static void main(String[] args) {

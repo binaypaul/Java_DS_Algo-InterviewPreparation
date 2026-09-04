@@ -1,5 +1,7 @@
 package DataStructure.Concepts.Tree.BST;
 
+import DataStructure.Concepts.Tree.*;
+
 public class BST {
 
     //Create a BST

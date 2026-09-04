@@ -1,6 +1,6 @@
 package DataStructure.Neetcode150.a_a_Practice.Past.Mock8;
 
-import DataStructure.Concepts.Tree.BST.*;
+import DataStructure.Concepts.Tree.*;
 
 public class DiameterOfABinaryTree {
     public static void main(String[] args) {

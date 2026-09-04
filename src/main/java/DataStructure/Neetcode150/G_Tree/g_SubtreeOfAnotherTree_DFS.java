@@ -1,6 +1,6 @@
 package DataStructure.Neetcode150.G_Tree;
 
-import DataStructure.Concepts.Tree.BST.TreeNode;
+import DataStructure.Concepts.Tree.TreeNode;
 //https://leetcode.com/problems/subtree-of-another-tree/description/
 
 public class g_SubtreeOfAnotherTree_DFS {

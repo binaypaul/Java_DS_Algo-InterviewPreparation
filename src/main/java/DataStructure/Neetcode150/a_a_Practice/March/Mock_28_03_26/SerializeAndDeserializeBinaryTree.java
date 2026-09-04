@@ -1,6 +1,6 @@
 package DataStructure.Neetcode150.a_a_Practice.March.Mock_28_03_26;
 
-import DataStructure.Concepts.Tree.BST.*;
+import DataStructure.Concepts.Tree.*;
 import java.util.*;
 
 public class SerializeAndDeserializeBinaryTree {

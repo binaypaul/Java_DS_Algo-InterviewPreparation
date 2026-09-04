@@ -1,4 +1,4 @@
-package DataStructure.Concepts.Tree.BST;
+package DataStructure.Concepts.Tree;
 
 import lombok.ToString;
 

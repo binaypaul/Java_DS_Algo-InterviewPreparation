@@ -1,6 +1,6 @@
 package DataStructure.Neetcode150.G_Tree;
 
-import DataStructure.Concepts.Tree.BST.TreeNode;
+import DataStructure.Concepts.Tree.TreeNode;
 
 //https://leetcode.com/problems/balanced-binary-tree/description/
 //Given a binary tree, determine if it is height-balanced.
