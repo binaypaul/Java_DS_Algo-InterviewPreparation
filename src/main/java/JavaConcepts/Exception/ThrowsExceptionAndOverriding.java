@@ -56,7 +56,8 @@ class Child extends Parent {
 //	}
 
 	//UncheckedException:
-	//allowed. Child class overridden method can throw parent class unchecked exception.
+	//allowed.
+	// Child class overridden method can throw parent class unchecked exception.
 	//RuntimeException is the parent of NullPointerException.
 	@Override
 	public void displayForUncheckedException() throws RuntimeException {

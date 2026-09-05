@@ -1,4 +1,4 @@
-package JavaConcepts.Interface_Annotation;
+package JavaConcepts.Interface_StaticAndDefault_Methods;
 
 public class InterfaceAndUseOfDefaultMethods implements A, B{
 	public static void main(String[] args) {

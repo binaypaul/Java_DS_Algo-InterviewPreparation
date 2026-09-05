@@ -19,7 +19,19 @@ public class FirstNonRepeatingCharInString {
         System.out.println(map);
         String ret = map.entrySet().stream()
                 .sorted(Map.Entry.<String, Integer>comparingByValue())
-                .findFirst().get().getKey();
+                .filter(e->e.getValue()==1)
+                .findFirst()
+                .get()
+                .getKey();
+
+        var ret1 = Arrays.stream(strArr)
+                .collect(Collectors.groupingBy(s->s, LinkedHashMap::new, Collectors.counting()))
+                .entrySet()
+                .stream()
+                .filter(e->e.getValue()==1)
+                .findFirst()
+                .get()
+                .getKey();
         return ret;
     }
 

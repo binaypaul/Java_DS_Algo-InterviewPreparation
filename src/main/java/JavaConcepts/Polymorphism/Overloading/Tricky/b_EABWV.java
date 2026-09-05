@@ -10,7 +10,7 @@ When multiple types of conversions are possible, Java follows a strict "order of
 1.E - Exact Match
 2.A - Automatic Type Promotion (e.g., int to long)
 3.B - Boxing/Autoboxing(e.g., int to Integer)
-4.W - Widening Reference Conversion (e.g. int to Number/Object or null to Integer then Object)
+4.W - Widening Reference Conversion (e.g. int to Number then Object OR null to Integer then Object)
 5.V - Varargs (e.g., int...)
  */
 
@@ -29,7 +29,11 @@ public class b_EABWV {
         return "show: Boxing";
     }
     //? Widening Reference Conversion
+    // Out of "Number" and "Object", "Number" is considered "more specific" to "int" by JVM
     public String show(Number i) {
+        return "show: Widening Reference Conversion";
+    }
+    public String show(Object i) {
         return "show: Widening Reference Conversion";
     }
     //? Varargs

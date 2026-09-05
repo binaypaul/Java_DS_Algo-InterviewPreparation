@@ -2,20 +2,24 @@ package JavaConcepts.Collections.MapRelated.a_SortMapByValue;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import lombok.*;
 
 public class SortMapByValue_ComplexValueObject {
     public static void main(String[] args) {
         Map<String, Person> hashMap = new HashMap<String, Person>() {{
-            put("one", new Person(1, "Rahi"));
-            put("two", new Person(31, "Jui"));
-            put("three", new Person(31, "Binay"));
-            put("four", new Person(75, "Baba"));
-            put("five", new Person(70, "Maa"));
+            put("one", new Person(1, "Rahi", 50));
+            put("two", new Person(31, "Jui", 20));
+            put("three", new Person(31, "Rahi", 30));
+            put("four", new Person(75, "Baba", 40));
+            put("five", new Person(70, "Maa", 10));
         }};
 
         hashMap = hashMap.entrySet()
                 .stream()
-                .sorted(Map.Entry.comparingByValue(new NameComparator()))
+                // sorted using NameComparator
+                .sorted(Map.Entry.<String, Person>comparingByValue(new NameComparator())
+                        // in case of collision when sorting by NameComparator, sort by salary using comparable
+                                 .thenComparing(Map.Entry.comparingByValue()))
                 .collect(
                         Collectors.toMap(
                                 e->e.getKey(),
@@ -31,50 +35,16 @@ public class SortMapByValue_ComplexValueObject {
     }
 }
 
-
-class Person {
+@Data
+@AllArgsConstructor
+class Person implements Comparable<Person> {
     int age;
     String name;
-
-    public Person(int age, String name) {
-        this.age = age;
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    int salary;
 
     @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Person person = (Person) o;
-        return age == person.age && Objects.equals(name, person.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(age, name);
-    }
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "age=" + age +
-                ", name='" + name + '\'' +
-                '}';
+    public int compareTo(Person o) {
+        return this.salary-o.salary;
     }
 }
 

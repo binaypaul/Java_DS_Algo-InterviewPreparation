@@ -1,4 +1,4 @@
-package JavaConcepts.Interface_Annotation.CustomAnnotation;
+package JavaConcepts.CustomAnnotation;
 
 @CustomAnnotation(name = "Binay")
 public class UsingCustomAnnotation {
