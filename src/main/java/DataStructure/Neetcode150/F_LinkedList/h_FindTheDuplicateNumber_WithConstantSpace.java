@@ -16,11 +16,11 @@ Example 3:
 Input: nums = [3,3,3,3,3]
 Output: 3
  */
-public class i_FindTheDuplicateNumber_WithConstantSpace {
+public class h_FindTheDuplicateNumber_WithConstantSpace {
     public static void main(String[] args) {
         int[] nums = {2,6,5,3,8,5,7,1};
         System.out.println(
-                new i_FindTheDuplicateNumber_WithConstantSpace()
+                new h_FindTheDuplicateNumber_WithConstantSpace()
                 .findDuplicate(nums)
         );
     }

@@ -87,6 +87,6 @@ It's worth noting that if the array contains duplicates (e.g., [3, 3, 1, 3]), ev
 }
 
 /*
-    * for finding min, compare mid "less than" left or right, and choose the unambiguous condition.
-    * for finding max, compare mid "greater than" left or right, and choose the unambiguous condition.
+    * for finding min, compare mid "less than" right, and choose the unambiguous condition.
+    * for finding max, compare mid "greater than" left, and choose the unambiguous condition.
  */

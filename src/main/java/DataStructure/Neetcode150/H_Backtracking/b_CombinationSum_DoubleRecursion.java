@@ -24,7 +24,7 @@ public class b_CombinationSum_DoubleRecursion {
 
         cur.add(can[i]);
         dfs(can, target - can[i], i);
-        cur.remove(cur.size() - 1);
+        cur.removeLast();
 
         dfs(can, target, i+1);
     }

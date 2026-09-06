@@ -1,41 +1,89 @@
 package DataStructure.Neetcode150.F_LinkedList;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Objects;
-/*
-Design a data structure that follows the constraints of a Least Recently Used (LRU) cache.
+import java.util.*;
 
-Implement the LRUCache class:
+public class i_LRUCache {
+    public static void main(String[] args) {
+        LRUCache lruCache = new LRUCache(2);
+        lruCache.put(1, 10);                      // cache: {1=10}
+        System.out.println(lruCache.get(1));      // return 10
+        lruCache.put(2, 20);                      // cache: {1=10, 2=20}
+        lruCache.put(3, 30);                      // cache: {2=20, 3=30}, key=1 was evicted
+        System.out.println(lruCache.get(2));      // returns 20
+        System.out.println(lruCache.get(1));      // return -1 (not found)
+        System.out.println(lruCache.get(3));      // return 30
+    }
+}
 
-LRUCache(int capacity) Initialize the LRU cache with positive size capacity.
-int get(int key) Return the value of the key if the key exists, otherwise return -1.
-void put(int key, int value) Update the value of the key if the key exists. Otherwise, add the key-value pair to the cache. If the number of keys exceeds the capacity from this operation, evict the least recently used key.
-The functions get and put must each run in O(1) average time complexity.
- */
+class LRUCache {
+    Map<Integer, DoublyListNode> lookUpMap = null;
+    Map<Integer, Integer> kvmap = null;
 
-class i_LRUCache {
     int capacity;
-    Map<Integer, Integer> cache = new LinkedHashMap<Integer, Integer>(capacity, 0.75f, true) {
-      @Override
-      protected boolean removeEldestEntry(Map.Entry<Integer, Integer> eldest) {
-          return size()>capacity;
-      }
-    };
+    DoublyListNode head, tail;
 
-    public i_LRUCache(int capacity) {
+    public LRUCache(int capacity) {
         this.capacity = capacity;
+
+        lookUpMap = new HashMap<>();
+        kvmap = new HashMap<>();
     }
 
     public int get(int key) {
-        return Objects.requireNonNullElse(cache.get(key), -1);
+        if(lookUpMap.containsKey(key)) {
+            int value = remove(key);
+            insert(key, value);
+            return value;
+        }
+        return -1;
     }
 
-    public void put(int key, int value, int[] nums1, int[] nums2) {
-        cache.put(key, value);
+    public void put(int key, int value) {
+        if(lookUpMap.containsKey(key)) {
+            remove(key);
+        } else if(lookUpMap.size()>=capacity) {
+            remove(tail.val);
+        }
+        insert(key, value);
     }
 
-    public static void main(String[] args) {
-        i_LRUCache cache = new i_LRUCache(5);
+    private int remove(int key) {
+        if(lookUpMap.containsKey(key)) {
+            int value = kvmap.remove(key);
+            DoublyListNode node = lookUpMap.remove(key);
+            if(head==node && tail == node) {
+                // when capacity is 1
+                head = null;
+                tail = null;
+            } else if(tail==node) {
+                tail=node.nextNode;
+            } else if(head==node) {
+                head=node.prevNode;
+            } else {
+                DoublyListNode prev = node.prevNode;
+                DoublyListNode next = node.nextNode;
+                prev.nextNode = next;
+                next.prevNode = prev;
+            }
+            return value;
+        }
+        return -1;
+    }
+
+    private void insert(int key, int value) {
+        DoublyListNode node = new DoublyListNode(key);
+
+        if (lookUpMap.isEmpty()) {
+            lookUpMap.put(key, node);
+            kvmap.put(key, value);
+            head = node;
+            tail = node;
+        } else if(lookUpMap.size()<capacity){
+            lookUpMap.put(key, node);
+            kvmap.put(key, value);
+            head.nextNode = node;
+            node.prevNode = head;
+            head = node;
+        }
     }
 }
