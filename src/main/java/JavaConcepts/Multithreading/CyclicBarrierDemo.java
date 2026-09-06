@@ -7,6 +7,7 @@ public class CyclicBarrierDemo {
 
     public static void main(String[] args)  {
         int numberOfSubsystems = 4;
+        //The thread in "CyclicBarrier" will run only after all other thread that has this barrier is up.
         CyclicBarrier barrier = new CyclicBarrier(numberOfSubsystems, new Runnable() {
             @Override
             public void run() {
@@ -18,15 +19,14 @@ public class CyclicBarrierDemo {
         Thread databaseThread = new Thread(new Subsystem("Database", 4000, barrier));
         Thread cacheThread = new Thread(new Subsystem("Cache", 3000, barrier));
         Thread messagingServiceThread = new Thread(new Subsystem("Messaging Service", 3500, barrier));
+        Thread notificationServiceThread = new Thread(new Subsystem("Messaging Service", 5000, barrier));
 
         webServerThread.start();
         databaseThread.start();
         cacheThread.start();
         messagingServiceThread.start();
-
+        notificationServiceThread.start(); // "CyclicBarrier" thread will not wait for this as above 4 threads will have completed.
     }
-
-
 }
 
 class Subsystem implements Runnable {
