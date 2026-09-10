@@ -40,6 +40,8 @@ public class p_SerializeAndDeserializeBinaryTree_DFS_Simpler {
 
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
+        //LinkedList or ArrayList either will work.
+        // Used LinkedList as removing 1st element in LinkedList doesn't cause left shift of remaining elements like ArrayList.
         List<String> al = new LinkedList<>(Arrays.asList(data.split(",")));
         return create(al);
     }
