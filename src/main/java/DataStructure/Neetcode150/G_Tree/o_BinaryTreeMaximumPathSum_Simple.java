@@ -33,8 +33,8 @@ public class o_BinaryTreeMaximumPathSum_Simple {
     private int dfs(TreeNode root)
     {
         if(root == null) return 0;
-        //if left subtree is returning negative value,
-        //then ignore the left subtree's negative value by finding max(0,"negative value") will always return 0.
+        //if left subtree is returning negative value, then ignore the left subtree's negative value by finding max(0,"negative value") will always return 0.
+        //if right subtree is returning negative value, then ignore the right subtree's negative value by finding max(0,"negative value") will always return 0.
         //as adding negative value will decrease the sum.
         //hence max of 0, negative value.
         int left = Math.max(0, dfs(root.left));
