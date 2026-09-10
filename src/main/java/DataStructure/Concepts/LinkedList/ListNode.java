@@ -1,4 +1,4 @@
-package DataStructure.Neetcode150.F_LinkedList;
+package DataStructure.Concepts.LinkedList;
 
 import lombok.*;
 

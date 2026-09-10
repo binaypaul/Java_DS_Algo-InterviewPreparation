@@ -1,6 +1,6 @@
 package DataStructure.Neetcode150.a_a_Practice.Past.Mock6_4Q90Min;
 
-import DataStructure.Neetcode150.F_LinkedList.*;
+import DataStructure.Concepts.LinkedList.*;
 import java.util.*;
 
 public class MergeKSortedLists {

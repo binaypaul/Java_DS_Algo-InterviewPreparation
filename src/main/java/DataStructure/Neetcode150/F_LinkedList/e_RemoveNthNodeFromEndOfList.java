@@ -1,4 +1,7 @@
 package DataStructure.Neetcode150.F_LinkedList;
+
+import DataStructure.Concepts.LinkedList.*;
+
 //https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 public class e_RemoveNthNodeFromEndOfList {
     public static void main(String[] args) {

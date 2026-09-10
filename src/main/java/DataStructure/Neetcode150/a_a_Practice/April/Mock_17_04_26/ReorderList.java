@@ -1,7 +1,6 @@
 package DataStructure.Neetcode150.a_a_Practice.April.Mock_17_04_26;
 
-import DataStructure.Neetcode150.F_LinkedList.*;
-import org.w3c.dom.*;
+import DataStructure.Concepts.LinkedList.*;
 
 public class ReorderList {
     public static void main(String[] args) {

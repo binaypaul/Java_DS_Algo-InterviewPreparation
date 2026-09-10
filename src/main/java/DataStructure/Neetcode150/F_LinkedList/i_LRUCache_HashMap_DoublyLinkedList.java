@@ -1,8 +1,9 @@
 package DataStructure.Neetcode150.F_LinkedList;
 
+import DataStructure.Concepts.LinkedList.*;
 import java.util.*;
 
-public class i_LRUCache {
+public class i_LRUCache_HashMap_DoublyLinkedList {
     public static void main(String[] args) {
         LRUCache lruCache = new LRUCache(2);
         lruCache.put(1, 10);                      // cache: {1=10}

@@ -1,4 +1,7 @@
 package DataStructure.Neetcode150.F_LinkedList;
+
+import DataStructure.Concepts.LinkedList.*;
+
 //https://leetcode.com/problems/reorder-list/description/
 public class d_ReorderList {
     public static void main(String[] args) {

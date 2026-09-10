@@ -1,6 +1,6 @@
 package DataStructure.Neetcode150.F_LinkedList;
 
-import org.w3c.dom.*;
+import DataStructure.Concepts.LinkedList.*;
 
 //https://leetcode.com/problems/add-two-numbers/description/
 public class g_AddTwoNumbers {

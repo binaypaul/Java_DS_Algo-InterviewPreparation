@@ -1,5 +1,7 @@
 package DataStructure.Neetcode150.F_LinkedList;
 
+import DataStructure.Concepts.LinkedList.*;
+
 public class c_LinkedListCycle {
     public static void main(String[] args) {
         ListNode one = new ListNode(1);

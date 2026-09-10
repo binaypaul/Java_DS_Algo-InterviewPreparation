@@ -1,9 +1,9 @@
-package DataStructure.Neetcode150.F_LinkedList;
+package DataStructure.Concepts.LinkedList;
 
 public class DoublyListNode {
-    int val;
-    DoublyListNode prevNode;
-    DoublyListNode nextNode;
+    public int val;
+    public DoublyListNode prevNode;
+    public DoublyListNode nextNode;
 
     public DoublyListNode(int val) {
         this.val = val;

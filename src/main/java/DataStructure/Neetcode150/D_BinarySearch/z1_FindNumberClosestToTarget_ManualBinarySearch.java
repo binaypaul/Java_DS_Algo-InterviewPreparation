@@ -4,12 +4,17 @@ import java.util.Arrays;
 
 public class z1_FindNumberClosestToTarget_ManualBinarySearch {
     public static void main(String[] args) {
-        System.out.print(new z1_FindNumberClosestToTarget_ManualBinarySearch().findClosestNum(new int[] {1,13,4,10,7}, 3) + " ");
+        System.out.print(new z1_FindNumberClosestToTarget_ManualBinarySearch()
+                .findClosestNum(new int[] {1,13,4,10,7}, 3));
+                //uncomment the below inputs to understand the 2 (1st else if and 2nd else if) conditions.
+//                .findClosestNum(new int[] {1,2,4,5,6}, 3));
+//                .findClosestNum(new int[] {1,2,3,5,6}, 4));
+
 
     }
 
     private int findClosestNum(int[] nums, int target) {
-        Arrays.sort(nums);
+        Arrays.sort(nums); //{1,4,7,10,13}
 
         int i = binarySearch(nums, target);
         if(i >= 0) {
@@ -32,8 +37,9 @@ public class z1_FindNumberClosestToTarget_ManualBinarySearch {
      * if not found,    returns the position (-insertion index -1) of the insertion point <p/>
      */
     private int binarySearch(int[] nums, int target) {
+        //{1,4,7,10,13}
         if(target < nums[0]) return -1;
-        if(target > nums[nums.length-1]) return -(nums.length-1)-2;
+        if(target > nums[nums.length-1]) return -(nums.length)-1;
 
         int low=0, high = nums.length-1;
         while (low <= high) {

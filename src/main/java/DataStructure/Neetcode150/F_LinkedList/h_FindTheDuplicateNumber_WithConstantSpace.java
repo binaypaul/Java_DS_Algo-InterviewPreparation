@@ -45,7 +45,7 @@ public class h_FindTheDuplicateNumber_WithConstantSpace {
 //      slow and fast pointer meet at 6 value, not index 6.
 
         // Phase 2: Find the "entrance" to the cycle.
-        // Reset one pointer (fast) to the beginning (index 0).
+        // Reset either pointer (fast) to the beginning (index 0).
         // Keep the other pointer(slow) at the meeting point.
         fast = nums[0];
         // Advance both pointers one step at a time until they meet.

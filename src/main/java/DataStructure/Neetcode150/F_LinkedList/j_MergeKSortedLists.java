@@ -26,6 +26,7 @@ Input: lists = [[]]
 Output: []
  */
 
+import DataStructure.Concepts.LinkedList.*;
 import java.util.*;
 
 /**

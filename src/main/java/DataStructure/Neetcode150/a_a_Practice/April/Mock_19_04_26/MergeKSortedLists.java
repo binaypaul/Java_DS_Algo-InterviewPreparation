@@ -1,8 +1,7 @@
 package DataStructure.Neetcode150.a_a_Practice.April.Mock_19_04_26;
 
-import DataStructure.Neetcode150.F_LinkedList.*;
+import DataStructure.Concepts.LinkedList.*;
 import java.util.*;
-import lombok.*;
 
 public class MergeKSortedLists {
     public static ListNode mergeKLists(ListNode[] lists) {

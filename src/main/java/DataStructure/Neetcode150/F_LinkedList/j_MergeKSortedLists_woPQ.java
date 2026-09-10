@@ -26,7 +26,7 @@ Input: lists = [[]]
 Output: []
  */
 
-import java.util.*;
+import DataStructure.Concepts.LinkedList.*;
 
 /**
  * Definition for singly-linked list.

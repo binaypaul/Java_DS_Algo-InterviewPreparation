@@ -1,6 +1,6 @@
 package DataStructure.Practice.September2026._09.M1;
 
-import DataStructure.Neetcode150.F_LinkedList.*;
+import DataStructure.Concepts.LinkedList.*;
 import java.util.*;
 
 public class DeleteNodesWithAGreaterValueToTheirRight {

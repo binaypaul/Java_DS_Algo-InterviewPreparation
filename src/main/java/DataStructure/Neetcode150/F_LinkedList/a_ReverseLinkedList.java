@@ -1,4 +1,7 @@
 package DataStructure.Neetcode150.F_LinkedList;
+
+import DataStructure.Concepts.LinkedList.*;
+
 //https://leetcode.com/problems/reverse-linked-list/
 public class a_ReverseLinkedList {
     public static void main(String[] args) {
