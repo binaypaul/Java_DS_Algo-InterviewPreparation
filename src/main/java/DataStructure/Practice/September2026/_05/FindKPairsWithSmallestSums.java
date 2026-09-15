@@ -1,4 +1,4 @@
-package DataStructure.Practice.September2026._05.M1;
+package DataStructure.Practice.September2026._05;
 
 import java.util.*;
 import lombok.*;

@@ -1,4 +1,4 @@
-package DataStructure.Practice.September2026._09.M1;
+package DataStructure.Practice.September2026._09;
 
 import DataStructure.Concepts.LinkedList.*;
 import java.util.*;
