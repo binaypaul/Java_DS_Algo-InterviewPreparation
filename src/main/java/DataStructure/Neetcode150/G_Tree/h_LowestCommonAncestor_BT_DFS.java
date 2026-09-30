@@ -1,7 +1,7 @@
 package DataStructure.Neetcode150.G_Tree;
 
 import DataStructure.Concepts.Tree.*;
-import DataStructure.Practice.September2026._04.M1.*;
+import DataStructure.Practice.Sept2026._04.M1.*;
 //https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/
 //https://youtu.be/_-QHfMDde90?t=323
 public class h_LowestCommonAncestor_BT_DFS {

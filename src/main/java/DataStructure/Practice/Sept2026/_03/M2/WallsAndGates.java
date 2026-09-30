@@ -1,9 +1,9 @@
-package DataStructure.Neetcode150.K_Graph;
+package DataStructure.Practice.Sept2026._03.M2;
 
 import java.util.*;
 import lombok.*;
 
-public class d_WallsAndGates {
+public class WallsAndGates {
     public static void main(String[] args) {
         int INF = 2147483647;
         int[][] rooms = {
@@ -12,7 +12,7 @@ public class d_WallsAndGates {
                 {INF, -1, INF, -1},
                 {  0, -1, INF, INF}
         };
-        new d_WallsAndGates().wallsAndGates(rooms);
+        new WallsAndGates().wallsAndGates(rooms);
         System.out.println(Arrays.deepToString(rooms));
     }
 
@@ -22,18 +22,18 @@ public class d_WallsAndGates {
         for (int r = 0; r < rooms.length; r++) {
             for (int c = 0; c < rooms[0].length; c++) {
                 if(rooms[r][c]==0) {
-                    bfs(rooms, INF, new Celll(r,c));
+                    bfs(rooms, INF, new Cell(r,c));
                 }
             }
         }
         
     }
-    private void bfs(int[][] rooms, int INF, Celll cell) {
+    private void bfs(int[][] rooms, int INF, Cell cell) {
         var rCount = rooms.length;
         var cCount = rooms[0].length;
-        var visited = new HashSet<Celll>();
+        var visited = new HashSet<Cell>();
 
-        Queue<Celll> q = new LinkedList<>();
+        Queue<Cell> q = new LinkedList<>();
         q.offer(cell);
         visited.add(cell);
 
@@ -45,28 +45,28 @@ public class d_WallsAndGates {
                 var cur = q.poll();
 
                 //to east
-                cell = new Celll(cur.r, cur.c + 1);
+                cell = new Cell(cur.r, cur.c + 1);
                 if ((cur.c + 1 < cCount) && (rooms[cur.r][cur.c + 1] != -1) && (rooms[cur.r][cur.c + 1] != 0) && !visited.contains(cell)) {
                     rooms[cur.r][cur.c + 1] = Math.min(count, rooms[cur.r][cur.c + 1]);
                     q.offer(cell);
                     visited.add(cell);
                 }
                 //to west
-                cell = new Celll(cur.r, cur.c - 1);
+                cell = new Cell(cur.r, cur.c - 1);
                 if ((cur.c - 1 > -1) && (rooms[cur.r][cur.c - 1] != -1) && (rooms[cur.r][cur.c - 1] != 0) && !visited.contains(cell)) {
                     rooms[cur.r][cur.c - 1] = Math.min(count, rooms[cur.r][cur.c - 1]);
                     q.offer(cell);
                     visited.add(cell);
                 }
                 //to north
-                cell = new Celll(cur.r-1, cur.c);
+                cell = new Cell(cur.r-1, cur.c);
                 if ((cur.r - 1 > -1) && (rooms[cur.r - 1][cur.c] != -1) && (rooms[cur.r - 1][cur.c] != 0) && !visited.contains(cell)) {
                     rooms[cur.r - 1][cur.c] = Math.min(count, rooms[cur.r - 1][cur.c]);
                     q.offer(cell);
                     visited.add(cell);
                 }
                 //to south
-                cell = new Celll(cur.r + 1, cur.c);
+                cell = new Cell(cur.r + 1, cur.c);
                 if ((cur.r + 1 < rCount) && (rooms[cur.r + 1][cur.c] != -1) && (rooms[cur.r + 1][cur.c] != 0) && !visited.contains(cell)) {
                     rooms[cur.r + 1][cur.c] = Math.min(count, rooms[cur.r + 1][cur.c]);
                     q.offer(cell);
@@ -79,6 +79,6 @@ public class d_WallsAndGates {
 
 @Data
 @AllArgsConstructor
-class Celll {
+class Cell {
     int r,c;
 }
