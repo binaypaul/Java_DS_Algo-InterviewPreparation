@@ -1,4 +1,4 @@
-package DataStructure.Practice.Oct2026;
+package DataStructure.Neetcode150.ZZ_UnionFind;
 
 import java.util.*;
 import java.util.stream.*;
