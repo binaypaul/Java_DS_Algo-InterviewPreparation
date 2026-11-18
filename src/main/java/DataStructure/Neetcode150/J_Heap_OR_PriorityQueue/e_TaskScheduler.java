@@ -16,7 +16,7 @@ public class e_TaskScheduler {
 
     public int leastInterval(char[] tasks, int n) {
         for (char task : tasks) {
-            map.merge(task, 1, Integer::sum);
+            map.compute(task, (k,v) -> v==null?1:v+1);
         }
 
         for (Map.Entry<Character, Integer> mapent : map.entrySet()) {

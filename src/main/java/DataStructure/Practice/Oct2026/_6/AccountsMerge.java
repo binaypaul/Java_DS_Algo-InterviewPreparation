@@ -1,4 +1,4 @@
-package DataStructure.Practice.Oct2026;
+package DataStructure.Practice.Oct2026._6;
 
 import java.util.*;
 import java.util.stream.*;
